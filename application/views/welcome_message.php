@@ -47,7 +47,7 @@
 	#body{
 		margin: 0 15px 0 15px;
 	}
-	
+
 	p.footer{
 		text-align: right;
 		font-size: 11px;
@@ -56,7 +56,7 @@
 		padding: 0 10px 0 10px;
 		margin: 20px 0 0 0;
 	}
-	
+
 	#container{
 		margin: 10px;
 		border: 1px solid #D0D0D0;
@@ -70,15 +70,10 @@
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+		<h1>Wooooo! Go Team 14</h1>
+		<p>This is the basic framework that CodeIgnighter provides developers with. I'm currently having a read of the dev guides to see if there is anything else that needs setting up, but my intial reaction would be a no. This is it, we just need to start messing around with routes and adding our Views, Models etc. to make it ours.</p>
+		<p>Code subject to change, obviously.</p>
+		<p>If people are interested, there is a short tutorial available on the CodeIgnighter wesbite that explains the basics of a how a framework like this works, including explainations on how the different parts communicate. You can find that <a href="http://ellislab.com/codeigniter%20/user-guide/tutorial/index.html">Here</a> if you're interested.</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
