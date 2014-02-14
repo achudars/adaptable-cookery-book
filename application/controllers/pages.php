@@ -2,10 +2,11 @@
 
 	class Pages extends CI_Controller
 	{
-		public function viewPage($page)
+		public function view($page)
 		{
 			if(!file_exists('application/views/pages/' . $page . '.php'))
 			{
+				error_log('Page ' . $page . ' doesn\'t exist');
 				show_404();
 			}
 
