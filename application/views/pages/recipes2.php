@@ -4,91 +4,45 @@
 
 <div class="container">
     <div class="row">
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
 
       </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
 
       </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
 
       </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
@@ -96,45 +50,91 @@
       </div>
     </div>
     <div class="row">
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
 
       </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
 
       </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
 
       </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
+      <div class="list-recipes col-xs-12">
           <a href="recipe">
-            <div class="preview-img">
+            <div class="preview-img pull-left">
 
             </div>
-            <div>
+            <div class="pull-right">
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="list-recipes col-xs-12">
+          <a href="recipe">
+            <div class="preview-img pull-left">
+
+            </div>
+            <div class="pull-right">
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+      <div class="list-recipes col-xs-12">
+          <a href="recipe">
+            <div class="preview-img pull-left">
+
+            </div>
+            <div class="pull-right">
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+      <div class="list-recipes col-xs-12">
+          <a href="recipe">
+            <div class="preview-img pull-left">
+
+            </div>
+            <div class="pull-right">
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+      <div class="list-recipes col-xs-12">
+          <a href="recipe">
+            <div class="preview-img pull-left">
+
+            </div>
+            <div class="pull-right">
                 <p> recipe </p>
             </div>
           </a>
