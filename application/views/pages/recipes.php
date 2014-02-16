@@ -6,59 +6,45 @@
     <div class="row">
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
-          </a>
+            <div class="preview-img">
 
-      </div>
-    </div>
-    <div class="row">
-      <div class="recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
-          </a>
-
-      </div>
-      <div class="recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
-          </a>
-
-      </div>
-      <div class="recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
-          </a>
-
-      </div>
-      <div class="recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
@@ -66,29 +52,91 @@
     <div class="row">
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
       <div class="recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <img src="http://placehold.it/150x150">
-            <div>text</div>
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="recipes col-xs-6 col-sm-3">
+          <a href="recipe">
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+      <div class="recipes col-xs-6 col-sm-3">
+          <a href="recipe">
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+      <div class="recipes col-xs-6 col-sm-3">
+          <a href="recipe">
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
+          </a>
+
+      </div>
+      <div class="recipes col-xs-6 col-sm-3">
+          <a href="recipe">
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
+            </div>
           </a>
 
       </div>
