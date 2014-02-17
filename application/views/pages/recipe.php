@@ -2,22 +2,24 @@
     <h1>Recipe</h1>
     <div class="row">
         <div class="recipe col-xs-8 col-sm-8">
-        <div class="btn-group btn-group-justified">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">Novice</button>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">Normal</button>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-default active">Expert</button>
-          </div>
-        </div>
+        <ul class="nav nav-tabs nav-justified">
+          <li class="active"><a href="#novice" data-toggle="tab" data-target="#novice">novice</a></li>
+          <li><a href="#normal" data-toggle="tab" data-target="#normal">normal</a></li>
+          <li><a href="#expert" data-toggle="tab" data-target="#expert">expert</a></li>
+        </ul>
             <div class="recipe-img">
 
             </div>
-            <div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="novice">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </div>
+              <div class="tab-pane fade" id="normal">
+                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </div>
+              <div class="tab-pane fade" id="expert">
+                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              </div>
             </div>
         </div>
         <div class="ingredients col-xs-4 col-sm-4">
