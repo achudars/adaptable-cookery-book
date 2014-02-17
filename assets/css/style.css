@@ -84,6 +84,9 @@ h1, a, div, p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    -moz-box-shadow:    inset 0px -10px 10px #383838;
+    -webkit-box-shadow: inset 0px -10px 10px #383838;
+    box-shadow:         inset 0px -10px 10px #383838;
 }
 
 .list-recipes > a .preview-img {
@@ -102,12 +105,6 @@ h1, a, div, p {
 }
 
 .grid-recipes a > div {
-    -webkit-border-bottom-left-radius: 3px;
-    -moz-border-bottom-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    -webkit-border-bottom-right-radius: 3px;
-    -moz-border-bottom-right-radius: 3px;
-    border-bottom-right-radius: 3px;
     height: 50%;
 }
 
