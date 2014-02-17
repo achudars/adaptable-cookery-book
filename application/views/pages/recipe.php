@@ -2,6 +2,17 @@
     <h1>Recipe</h1>
     <div class="row">
         <div class="recipe col-xs-8 col-sm-8">
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">Novice</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">Normal</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default active">Expert</button>
+          </div>
+        </div>
             <div class="recipe-img">
 
             </div>
