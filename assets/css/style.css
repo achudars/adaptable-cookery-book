@@ -31,8 +31,12 @@ body nav, input, button {
   color: orangered;
 }
 
-.container {
+.navbar > .container {
     margin-bottom: 10px;
+    padding: 0;
+}
+.navbar > .container li:first-child {
+    margin-left: -15px;
 }
 
 .icon-bar {
