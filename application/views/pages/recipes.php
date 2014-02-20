@@ -9,8 +9,12 @@
             <div class="preview-img">
 
             </div>
-            <div>
+            <div class="recipe-title">
                 <p> recipe </p>
+            </div>
+            <div class="split">
+                <span><span class="glyphicon glyphicon-time"></span> 90 min</span>
+                <span><span class="glyphicon glyphicon-dashboard"></span> 666 cal</span>
             </div>
           </a>
 
