@@ -8,7 +8,8 @@ body {
 body a {
   text-decoration: none;
   color: #383838;
-  font-family: 'Istok Web', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 body nav, input, button {
   -webkit-border-radius: 0px !important;
@@ -39,11 +40,12 @@ body nav, input, button {
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
-  color: #B01141;
+  color: #000;
   background: none;
+  text-decoration: underline;
 }
 .nav>li.active a {
-  color: orangered;
+  color: #B01141;
 }
 
 .navbar > .container {
@@ -52,7 +54,7 @@ body nav, input, button {
     margin-top: 25px;
 }
 .navbar > .container li:first-child {
-    margin-left: -15px;
+    margin-left: 0px;
 }
 
 .icon-bar {
@@ -64,6 +66,9 @@ h1, a, div, p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: #383838;
+}
+h1 {
+    margin-left: 10px;
 }
 
 .grid-recipes, .list-recipes {
@@ -116,7 +121,6 @@ h1, a, div, p {
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    background-image: url("http://bit.ly/1gJuK0l");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -139,8 +143,8 @@ h1, a, div, p {
     width: 48%;
     height: 100%;
     display: inline-block;
-    font-size: smaller;
     color: #383838;
+    margin-top: 2.5px;
 }
 
 .list-recipes a > div.pull-right {
@@ -151,6 +155,9 @@ h1, a, div, p {
     color: #FFF;
     background: #383838;
     padding-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .list-recipes a > div p {
     -webkit-border-top-left-radius: 3px;

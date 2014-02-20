@@ -3,18 +3,29 @@
 </div>
 
 <div class="container">
-    <div class="row">
+    <?php foreach ($recipes as $recipe):?>
       <div class="grid-recipes col-xs-6 col-sm-3">
           <a href="recipe">
-            <div class="preview-img">
-
-            </div>
+            <div class="preview-img" style="background-image: url(<?php echo $recipe[3];?>);"></div>
             <div class="recipe-title">
-                <p> recipe </p>
+                <p> <?php echo $recipe[0];?> </p>
             </div>
             <div class="split">
-                <span><span class="glyphicon glyphicon-time"></span> 90 min</span>
-                <span><span class="glyphicon glyphicon-dashboard"></span> 666 cal</span>
+                <span><span class="glyphicon glyphicon-time"></span> <?php echo $recipe[1];?> min</span>
+                <span><span class="glyphicon glyphicon-dashboard"></span> <?php echo $recipe[2];?> cal</span>
+            </div>
+          </a>
+      </div>
+    <?php endforeach;?>
+   <!--  </div> -->
+    <!-- <div class="row">
+      <div class="grid-recipes col-xs-6 col-sm-3">
+          <a href="recipe">
+            <div class="preview-img">
+
+            </div>
+            <div>
+                <p> recipe </p>
             </div>
           </a>
 
@@ -98,51 +109,5 @@
           </a>
 
       </div>
-    </div>
-    <div class="row">
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="grid-recipes col-xs-6 col-sm-3">
-          <a href="recipe">
-            <div class="preview-img">
-
-            </div>
-            <div>
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-    </div>
+    </div> -->
 </div>
