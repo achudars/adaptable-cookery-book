@@ -15,7 +15,21 @@ body nav, input, button {
   border-radius: 0px !important;
   background: #FFF;
 }
+
+.brand {
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    margin: 10px 0 10px -40px;
+    position: absolute;
+    z-index: 1;
+}
+.brand img {
+    width: 100%;
+}
+
 .navbar {
+    min-height: 100px;
     background: #FFF;
     border-bottom: 1px solid #383838;
     -moz-box-shadow:    0px 0px 3px 2px rgba(0,0,0,0.2);
@@ -34,6 +48,7 @@ body nav, input, button {
 .navbar > .container {
     margin-bottom: 10px;
     padding: 0;
+    margin-top: 25px;
 }
 .navbar > .container li:first-child {
     margin-left: -15px;

@@ -7,6 +7,8 @@
     <title>
         <?php echo $title ?>
     </title>
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -15,6 +17,9 @@
 
 <body>
     <header>
+        <div class="brand">
+            <img src="../../../assets/images/icon.png" alt="brand">
+        </div>
         <nav class="navbar" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
