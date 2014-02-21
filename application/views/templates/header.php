@@ -18,7 +18,6 @@
 <body>
     <header>
         <div class="brand">
-            <img src="../../../assets/images/icon.png" alt="brand">
         </div>
         <nav class="navbar" role="navigation">
             <div class="container">
@@ -39,12 +38,19 @@
                         <li><a href="recipes2">LIST Recipes</a></li>
                         <li><a href="recipe">Recipe</a></li>
                     </ul>
-                    <form class="navbar-form navbar-right btn-group" role="search">
-                        <div class="btn-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default btn-group">Submit</button>
-                    </form>
+                    <span class="btn-group pull-right">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                      Change recipe style
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="#novice" data-toggle="tab" data-target="#novice">novice</a></li>
+                                        <li><a href="#normal" data-toggle="tab" data-target="#normal">normal</a></li>
+                                        <li><a href="#expert" data-toggle="tab" data-target="#expert">expert</a></li>
+                                    </ul>
+                                  </div>
+                                </span>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
