@@ -1,19 +1,31 @@
 <?php
 
+	/**
+	 * Controller used to display recipe data and pages
+	 */
 	class Recipe extends CI_Controller
 	{
-
-		public function view($page = "recipe")
+		/**
+		 * Function called when viewing a recipe.
+		 *
+		 * @param $recipeId : Integer/Null - When integer, recipe data is feteched fron
+		 *                    from the database and displayed to the user.
+		 *                    If null, WE'LL SEND THEM TO THE RECIPE LANDING PAGE
+		 *
+		 */
+		public function view($recipeId = null)
 		{
-			if(!file_exists('application/views/pages/' . $page . '.php'))
+			if(isset($recipeId))
 			{
-				error_log('Page ' . $page . ' doesn\'t exist');
-				show_404();
+				//Go and get the recipe details from the database
+				//$data['recipeData'] = $db->getRecipe($recipeId);
 			}
+
+			$data['title'] = 'Recipe Title From Database Goes Here';
+
 			$this->load->helper('html');
-			$data['title'] = ucfirst($page); // Capitalise the first letter
 			$this->load->view('templates/header.php', $data);
-			$this->load->view('pages/' . $page . '.php', $data);
+			$this->load->view('pages/recipe.php', $data);
 			$this->load->view('templates/footer.php', $data);
 		}
 	}
