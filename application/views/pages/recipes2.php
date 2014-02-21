@@ -10,13 +10,15 @@
                 <p> <?php echo $recipe[0];?> </p>
             </div>
             <div class="content">
-              <div class="preview-img pull-left" style="background-image: url(<?php echo $recipe[3];?>);"></div>
+              <div class="preview-img pull-left" style="background-image: url(<?php echo $recipe[5];?>);"></div>
               <div class="recipe-text">
 
               </div>
               <div class="pull-left split">
-                  <div><span class="glyphicon glyphicon-time"></span> <?php echo $recipe[1];?> min</div>
-                  <div><span class="glyphicon glyphicon-dashboard"></span> <?php echo $recipe[2];?> cal</div>
+                  <div><span class="glyphicon glyphicon-time"></span> <span class="pull-right"><?php echo $recipe[1];?> min</span></div>
+                  <div><span class="glyphicon glyphicon-dashboard"></span> <span class="pull-right"><?php echo $recipe[2];?> cal</span></div>
+                  <div><span class="glyphicon glyphicon-cutlery"></span> <span class="pull-right"><?php echo $recipe[3];?></span></div>
+                  <div><span class="glyphicon glyphicon-user"></span> <span class="pull-right"><?php echo $recipe[4];?> cal</span></div>
               </div>
             </div>
           </a>
