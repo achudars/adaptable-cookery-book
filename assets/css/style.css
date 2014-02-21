@@ -53,7 +53,7 @@ body nav, input, button {
 }
 
 .nav>li>a {
-    text-transform: uppercase;
+    text--webkit-transform: uppercase;
 }
 .nav>li>a:hover, .nav>li>a:focus {
   color: #000;
@@ -212,17 +212,27 @@ h1 {
     text-align: justify;
     padding: 0;
     min-height: 600px;
+    background: #FFF;
+}
+.recipe .tab-pane {
+    padding: 0 10px;
 }
 .recipe h1 {
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
     background: #383838;
     color: #FFF;
     margin-left: 0;
     padding: 5px;
 }
 .recipe .recipe-img {
-    -moz-box-shadow:    inset 0px 10px 10px #383838;
-    -webkit-box-shadow: inset 0px 10px 10px #383838;
-    box-shadow:         inset 0px 10px 10px #383838;
+    -moz-box-shadow:    inset 0px 10px 20px #383838;
+    -webkit-box-shadow: inset 0px 10px 20px #383838;
+    box-shadow:         inset 0px 10px 20px #383838;
     background-image: url("http://bit.ly/1gJuK0l");
     background-size: cover;
     background-repeat: no-repeat;
@@ -234,7 +244,7 @@ h1 {
     padding: 0 40px;
 }
 .ingredients ul {
-    font-size: 120%;
+    font-size: 110%;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -245,12 +255,15 @@ h1 {
 }
 .ingredients ul li {
     padding: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.ingredients ul li:hover {
+.ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
     background: #333;
     color: #FFF;
-    cursor: pointer;
+    cursor: crosshair;
 }
 .ingredients ul li .amount {
     width: 50px;
@@ -269,3 +282,115 @@ button.dropdown-toggle {
     margin-top: 8px;
     border: none;
 }
+
+
+
+
+
+
+h2 {
+    margin: 3em 0 0 0;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text--webkit-transform: uppercase;
+}
+
+#timeline {
+    list-style: none;
+    margin: 50px 0 30px 30px;
+    padding-left: 30px;
+    border-left: 8px solid #383838;
+}
+
+#timeline li {
+   position: relative;
+   height: 90px;
+   border: 1px solid rgba(0,0,0,0.03);
+   -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#timeline p {
+    margin: 0 0 15px;
+}
+
+.step {
+    margin-top: -10px;
+    top: 50px;
+    left: -70px;
+    position: absolute;
+}
+
+.circle {
+    margin-top: -10px;
+    top: 50%;
+    left: -44px;
+    width: 20px;
+    height: 20px;
+    background: #FFF;
+    border: 5px solid #383838;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+}
+
+.sub {
+    max-height: 20px;
+    padding: 50px 20px 0;
+    border: 1px solid transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.sub:before, .sub:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 1px solid rgba(0, 0, 0, 0);
+    position: absolute;
+    pointer-events: none;
+    right: 100%;
+}
+.sub:before {
+    border-right-color: #383838;
+    border-width: 10px;
+    top: 45px;
+    margin-top: -10px;
+}
+
+
+label {
+    font-weight: 400;
+    top: 15px;
+    left: 20px;
+    right: 40px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.radio {
+    display: none;
+}
+.radio:checked + .relative .circle {
+    background: Coral;
+}
+.radio:checked ~ .sub {
+    min-height: 90px;
+    border-color: #383838;
+}
+.radio:checked ~ .sub p {
+    max-height: 200px;
+    color: #383838;
+    transition: color 0.1s linear 0.1s;
+}
+
+.radio:checked p {
+    max-height: 200px;
+    color: orange;
+}
+
+
