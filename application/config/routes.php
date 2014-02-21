@@ -38,8 +38,11 @@
 |
 */
 
-$route['default_controller'] = "pages/view";
-$route['404_override'] = '';
+$route['default_controller'] = 'recipe/view';
+$route['default_controller'] = 'recipe/view';
+$route['recipe']             = 'recipe/view';
+$route['recipe/(:num)']      = 'recipe/view/$1';
+$route['404_override']       = '';
 
 
 /* End of file routes.php */
