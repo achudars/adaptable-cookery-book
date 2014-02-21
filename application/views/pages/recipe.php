@@ -1,12 +1,6 @@
 <div class="container single-recipe">
     <div class="row">
-
-   <!--  <ul class="nav nav-tabs nav-justified">
-             <li class="active"><a href="#novice" data-toggle="tab" data-target="#novice">novice</a></li>
-             <li><a href="#normal" data-toggle="tab" data-target="#normal">normal</a></li>
-             <li><a href="#expert" data-toggle="tab" data-target="#expert">expert</a></li>
-           </ul> -->
-        <div class="recipe col-xs-8 col-sm-8">
+        <div class="recipe col-sm-7">
             <h1><?php echo $recipes[0][0];?></h1>
             <div class="recipe-img"></div>
             <div class="tab-content">
@@ -50,13 +44,26 @@
             </div>
         </div>
 
-        <div class="ingredients col-xs-4 col-sm-4">
+        <div class="ingredients col-sm-5">
             <ul>
-                <li>ingredient</li>
-                <li>ingredient</li>
-                <li>ingredient</li>
-                <li>ingredient</li>
-                <li>ingredient</li>
+                <li><span class="amount"> 2  </span><span class="ingredient-name"> medium tomatoes                 </span></li>
+                <li><span class="amount"> ½  </span><span class="ingredient-name"> cup French Dressing             </span></li>
+                <li><span class="amount"> 1  </span><span class="ingredient-name"> pound smoke fish fillets        </span></li>
+                <li><span class="amount"> 1  </span><span class="ingredient-name"> cup milk                        </span></li>
+                <li><span class="amount"> 1½ </span><span class="ingredient-name"> cups of rice                    </span></li>
+                <li><span class="amount"> 2  </span><span class="ingredient-name"> tablespoons of butter           </span></li>
+                <li><span class="amount"> 3  </span><span class="ingredient-name"> eggs                            </span></li>
+                <li><span class="amount"> 1  </span><span class="ingredient-name"> block of Canadian Cheddar Cheese</span></li>
+                <li><span class="amount"> &nbsp; </span><span class="ingredient-name"> Green Onions or Chives          </span></li>
+                <li><span class="amount"> 2  </span><span class="ingredient-name"> medium tomatoes                 </span></li>
+                <li><span class="amount"> ½  </span><span class="ingredient-name"> cup French Dressing             </span></li>
+                <li><span class="amount"> 1  </span><span class="ingredient-name"> pound smoke fish fillets        </span></li>
+                <li><span class="amount"> 1  </span><span class="ingredient-name"> cup milk                        </span></li>
+                <li><span class="amount"> 1½ </span><span class="ingredient-name"> cups of rice                    </span></li>
+                <li><span class="amount"> 2  </span><span class="ingredient-name"> tablespoons of butter           </span></li>
+                <li><span class="amount"> 3  </span><span class="ingredient-name"> eggs                            </span></li>
+                <li><span class="amount"> 1  </span><span class="ingredient-name"> block of Canadian Cheddar Cheese</span></li>
+                <li><span class="amount"> &nbsp; </span><span class="ingredient-name"> Onions or Chives                </span></li>
             </ul>
         </div>
     </div>

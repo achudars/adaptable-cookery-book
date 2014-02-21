@@ -41,13 +41,13 @@
                     <span class="btn-group pull-right">
                                   <div class="btn-group">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                      Change recipe style
+                                      Change recipe version style
                                       <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li class="active"><a href="#novice" data-toggle="tab" data-target="#novice">novice</a></li>
-                                        <li><a href="#normal" data-toggle="tab" data-target="#normal">normal</a></li>
-                                        <li><a href="#expert" data-toggle="tab" data-target="#expert">expert</a></li>
+                                        <li class="active"><a href="#novice" data-toggle="tab" data-target="#novice">narrative</a></li>
+                                        <li><a href="#normal" data-toggle="tab" data-target="#normal">segmented</a></li>
+                                        <li><a href="#expert" data-toggle="tab" data-target="#expert">step-by-step</a></li>
                                     </ul>
                                   </div>
                                 </span>
