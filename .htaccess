@@ -1,6 +1,5 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
 
 RewriteCond $1 ^(application|system|private|logs)
 RewriteRule ^(.*)$ index.php/access_denied/$1 [PT,L]
