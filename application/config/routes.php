@@ -39,11 +39,14 @@
 */
 
 $route['default_controller'] = 'recipe/view';
-$route['default_controller'] = 'recipe/view';
-$route['recipe']             = 'recipe/view';
-$route['recipe/(:num)']      = 'recipe/view/$1';
 $route['404_override']       = '';
 
+$route['recipe']        = 'recipe/view';
+$route['recipe/(:num)'] = 'recipe/view/$1';
+
+$route['recipes']           = 'recipes/viewList';
+$route['recipes/list-view'] = 'recipes/viewList';
+$route['recipes/grid-view'] = 'recipes/viewGrid';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
