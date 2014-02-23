@@ -48,5 +48,7 @@ $route['recipes']           = 'recipes/viewList';
 $route['recipes/list-view'] = 'recipes/viewList';
 $route['recipes/grid-view'] = 'recipes/viewGrid';
 
+$route['course/(:num)'] = 'course/view/$1';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
