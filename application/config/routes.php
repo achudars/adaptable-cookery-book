@@ -50,5 +50,7 @@ $route['recipes/grid-view'] = 'recipes/viewGrid';
 
 $route['course/(:num)'] = 'course/view/$1';
 
+$route['courses'] = 'courses/viewAll';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
