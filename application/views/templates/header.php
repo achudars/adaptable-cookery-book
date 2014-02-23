@@ -33,6 +33,7 @@
                         <li class="active"><a href="<?php echo base_url() .  'recipes/grid-view' ?>">GRID Recipes</a></li>
                         <li><a href="<?php echo base_url() . 'recipes/' ?>">LIST Recipes</a></li>
                         <li><a href="<?php echo base_url() . 'recipe/' ?>">Recipe</a></li>
+						<li><a href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
                     <form class="navbar-form navbar-right btn-group" role="search">
                         <div class="btn-group">
