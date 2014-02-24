@@ -7,6 +7,8 @@
     <title>
         <?php echo $title ?>
     </title>
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -15,8 +17,10 @@
 
 <body>
     <header>
+        <div class="brand">
+        </div>
         <nav class="navbar" role="navigation">
-            <div class="container-fluid">
+            <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -35,12 +39,19 @@
                         <li><a href="<?php echo base_url() . 'recipe/' ?>">Recipe</a></li>
 						<li><a href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
-                    <form class="navbar-form navbar-right btn-group" role="search">
-                        <div class="btn-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default btn-group">Submit</button>
-                    </form>
+                    <span class="btn-group pull-right">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                      Change recipe version style
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="#novice" data-toggle="tab" data-target="#novice">narrative</a></li>
+                                        <li><a href="#normal" data-toggle="tab" data-target="#normal">segmented</a></li>
+                                        <li><a href="#expert" data-toggle="tab" data-target="#expert">step-by-step</a></li>
+                                    </ul>
+                                  </div>
+                                </span>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>

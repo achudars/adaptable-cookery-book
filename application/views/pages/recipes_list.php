@@ -1,144 +1,23 @@
 <div class="container">
-    <h1><?php echo $title ?></h1>
-</div>
-
-<div class="container">
-    <div class="row">
+    <?php foreach ($recipes as $recipe):?>
       <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
+          <a href="/recipe">
+            <div class="recipe-title">
+                <p> <?php echo $recipe[0];?> </p>
             </div>
-            <div class="pull-right">
-                <p> recipe </p>
+            <div class="content">
+              <div class="preview-img pull-left" style="background-image: url(<?php echo $recipe[5];?>);"></div>
+              <div class="recipe-text">
+
+              </div>
+              <div class="pull-left split">
+                  <div><span class="glyphicon glyphicon-time"></span> <span class="pull-right"><?php echo $recipe[1];?> min</span></div>
+                  <div><span class="glyphicon glyphicon-dashboard"></span> <span class="pull-right"><?php echo $recipe[2];?> cal</span></div>
+                  <div><span class="glyphicon glyphicon-cutlery"></span> <span class="pull-right"><?php echo $recipe[3];?></span></div>
+                  <div><span class="glyphicon glyphicon-user"></span> <span class="pull-right"><?php echo $recipe[4];?> cal</span></div>
+              </div>
             </div>
           </a>
-
       </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-      <div class="list-recipes col-xs-12">
-          <a href="recipe">
-            <div class="preview-img pull-left">
-
-            </div>
-            <div class="pull-right">
-                <p> recipe </p>
-            </div>
-          </a>
-
-      </div>
-    </div>
+    <?php endforeach;?>
 </div>
