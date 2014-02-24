@@ -286,8 +286,12 @@ button.dropdown-toggle:hover {
     background: none;
     text-decoration: underline;
 }
-
-
+.dropdown-menu {
+    width: 100%;
+}
+.dropdown-menu .active a {
+    background: #383838;
+}
 
 
 
