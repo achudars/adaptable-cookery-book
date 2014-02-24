@@ -1,11 +1,7 @@
 <div class="container">
-    <h1><?php echo $title ?></h1>
-</div>
-
-<div class="container">
     <?php foreach ($recipes as $recipe):?>
       <div class="list-recipes col-xs-12">
-          <a href="recipe">
+          <a href="/recipe">
             <div class="recipe-title">
                 <p> <?php echo $recipe[0];?> </p>
             </div>

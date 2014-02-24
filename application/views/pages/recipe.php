@@ -1,7 +1,7 @@
 <div class="container single-recipe">
     <div class="row">
         <div class="recipe col-sx-7 col-sm-7 col-md-7 col-lg-7">
-            <h1><?php echo $recipes[0][0];?></h1>
+            <h1>Extreme Cajun Flamethrower</h1>
             <div class="recipe-img"></div>
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="novice">

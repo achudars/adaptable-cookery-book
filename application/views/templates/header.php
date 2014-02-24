@@ -11,8 +11,8 @@
     <link rel="icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <?php echo link_tag( 'assets/css/style.css'); ?>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="<?php echo base_url() . 'assets/css/style.css' ?>" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -34,9 +34,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="recipes">GRID Recipes</a></li>
-                        <li><a href="recipes2">LIST Recipes</a></li>
-                        <li><a href="recipe">Recipe</a></li>
+                        <li class="active"><a href="<?php echo base_url() .  'recipes/grid-view' ?>">GRID Recipes</a></li>
+                        <li><a href="<?php echo base_url() . 'recipes/' ?>">LIST Recipes</a></li>
+                        <li><a href="<?php echo base_url() . 'recipe/' ?>">Recipe</a></li>
+						<li><a href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
                     <span class="btn-group pull-right">
                                   <div class="btn-group">

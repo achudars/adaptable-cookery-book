@@ -38,9 +38,20 @@
 |
 */
 
-$route['default_controller'] = "pages/view";
-$route['404_override'] = '';
+$route['default_controller'] = 'recipe/view';
+$route['404_override']       = '';
 
+$route['recipe']        = 'recipe/view';
+$route['recipe/(:num)'] = 'recipe/view/$1';
+
+$route['recipes']           = 'recipes/viewList';
+$route['recipes/list-view'] = 'recipes/viewList';
+$route['recipes/grid-view'] = 'recipes/viewGrid';
+
+$route['course']        = 'courses/viewAll';
+$route['course/(:num)'] = 'course/view/$1';
+
+$route['courses'] = 'courses/viewAll';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
