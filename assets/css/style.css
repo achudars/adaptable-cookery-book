@@ -286,8 +286,15 @@ button.dropdown-toggle:hover {
     background: none;
     text-decoration: underline;
 }
-
-
+.dropdown-menu {
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.dropdown-menu .active a {
+    background: #383838;
+}
 
 
 
