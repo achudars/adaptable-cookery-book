@@ -282,7 +282,10 @@ button.dropdown-toggle {
     margin-top: 8px;
     border: none;
 }
-
+button.dropdown-toggle:hover {
+    background: none;
+    text-decoration: underline;
+}
 
 
 
