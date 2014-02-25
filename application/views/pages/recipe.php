@@ -1,14 +1,14 @@
 <div class="container single-recipe">
     <div class="row">
         <div class="recipe col-sx-7 col-sm-7 col-md-7 col-lg-7">
-            <h1>Extreme Cajun Flamethrower</h1>
+            <h1 tabindex="5">Extreme Cajun Flamethrower</h1>
             <div class="recipe-img"></div>
             <div class="tab-content">
-                <div class="tab-pane fade in active" id="novice">
-                    <h2>Instructions:</h2>
+                <div tabindex="7" class="tab-pane fade in active" id="novice">
+                    <h2 tabindex="8">Instructions:</h2>
 
-                    <ul id='timeline'>
-                        <li class='work'>
+                    <ul tabindex="9" id='timeline'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work1' name='works' type='radio' checked>
                             <div class="relative">
                                 <label for='work1'>Retrieve a 3-quart saucepan and combine meat, water, spices and garlic.</label>
@@ -17,7 +17,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work2' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work2'>Cook over low heat, stiring constantly until meat is brown and half the liquid is gone.</label>
@@ -26,7 +26,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work3' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work3'>Cover and cook for about 45 minutes.</label>
@@ -35,7 +35,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work4' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work4'>While cooking meat, prepare potatoes.  Boil and mash.</label>
@@ -44,7 +44,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work5' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work5'>Mix the meat and potatoes and allow them to cool.</label>
@@ -53,7 +53,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work6' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work6'>Preheat oven to 450 degrees F</label>
@@ -62,7 +62,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work7' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work7'>Prepare crust for 2-crust, 9-inch pie.  Whisk the flour and salt.</label>
@@ -71,7 +71,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work8' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work8'>Blend or cut in butter and lard until it is in coarse crumbs.</label>
@@ -80,7 +80,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work9' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work9'>Drizzle with water, tossing a while with a fork until ragged dough forms, and adding 1 tablespoon more water if necessary.</label>
@@ -89,7 +89,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work10' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work10'>Divide dough in half and shape into disks.  Wrap and chill in fridge for 30 min.</label>
@@ -98,7 +98,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work11' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work11'>Roll out 1 dough into a 9-inch pie crust and line a pie plate.  Fill with the meat mixture.  Roll out and cover the pie with the second dough.</label>
@@ -107,7 +107,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work'>
+                        <li class='work' tabindex="10">
                             <input class='radio' id='work12' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work12'>Bake at 450 degrees F for 10 minutes and reduce heat to 350 degrees F.  Bake for 30-40 more minutes.</label>
@@ -119,14 +119,14 @@
                     </ul>
                 </div>
 <div class="tab-pane fade" id="normal">
-  <h2>Instructions:</h2>
- Cook over low heat in a large saucepan, stirring constantly until meat loses its red colour and about half of the liquid has evaporated.  cover and cook about 45 minutes longer.
+  <h2 tabindex="8">Instructions:</h2>
+ <p tabindex="9">Cook over low heat in a large saucepan, stirring constantly until meat loses its red colour and about half of the liquid has evaporated.  cover and cook about 45 minutes longer.
                     Boil and mash potatoes and mix in with the meat and allow to cool.  Preheat oven to 450 degrees F.  Prepare psatry for 2-crust, 9 inch pie.  Roll out half and line a 9-inch pie plate.  Fill with cooled meat mixture.  Roll out remainder of dough and cover pie.  Flute and seal edges.  Slash top of crust.  Bake for 10 min and reduce heat to 350 degrees F and bake for 30-40 minutes.
-
+</p>
 </div>
 <div class="tab-pane fade" id="expert">
-  <h2>Instructions:</h2>
-  <ul>
+  <h2 tabindex="8">Instructions:</h2>
+  <ul tabindex="9">
     <li> Get one 3-quart saucepan</li>
     <li> Mince 1 small onion finely</li>
     <li> Heat saucepan on low heat</li>
@@ -168,7 +168,7 @@
 </div>
 </div>
 
-<div class="ingredients col-sx-5 col-sm-5 col-md-5 col-lg-5">
+<div tabindex="6" class="ingredients col-sx-5 col-sm-5 col-md-5 col-lg-5" title="list of ingredients">
     <ul>
         <li> <span class="amount"> 2  </span><span class="ingredient-name"> medium tomatoes                 </span></li>
         <li> <span class="amount"> ½  </span><span class="ingredient-name"> cup French Dressing             </span></li>
