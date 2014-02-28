@@ -1,6 +1,8 @@
 <div class="container">
-    <h1>Course</h1>
     <div class="row">
-		<p>Here's some filler text that will have a specific course in it.</p>
-    </div>
+        <div class="recipe col-sx-12 col-sm-12 col-md-12 col-lg-12">
+            <h1><?php echo $courseName ?></h1>
+            <div class="recipe-img" style="background-image: url(<?php echo $courseImage ?>)"></div>
+		</div>
+	</div>
 </div>

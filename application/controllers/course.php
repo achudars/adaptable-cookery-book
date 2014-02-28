@@ -21,6 +21,9 @@
 
 			$data['title'] = 'Course Title From Database';
 
+			$data['courseName']  = 'Main Courses';
+			$data['courseImage'] = 'http://www.brake.co.uk/_assets/720xn/Main_Course_Poster_720x430px_1.jpg';
+
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
 			$this->load->view('pages/course.php', $data);
