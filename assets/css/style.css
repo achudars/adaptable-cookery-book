@@ -372,7 +372,7 @@ h2 {
     content: "";
     width: 0;
     height: 0;
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0,0,0,0);
     position: absolute;
     pointer-events: none;
     right: 100%;
@@ -383,7 +383,9 @@ h2 {
     top: 45px;
     margin-top: -10px;
 }
-
+input:not(:checked) + .relative +  .sub:before {
+    border: none;
+}
 
 label {
     font-weight: 400;
