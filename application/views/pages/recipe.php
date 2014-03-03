@@ -2,7 +2,7 @@
     <div class="row">
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <h1 tabindex="5">Extreme Cajun Flamethrower</h1>
-            <div class="recipe-img"></div>
+            <img alt="" class="recipe-img">
         </div>
         <div class="col-sx-12 col-sm-12 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4 ingredients">
             <h2 tabindex="8">Ingredients:</h2>

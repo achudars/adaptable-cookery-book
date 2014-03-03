@@ -132,6 +132,8 @@ h1 {
     -moz-box-shadow:    inset 0px -10px 10px #383838;
     -webkit-box-shadow: inset 0px -10px 10px #383838;
     box-shadow:         inset 0px -10px 10px #383838;
+    width: 100%;
+    height: 70%;
 }
 
 .list-recipes > a .preview-img {
@@ -145,9 +147,6 @@ h1 {
     height: 100%;
 }
 
-.grid-recipes a > .preview-img {
-    height: 70%;
-}
 .grid-recipes a > .recipe-title {
     height: 10%;
     margin-bottom: 5px;
@@ -242,6 +241,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 300px;
+    width: 100%;
 }
 .container.single-recipe {
     padding: 0 40px;
@@ -256,6 +256,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 300px;
+    width: 100%;
     -moz-box-shadow:    inset 0px 10px 20px #383838;
     -webkit-box-shadow: inset 0px 10px 20px #383838;
     box-shadow:         inset 0px 10px 20px #383838;
@@ -442,4 +443,7 @@ span.the {
 }
 span.the:hover {
     cursor: pointer;
+}
+img {
+    -webkit-box-shadow:none;
 }
