@@ -1,9 +1,9 @@
 <div class="container">
     <?php foreach ($recipes as $recipe):?>
       <div class="list-recipes col-xs-12">
-          <a href="/recipe">
+          <div class="holder">
             <div class="recipe-title">
-                <p> <?php echo $recipe[0];?> </p>
+                <p><a href="/recipe"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe[0];?></a></p>
             </div>
             <div class="content">
               <img alt="" class="preview-img pull-left" style="background-image: url(<?php echo $recipe[5];?>);">
@@ -17,7 +17,7 @@
                   <div><span class="glyphicon glyphicon-user"></span> <span class="pull-right"><?php echo $recipe[4];?> cal</span></div>
               </div>
             </div>
-          </a>
+          </div>
       </div>
     <?php endforeach;?>
 </div>

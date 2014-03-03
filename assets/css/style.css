@@ -97,7 +97,7 @@ h1 {
     padding: 10px;
     min-height: 300px;
 }
-.grid-recipes > a, .list-recipes > a {
+.grid-recipes > .holder, .list-recipes > .holder {
     background: #FFF;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -114,13 +114,12 @@ h1 {
     -webkit-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
     box-shadow:         0px 0px 3px 2px rgba(0,0,0,0.2);
 }
-.grid-recipes > a:hover, .list-recipes > a:hover {
+.grid-recipes > .holder:hover, .list-recipes > .holder:hover {
     -moz-box-shadow:    0px 0px 3px 2px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.5);
     box-shadow:         0px 0px 3px 2px rgba(0,0,0,0.5);
-    cursor: pointer;
 }
-.grid-recipes > a .preview-img {
+.grid-recipes > .holder .preview-img {
     -webkit-border-top-left-radius: 3px;
     -moz-border-top-left-radius: 3px;
     border-top-left-radius: 3px;
@@ -136,7 +135,7 @@ h1 {
     height: 70%;
 }
 
-.list-recipes > a .preview-img {
+.list-recipes > .holder .preview-img {
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -147,35 +146,35 @@ h1 {
     height: 100%;
 }
 
-.grid-recipes a > .recipe-title {
+.grid-recipes .holder > .recipe-title {
     height: 10%;
     margin-bottom: 5px;
 }
-.grid-recipes a > .split {
+.grid-recipes .holder > .split {
     height: 10%;
     margin-top: -5px;
 }
-.grid-recipes a > .split > span {
+.grid-recipes .holder > .split > span {
     width: 48%;
     height: 100%;
     display: inline-block;
     color: #383838;
     margin-top: 2.5px;
 }
-.grid-recipes a > .split > span:first-child {
+.grid-recipes .holder > .split > span:first-child {
     padding-left: 5px;
     text-align: left;
 }
-.grid-recipes a > .split > span:last-child {
+.grid-recipes .holder > .split > span:last-child {
     padding-right: 5px;
     text-align: right;
 }
 
-.list-recipes a > div.pull-right {
+.list-recipes .holder > div.pull-right {
     width: 100%;
     position: absolute;
 }
-.grid-recipes a > div p {
+.grid-recipes .holder > div p {
     color: #FFF;
     background: #383838;
     padding-bottom: 5px;
@@ -185,13 +184,13 @@ h1 {
     margin-left: -5px;
     margin-right: -6px;
 }
-.list-recipes a > div p {
+.list-recipes .holder > div p {
     padding-top: 2.5px;
     color: #FFF;
     margin-left: -5px;
     margin-right: -6px;
 }
-.grid-recipes a > div p:after{
+.grid-recipes .holder > div p:after{
    border-color:  #383838 transparent transparent #383838;
    border-style:solid;
    border-width: 3px;
@@ -202,7 +201,7 @@ h1 {
    margin-top: 25px;
    content: "";
 }
-.grid-recipes a > div p:before{
+.grid-recipes .holder > div p:before{
     border-color: #383838 #383838 transparent transparent;
    border-style:solid;
    border-width: 3px;
@@ -213,6 +212,18 @@ h1 {
    margin-top: 25px;
    content: "";
 }
+
+div p a {
+    color: #FFF;
+}
+div p a:hover {
+    cursor: pointer;
+    color: Coral;
+}
+.glyphicon {
+    font-size: smaller;
+}
+
 .list-recipes .recipe-title {
     -webkit-border-top-left-radius: 3px;
     -moz-border-top-left-radius: 3px;
