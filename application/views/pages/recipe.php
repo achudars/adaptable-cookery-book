@@ -44,7 +44,7 @@
                         <li class='work' tabindex="10">
                             <input class='radio' id='work1' name='works' type='radio' checked>
                             <div class="relative">
-                                <label for='work1'>Retrieve a 3-quart saucepan and combine meat, water, spices and garlic.</label>
+                                <label for='work1'>Retrieve a 3-quart saucepan and combine <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span>, water, spices and garlic.</label>
                                 <span class='step'>1</span>
                                 <span class='circle'></span>
                             </div>
@@ -53,7 +53,7 @@
                         <li class='work' tabindex="10">
                             <input class='radio' id='work2' name='works' type='radio'>
                             <div class="relative">
-                                <label for='work2'>Cook over low heat, stiring constantly until meat is brown and half the liquid is gone.</label>
+                                <label for='work2'>Cook over low heat, stiring constantly until <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> is brown and half the liquid is gone.</label>
                                 <span class='step'>2</span>
                                 <span class='circle'></span>
                             </div>
@@ -71,7 +71,7 @@
                         <li class='work' tabindex="10">
                             <input class='radio' id='work4' name='works' type='radio'>
                             <div class="relative">
-                                <label for='work4'>While cooking meat, prepare potatoes. Boil and mash.</label>
+                                <label for='work4'>While cooking <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span>, prepare potatoes. Boil and mash.</label>
                                 <span class='step'>4</span>
                                 <span class='circle'></span>
                             </div>
@@ -80,7 +80,7 @@
                         <li class='work' tabindex="10">
                             <input class='radio' id='work5' name='works' type='radio'>
                             <div class="relative">
-                                <label for='work5'>Mix the meat and potatoes and allow them to cool.</label>
+                                <label for='work5'>Mix the <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> and potatoes and allow them to cool.</label>
                                 <span class='step'>5</span>
                                 <span class='circle'></span>
                             </div>
@@ -134,7 +134,7 @@
                         <li class='work' tabindex="10">
                             <input class='radio' id='work11' name='works' type='radio'>
                             <div class="relative">
-                                <label for='work11'>Roll out 1 dough into a 9-inch pie crust and line a pie plate. Fill with the meat mixture. Roll out and cover the pie with the second dough.</label>
+                                <label for='work11'>Roll out 1 dough into a 9-inch pie crust and line a pie plate. Fill with the <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> mixture. Roll out and cover the pie with the second dough.</label>
                                 <span class='step'>11</span>
                                 <span class='circle'></span>
                             </div>
@@ -153,8 +153,8 @@
                 </div>
                 <div class="tab-pane fade" id="segmented">
                     <h2 tabindex="8">Instructions:</h2>
-                    <p tabindex="9">Cook over low heat in a large saucepan, stirring constantly until meat loses its red colour and about half of the liquid has evaporated. cover and cook about 45 minutes longer. Boil and mash potatoes and mix in with the meat and allow
-                        to cool. Preheat oven to 450 degrees F. Prepare psatry for 2-crust, 9 inch pie. Roll out half and line a 9-inch pie plate. Fill with cooled meat mixture. Roll out remainder of dough and cover pie. Flute and seal edges. Slash top
+                    <p tabindex="9">Cook over low heat in a large saucepan, stirring constantly until <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> loses its red colour and about half of the liquid has evaporated. cover and cook about 45 minutes longer. Boil and mash potatoes and mix in with the <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> and allow
+                        to cool. Preheat oven to 450 degrees F. Prepare psatry for 2-crust, 9 inch pie. Roll out half and line a 9-inch pie plate. Fill with cooled <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> mixture. Roll out remainder of dough and cover pie. Flute and seal edges. Slash top
                         of crust. Bake for 10 min and reduce heat to 350 degrees F and bake for 30-40 minutes.
                     </p>
                 </div>
@@ -165,7 +165,7 @@
                         <li>Mince 1 small onion finely</li>
                         <li>Heat saucepan on low heat</li>
                         <li>Add 1 ½ pounds of ground lean pork to saucepan</li>
-                        <li>Mix in 1 minced onion to meat</li>
+                        <li>Mix in 1 minced onion to <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span></li>
                         <li>Mix in 1 ½ teaspoons of salt.</li>
                         <li>Mix in ¼ teaspoon of celery salt</li>
                         <li>Mix in ¼ teaspoon of back pepper</li>
@@ -173,12 +173,12 @@
                         <li>Mix in 1 knife-tip of ground cloves (1/16 teaspoon)</li>
                         <li>Chop 1 garlic clove</li>
                         <li>Mix in 1 garlic clove</li>
-                        <li>Cook while stiring slowly on low heat. Stop when meat has turned brown and half of the liquid has evaporated.</li>
+                        <li>Cook while stiring slowly on low heat. Stop when <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> has turned brown and half of the liquid has evaporated.</li>
                         <li>Cover pan and cook on low heat for 45 minutes.</li>
-                        <li>While meat is cooking boil a large pot of water.</li>
+                        <li>While <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> is cooking boil a large pot of water.</li>
                         <li>Place 3 potatoes in pot and boil until soft.</li>
                         <li>Mash potatoes.</li>
-                        <li>When meat is done cooking, mix in potatoes and allow to cool.</li>
+                        <li>When <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> is done cooking, mix in potatoes and allow to cool.</li>
                         <li>While cooling, make pie crust. Begin by filling mixing bowl with 2 ½ cups of flour and ¾ teaspoon of salt.</li>
                         <li>Cube ⅔ cup of butter</li>
                         <li>Cube ⅓ cup of lard</li>
@@ -189,7 +189,7 @@
                         <li>Cover dough with cling film and allow to cool in the fridge for 30 min.</li>
                         <li>Roll one dough out to cover 9-inch pie plate.</li>
                         <li>Cover 9-inch pie plate with pie crust doug.</li>
-                        <li>Add the cooled meat and potatoe mixture.</li>
+                        <li>Add the cooled <span class="the" data-toggle="tooltip" data-placement="top" title="meat" data-original-title="meat2">meat</span> and potatoe mixture.</li>
                         <li>Roll one dough out to form the top of the pie.</li>
                         <li>Cover pie top.</li>
                         <li>Flute and seal the pie.</li>
