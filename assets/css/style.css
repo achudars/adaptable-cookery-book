@@ -253,6 +253,7 @@ h1 {
     background: #383838;
     list-style: none;
     color: #EEE;
+    position: fixed;
 }
 .ingredients ul li {
     padding: 4px 0;
