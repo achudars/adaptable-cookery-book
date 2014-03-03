@@ -285,7 +285,7 @@ h1 {
 @media (min-width: 990px) {
     .ingredients ul {
         position: fixed;
-        margin-top: 30px;
+        margin-top: 40px;
     }
     .ingredients h2 {
         position: fixed;
@@ -307,15 +307,6 @@ button.dropdown-toggle:hover {
 }
 .dropdown-menu .active a {
     background: #383838;
-}
-
-
-
-h2 {
-    margin: 3em 0 0 0;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    text--webkit-transform: uppercase;
 }
 
 #timeline {

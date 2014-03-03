@@ -5,7 +5,7 @@
             <div class="recipe-img"></div>
         </div>
         <div class="col-sx-12 col-sm-12 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4 ingredients">
-            <h2 tabindex="8">Ingredients</h2>
+            <h2 tabindex="8">Ingredients:</h2>
             <ul>
                 <li> <span class="amount"> 2  </span><span class="ingredient-name"> medium tomatoes                 </span></li>
                 <li> <span class="amount"> ½  </span><span class="ingredient-name"> cup French Dressing             </span></li>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="tab-pane fade" id="step-by-step">
                     <h2 tabindex="8">Instructions:</h2>
-                    <ul tabindex="9">
+                    <ol tabindex="9">
                         <li>Get one 3-quart saucepan</li>
                         <li>Mince 1 small onion finely</li>
                         <li>Heat saucepan on low heat</li>
@@ -197,7 +197,7 @@
                         <li>Cook pie for 10 minutes at 450 degrees F.</li>
                         <li>Reduce heat to 350 degrees F.</li>
                         <li>Cook for 30-40 min at 350 degrees F.</li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
