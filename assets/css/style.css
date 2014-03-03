@@ -324,13 +324,16 @@ button.dropdown-toggle:hover {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+#timeline li:hover {
+    border: 1px solid Coral;
+}
 
 #timeline p {
     margin: 0 0 15px;
 }
 
 .step {
-    margin-top: -10px;
+    margin-top: -16px;
     top: 50px;
     left: -70px;
     position: absolute;

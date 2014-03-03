@@ -41,7 +41,7 @@
                     <h2 tabindex="8">Instructions:</h2>
 
                     <ul tabindex="9" id='timeline'>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work1' name='works' type='radio' checked>
                             <div class="relative">
                                 <label for='work1'>Retrieve a 3-quart saucepan and combine meat, water, spices and garlic.</label>
@@ -50,7 +50,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work2' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work2'>Cook over low heat, stiring constantly until meat is brown and half the liquid is gone.</label>
@@ -59,7 +59,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work3' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work3'>Cover and cook for about 45 minutes.</label>
@@ -68,7 +68,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work4' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work4'>While cooking meat, prepare potatoes. Boil and mash.</label>
@@ -77,7 +77,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work5' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work5'>Mix the meat and potatoes and allow them to cool.</label>
@@ -86,7 +86,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work6' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work6'>Preheat oven to 450 degrees F</label>
@@ -95,7 +95,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work7' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work7'>Prepare crust for 2-crust, 9-inch pie. Whisk the flour and salt.</label>
@@ -104,7 +104,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work8' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work8'>Blend or cut in butter and lard until it is in coarse crumbs.</label>
@@ -113,7 +113,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work9' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work9'>Drizzle with water, tossing a while with a fork until ragged dough forms, and adding 1 tablespoon more water if necessary.</label>
@@ -122,7 +122,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work10' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work10'>Divide dough in half and shape into disks. Wrap and chill in fridge for 30 min.</label>
@@ -131,7 +131,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work11' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work11'>Roll out 1 dough into a 9-inch pie crust and line a pie plate. Fill with the meat mixture. Roll out and cover the pie with the second dough.</label>
@@ -140,7 +140,7 @@
                             </div>
                             <div class='sub'></div>
                         </li>
-                        <li class='work' tabindex="10">
+                        <li tabindex="10">
                             <input class='radio' id='work12' name='works' type='radio'>
                             <div class="relative">
                                 <label for='work12'>Bake at 450 degrees F for 10 minutes and reduce heat to 350 degrees F. Bake for 30-40 more minutes.</label>
