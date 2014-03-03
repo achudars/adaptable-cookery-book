@@ -271,7 +271,6 @@ h1 {
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
     background: #333;
     color: #FFF;
-    cursor: crosshair;
 }
 .ingredients ul li .amount {
     width: 50px;
@@ -417,6 +416,9 @@ label {
 }
 
 span.the {
-    color: red;
+    color: Coral;
     font-weight: bold;
+}
+span.the:hover {
+    cursor: pointer;
 }
