@@ -2,7 +2,7 @@
     <?php foreach ($recipes as $recipe):?>
       <div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <a href="/recipe">
-            <div class="preview-img" style="background-image: url(<?php echo $recipe[5];?>);"></div>
+            <img alt="" class="preview-img" style="background-image: url(<?php echo $recipe[5];?>);">
             <div class="recipe-title">
                 <p> <?php echo $recipe[0];?> </p>
             </div>

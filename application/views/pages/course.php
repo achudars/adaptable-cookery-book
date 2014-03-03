@@ -2,7 +2,7 @@
     <div class="row">
         <div class="recipe col-sx-12 col-sm-12 col-md-12 col-lg-12">
             <h1><?php echo $courseName ?></h1>
-            <div class="course-img" style="background-image: url(<?php echo $courseImage ?>)"></div>
+            <img alt="" class="course-img" src="" style="background-image: url(<?php echo $courseImage ?>)">
 		</div>
 	</div>
 </div>
@@ -10,7 +10,7 @@
     <?php foreach ($recipes as $recipe):?>
       <div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <a href="/recipe">
-            <div class="preview-img" style="background-image: url(<?php echo $recipe[5];?>);"></div>
+            <img alt="" class="preview-img" src="" style="background-image: url(<?php echo $recipe[5];?>);">
             <div class="recipe-title">
                 <p> <?php echo $recipe[0];?> </p>
             </div>

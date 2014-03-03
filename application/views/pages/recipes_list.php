@@ -6,7 +6,7 @@
                 <p> <?php echo $recipe[0];?> </p>
             </div>
             <div class="content">
-              <div class="preview-img pull-left" style="background-image: url(<?php echo $recipe[5];?>);"></div>
+              <img alt="" class="preview-img pull-left" style="background-image: url(<?php echo $recipe[5];?>);">
               <div class="recipe-text">
 
               </div>
