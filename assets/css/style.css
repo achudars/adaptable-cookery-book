@@ -213,7 +213,6 @@ h1 {
 }
 .recipe {
     padding: 0;
-    min-height: 600px;
     background: #FFF;
 }
 .recipe .tab-pane {
@@ -244,6 +243,9 @@ h1 {
 .container.single-recipe {
     padding: 0 40px;
 }
+.ingredients {
+    padding: 0;
+}
 .ingredients ul {
     font-size: 110%;
     -webkit-border-radius: 3px;
@@ -253,7 +255,11 @@ h1 {
     background: #383838;
     list-style: none;
     color: #EEE;
-    position: fixed;
+}
+@media (min-width: 990px) {
+    .ingredients ul {
+        position: fixed;
+    }
 }
 .ingredients ul li {
     padding: 4px 0;
