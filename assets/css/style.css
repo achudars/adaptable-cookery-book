@@ -230,6 +230,9 @@ h1 {
     margin-left: 0;
     padding: 5px;
 }
+.recipe p {
+    margin-bottom: 40px;
+}
 .recipe .recipe-img {
     -moz-box-shadow:    inset 0px 10px 20px #383838;
     -webkit-box-shadow: inset 0px 10px 20px #383838;
@@ -260,7 +263,7 @@ h1 {
     margin: 0;
 }
 .ingredients ul li {
-    padding: 4px 0;
+    padding: 4px 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -317,6 +320,7 @@ button.dropdown-toggle:hover {
 }
 
 #timeline li {
+    outline: none;
    position: relative;
    height: 90px;
    border: 1px solid rgba(0,0,0,0.03);
