@@ -34,9 +34,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li tabindex="1"  class="active"><a title="grid"href="<?php echo base_url() .  'recipes/grid-view' ?>">Grid</a></li>
-                        <li tabindex="2"  ><a title="list" href="<?php echo base_url() . 'recipes/' ?>">List</a></li>
-						<li tabindex="3"  ><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
+                        <li tabindex="1"  class="<?php echo $this->uri->segment(2) == 'grid-view' ? 'active' : '' ?>"><a title="grid"href="<?php echo base_url() .  'recipes/grid-view' ?>">Grid</a></li>
+                        <li tabindex="2"  class="<?php echo $this->uri->segment(2) == 'list-view' ? 'active' : '' ?>"><a title="list" href="<?php echo base_url() . 'recipes/list-view' ?>">List</a></li>
+						<li tabindex="3"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
                     <span class="btn-group pull-right">
                       <div class="btn-group">
