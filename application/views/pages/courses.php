@@ -6,8 +6,8 @@
             <div class="course-title">
                 <p> <?php echo $course['courseName'];?> </p>
             </div>
-            <div class="split">
-                <span><?php echo $course['recipeCount'];?> recipes <span class="glyphicon glyphicon-list"></span></span>
+            <div>
+                <span class="glyphicon glyphicon-list"></span> <?php echo $course['recipeCount'];?> recipes
             </div>
           </a>
       </div>
