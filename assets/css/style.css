@@ -246,6 +246,27 @@ h1 {
 .container.single-recipe {
     padding: 0 40px;
 }
+
+.container.course {
+    padding: 0 40px;
+
+}
+.container.course .course-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 300px;
+    -moz-box-shadow:    inset 0px 10px 20px #383838;
+    -webkit-box-shadow: inset 0px 10px 20px #383838;
+    box-shadow:         inset 0px 10px 20px #383838;
+    -webkit-border-bottom-left-radius: 3px !important;
+    -moz-border-bottom-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+    -webkit-border-bottom-right-radius: 3px !important;
+    -moz-border-bottom-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+}
+
 .ingredients {
     padding: 0;
 }
