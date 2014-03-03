@@ -45,9 +45,9 @@
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" tabindex="5">
-                            <li tabindex="5" class="active"><a href="#novice" data-toggle="tab" data-target="#novice">narrative</a></li>
-                            <li tabindex="5"><a href="#normal" data-toggle="tab" data-target="#normal">segmented</a></li>
-                            <li tabindex="5"><a href="#expert" data-toggle="tab" data-target="#expert">step-by-step</a></li>
+                            <li tabindex="5" class="active"><a href="#narrative" data-toggle="tab" data-target="#narrative">narrative</a></li>
+                            <li tabindex="5"><a href="#segmented" data-toggle="tab" data-target="#segmented">segmented</a></li>
+                            <li tabindex="5"><a href="#step-by-step" data-toggle="tab" data-target="#step-by-step">step-by-step</a></li>
                         </ul>
                       </div>
                     </span>
