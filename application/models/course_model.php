@@ -7,7 +7,12 @@ class CourseModel extends CI_Model
         parent::__construct();
     }
     
-    public function getAllCourses($courseid) {
+    /**
+     * Loads a list of all the types of courses, and their basic information
+     * 
+     * @return Array[Object] [{courseid, name, description}, ...]
+     */
+    public function getAllCourses() {
         $this->db->select('courseid, name, description')
                 ->from('course')
                 ->order_by('name', 'asc');
@@ -15,6 +20,13 @@ class CourseModel extends CI_Model
         return $this->db->get();
     }
     
+    /**
+     * Loads information about a course
+     * 
+     * @param int $courseid
+     * @return Object {courseid, name, description}
+     * @throws Exception if a course does not exist
+     */
     public function getCourseInfo($courseid) {
         $this->db->select('name, description')
                 ->from('course')
@@ -27,7 +39,7 @@ class CourseModel extends CI_Model
         {
             throw new Exception('That course could not be found.', 404);
         } else {
-            return $q->result();
+            return $q->result()[0];
         }
     }
 }

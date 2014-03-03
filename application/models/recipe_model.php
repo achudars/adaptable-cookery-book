@@ -12,7 +12,7 @@ class RecipeModel extends CI_Model
      * Loads basic details about a recipe, useful for menu pages.
      * 
      * @param int $recipeid
-     * @return Array A set of [recipeid, name, courseid, diettype, serves and imageurl]
+     * @return Object A set of {recipeid, name, courseid, diettype, serves, imageurl}
      * @throws Exception On failure to find the recipe.
      */
     public function getRecipeInfo($recipeid)
@@ -33,11 +33,27 @@ class RecipeModel extends CI_Model
     }
     
     /**
+     * Loads basic details for all recipes for a given course.
+     * 
+     * @param int $courseid
+     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl},...]
+     */
+    public function getRecipesForCourse($courseid)
+    {
+        $this->db->select('recipeid, name, diettype, serves, imageurl')
+                  ->from('recipe')
+                  ->where(['courseid' => $courseid])
+                  ->order_by('name', 'asc');
+        
+        return $this->db->get();
+    }
+    
+    /**
      * Gets all the information necessary to display the narrative form
      * of the recipe.
      * 
      * @param int $recipeid
-     * @return Array [narrative, ingredients[]]
+     * @return Object {instructions, ingredients[]}
      * @throws Exception On failure to find the recipe
      */
     public function getRecipeNarrative($recipeid)
@@ -58,6 +74,13 @@ class RecipeModel extends CI_Model
         }
     }
     
+    /**
+     * Gets all the information necessary to display the segmented form
+     * of the recipe.
+     * 
+     * @param int $recipeid
+     * @return Object {instructions[{stepid, instruction}], ingredients[]}
+     */
     public function getRecipeSegmented($recipeid)
     {
         $this->db->select('stepid, instruction')
@@ -70,6 +93,13 @@ class RecipeModel extends CI_Model
         return $recipe;
     }
     
+    /**
+     * Gets all the information necessary to display the stepped form
+     * of the recipe.
+     * 
+     * @param int $recipeid
+     * @return Object {instructions[{stepid, instruction}], ingredients[]}
+     */
     public function getRecipeStepped($recipeid)
     {
         $this->db->select('stepid, instruction')
@@ -82,6 +112,15 @@ class RecipeModel extends CI_Model
         return $recipe;
     }
     
+    /**
+     * Gets all the ingredients for the narrative recipe, except those excluded.
+     * 
+     * Segmented and stepped recipes will use the same ingredient set as
+     * narrative, unless they are explicitly overridden.
+     * 
+     * @param int $recipeid
+     * @return Array[Object] [{name, quantity, section, units}]
+     */
     private function getNarrativeIngredientsExcept($recipeid, $except)
     {
         $this->db->select('name, quantity, section, units')
@@ -92,11 +131,24 @@ class RecipeModel extends CI_Model
         return $this->db->get();
     }
     
+    /**
+     * Loads the ingredients needed for the Narrative view of the recipe.
+     * 
+     * @param int $recipeid
+     * @return Array[Object] [{name, quantity, section, units}]
+     */
     private function getNarrativeIngredients($recipeid)
     {
         return $this->getNarrativeIngredientsExcept($recipeid, []);
     }
     
+    /**
+     * Loads the ingredients needed for the Segmented view of the recipe.
+     * 
+     * @param int $recipeid
+     * @return Array[Object] [{name, quantity, section, units}]
+     * @todo Look at providing a consistent ordering
+     */
     private function getSegmentedIngredients($recipeid)
     {
         $this->db->select('name, quantity, section, units, replaces')
@@ -119,6 +171,13 @@ class RecipeModel extends CI_Model
         return array_merge($ingredients, $narrative);
     }
     
+    /**
+     * Loads the ingredients needed for the Stepped view of the recipe.
+     * 
+     * @param int $recipeid
+     * @return Array[Object] [{name, quantity, section, units}]
+     * @todo Look at providing a consistent ordering
+     */
     private function getSteppedIngredients($recipeid)
     {
         $this->db->select('name, quantity, section, units, replaces')
