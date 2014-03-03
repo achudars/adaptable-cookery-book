@@ -52,9 +52,6 @@ body nav, input, button {
     margin-right: 25px;
 }
 
-.nav>li>a {
-    text--webkit-transform: uppercase;
-}
 .nav>li>a:hover, .nav>li>a:focus {
   color: #000;
   background: none;
@@ -62,6 +59,12 @@ body nav, input, button {
 }
 .nav>li.active a {
   color: #B01141;
+}
+.nav-tabs.nav-justified>li>a {
+    padding: 10px;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
 }
 
 .navbar > .container {
@@ -209,7 +212,6 @@ h1 {
     height: 30%;
 }
 .recipe {
-    text-align: justify;
     padding: 0;
     min-height: 600px;
     background: #FFF;
@@ -238,7 +240,6 @@ h1 {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 300px;
-    margin-bottom: 20px;
 }
 .container.single-recipe {
     padding: 0 40px;
