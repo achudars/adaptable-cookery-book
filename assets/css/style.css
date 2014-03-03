@@ -256,10 +256,8 @@ h1 {
     list-style: none;
     color: #EEE;
 }
-@media (min-width: 990px) {
-    .ingredients ul {
-        position: fixed;
-    }
+.ingredients h2 {
+    margin: 0;
 }
 .ingredients ul li {
     padding: 4px 0;
@@ -267,7 +265,6 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
     background: #333;
     color: #FFF;
@@ -285,7 +282,15 @@ h1 {
     color: Lavender;
     height: 24px;
 }
-
+@media (min-width: 990px) {
+    .ingredients ul {
+        position: fixed;
+        margin-top: 30px;
+    }
+    .ingredients h2 {
+        position: fixed;
+    }
+}
 button.dropdown-toggle {
     margin-top: 8px;
     border: none;

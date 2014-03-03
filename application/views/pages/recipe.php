@@ -5,6 +5,7 @@
             <div class="recipe-img"></div>
         </div>
         <div class="col-sx-12 col-sm-12 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4 ingredients">
+            <h2 tabindex="8">Ingredients</h2>
             <ul>
                 <li> <span class="amount"> 2  </span><span class="ingredient-name"> medium tomatoes                 </span></li>
                 <li> <span class="amount"> ½  </span><span class="ingredient-name"> cup French Dressing             </span></li>
