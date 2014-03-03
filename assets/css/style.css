@@ -230,6 +230,9 @@ h1 {
     margin-left: 0;
     padding: 5px;
 }
+.recipe p {
+    margin-bottom: 40px;
+}
 .recipe .recipe-img {
     -moz-box-shadow:    inset 0px 10px 20px #383838;
     -webkit-box-shadow: inset 0px 10px 20px #383838;
@@ -260,7 +263,7 @@ h1 {
     margin: 0;
 }
 .ingredients ul li {
-    padding: 4px 0;
+    padding: 4px 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -285,7 +288,7 @@ h1 {
 @media (min-width: 990px) {
     .ingredients ul {
         position: fixed;
-        margin-top: 30px;
+        margin-top: 40px;
     }
     .ingredients h2 {
         position: fixed;
@@ -309,15 +312,6 @@ button.dropdown-toggle:hover {
     background: #383838;
 }
 
-
-
-h2 {
-    margin: 3em 0 0 0;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    text--webkit-transform: uppercase;
-}
-
 #timeline {
     list-style: none;
     margin: 50px 0 30px 30px;
@@ -326,6 +320,7 @@ h2 {
 }
 
 #timeline li {
+    outline: none;
    position: relative;
    height: 90px;
    border: 1px solid rgba(0,0,0,0.03);
@@ -333,13 +328,16 @@ h2 {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+#timeline li:hover {
+    border: 1px solid Coral;
+}
 
 #timeline p {
     margin: 0 0 15px;
 }
 
 .step {
-    margin-top: -10px;
+    margin-top: -16px;
     top: 50px;
     left: -70px;
     position: absolute;
@@ -372,7 +370,7 @@ h2 {
     content: "";
     width: 0;
     height: 0;
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0,0,0,0);
     position: absolute;
     pointer-events: none;
     right: 100%;
@@ -383,7 +381,9 @@ h2 {
     top: 45px;
     margin-top: -10px;
 }
-
+input:not(:checked) + .relative +  .sub:before {
+    border: none;
+}
 
 label {
     font-weight: 400;
