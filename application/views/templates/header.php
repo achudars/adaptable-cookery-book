@@ -17,8 +17,8 @@
 
 <body>
     <header>
-        <div class="brand">
-        </div>
+        <a class="brand" href="<?php echo base_url() . 'recipes/grid-view' ?>">
+        </a>
         <nav class="navbar" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
