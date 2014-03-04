@@ -30,13 +30,13 @@
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <ul class="nav nav-tabs nav-justified">
                 <li class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
-					<a href="#narrative" data-toggle="tab" data-target="#narrative">narrative</a>
+					<a class="recipe-style" href="#narrative" data-style="narrative" data-toggle="tab" data-target="#narrative">narrative</a>
                 </li>
                 <li class="<?php echo $defaultStyle == 'segmented' ? 'active' : '' ?>">
-					<a href="#segmented" data-toggle="tab" data-target="#segmented">segmented</a>
+					<a class="recipe-style" href="#segmented" data-style="segmented" data-toggle="tab" data-target="#segmented">segmented</a>
                 </li>
                 <li class="<?php echo $defaultStyle == 'step' ? 'active' : '' ?>">
-					<a href="#step-by-step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
+					<a class="recipe-style" href="#step-by-step" data-style="step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
                 </li>
             </ul>
             <div class="tab-content">

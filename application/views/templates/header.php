@@ -64,7 +64,7 @@
 	<div class="container">
 		<div class="alert alert-danger style-change-error hidden">
 			<strong>Sorry, there was a problem changing the style of your recipes.</strong><br />
-			There was a problem sending your request to the server. Please try selecting your preferred recipe style again.<br />
-			If this problem continues, try refreshing the page or coming back later.
+			Although the recipe has changed here, the system can't remember your change at the moment.</br />
+			As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.
 		</div>
 	</div>
