@@ -7,6 +7,13 @@
 	{
 		public function changeRecipeStyle()
 		{
-			error_log("fndsjkndsfnkdsjnfnksdkjnf");
+			if(!isset($_POST['recispeStyle']))
+			{
+				error_log(__FILE__ . ':' . __LINE__ . ' - Received incorrect data when style change requested. Expected new style, data not sent.');
+				header('HTTP/1.1 400 Bad Request');
+				return;
+			}
+
+
 		}
 	}
