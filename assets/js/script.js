@@ -31,17 +31,16 @@ $(document).ready(function() {
 	};
 
 	$('.recipe-style').click(function() {
+		$('.style-change-error').addClass('hidden');
+
 		var chosenStyle = $(this).data('style');
 
 		$.ajax({
 			type: 'POST',
 			url: $('#baseUrl').text() + 'ajax/changeRecipeStyle',
 			data: {recipeStyle: chosenStyle},
-			success: function() {
-				console.log("Woo");
-			},
 			error: function() {
-				console.log("No");
+				$('.style-change-error').removeClass('hidden');
 			}
 		});
 	});

@@ -64,3 +64,10 @@
             <!-- /.container-fluid -->
         </nav>
     </header>
+	<div class="container">
+		<div class="alert alert-danger style-change-error hidden">
+			<strong>Sorry, there was a problem changing the style of your recipes.</strong><br />
+			There was a problem sending your request to the server. Please try selecting your preferred recipe style again.<br />
+			If this problem continues, try refreshing the page or coming back later.
+		</div>
+	</div>
