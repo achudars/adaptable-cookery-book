@@ -40,6 +40,18 @@
 				array("Singarich noodles","10","100","main dish","0",           "http://bit.ly/1hbxPVG")
 			);
 
+			$this->load->model('Recipe_style_model');
+
+			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
+
+			if(!$preferredRecipeStyle)
+			{
+				$this->Recipe_style_model->setRecipeStyle();
+				$preferredRecipeStyle = 'narrative';
+			}
+
+			$data['defaultStyle'] = $preferredRecipeStyle;
+
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
 			$this->load->view('pages/course.php', $data);
