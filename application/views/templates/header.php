@@ -43,13 +43,13 @@
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" tabindex="5">
-                            <li tabindex="5" class="active">
+                            <li tabindex="5" class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
 								<a class="recipe-style" href="#narrative" data-style="narrative" data-toggle="tab" data-target="#narrative">narrative</a>
 							</li>
-                            <li tabindex="5">
+                            <li tabindex="5" class="<?php echo $defaultStyle == 'segmented' ? 'active' : '' ?>">
 								<a class="recipe-style" href="#segmented" data-style="segmented" data-toggle="tab" data-target="#segmented">segmented</a>
 							</li>
-                            <li tabindex="5">
+                            <li tabindex="5" class="<?php echo $defaultStyle == 'step' ? 'active' : '' ?>">
 								<a class="recipe-style" href="#step-by-step" data-style="step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
 							</li>
                         </ul>
