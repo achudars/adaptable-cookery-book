@@ -15,29 +15,24 @@
 		 */
 		public function view($recipeId = null)
 		{
-			$data = array();
-
 			if(isset($recipeId))
 			{
 				//Go and get the recipe details from the database
 				//$data['recipeData'] = $db->getRecipe($recipeId);
 			}
 
-			$preferredRecipeStyle = $this->input->cookie('preferredRecipeStyle');
+			$this->load->model('Recipe_style_model');
+
+			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
 
 			if(!$preferredRecipeStyle)
 			{
-				$this->input->set_cookie(array(
-					'name'   => 'preferredRecipeStyle',
-					'value'  => 'narrative',
-					'expire' => time() + (10 * 365 * 24 * 60 * 60),
-				));
-
+				$this->Recipe_style_model->setRecipeStyle();
 				$preferredRecipeStyle = 'narrative';
 			}
 
-			$data['title']        = 'Recipe Title From Database Goes Here';
 			$data['defaultStyle'] = $preferredRecipeStyle;
+			$data['title']        = 'Recipe Title From Database Goes Here';
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
