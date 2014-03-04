@@ -1,6 +1,6 @@
 <?php
 
-class RecipeModel extends CI_Model
+class Recipe_model extends CI_Model
 {
     
     public function __construct()
@@ -36,16 +36,32 @@ class RecipeModel extends CI_Model
      * Loads basic details for all recipes for a given course.
      * 
      * @param int $courseid
-     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl},...]
+     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, course},...]
      */
     public function getRecipesForCourse($courseid)
     {
-        $this->db->select('recipeid, name, diettype, serves, imageurl')
+        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, course.name AS course')
                   ->from('recipe')
+                  ->join('course', 'recipe.courseid = course.courseid')
                   ->where(['courseid' => $courseid])
                   ->order_by('name', 'asc');
         
-        return $this->db->get();
+        return $this->db->get()->result();
+    }
+    
+    /**
+     * Loads basic details for all recipes.
+     * 
+     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, course},...]
+     */
+    public function getAllRecipes()
+    {
+        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, course.name AS course')
+                  ->from('recipe')
+                  ->join('course', 'recipe.courseid = course.courseid')
+                  ->order_by('name', 'asc');
+        
+        return $this->db->get()->result();
     }
     
     /**
