@@ -5,6 +5,10 @@
 	 */
 	class Ajax extends CI_Controller
 	{
+		/**
+		 * Function called from JS that changes the user's
+		 * recipe style preferences.
+		 */
 		public function changeRecipeStyle()
 		{
 			if(!isset($_POST['recipeStyle']))
@@ -14,10 +18,7 @@
 				return;
 			}
 
-			$this->input->set_cookie(array(
-				'name'   => 'preferredRecipeStyle',
-				'value'  => $_POST['recipeStyle'],
-				'expire' => time() + (10 * 365 * 24 * 60 * 60),
-			));
+			$this->load->model('Recipe_style_model');
+			$this->Recipe_style_model->setRecipeStyle($_POST['recipeStyle']);
 		}
 	}
