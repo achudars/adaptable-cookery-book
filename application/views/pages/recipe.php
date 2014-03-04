@@ -29,15 +29,18 @@
         </div>
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <ul class="nav nav-tabs nav-justified">
-                <li class="active"><a href="#narrative" data-toggle="tab" data-target="#narrative">narrative</a>
+                <li class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
+					<a href="#narrative" data-toggle="tab" data-target="#narrative">narrative</a>
                 </li>
-                <li><a href="#segmented" data-toggle="tab" data-target="#segmented">segmented</a>
+                <li class="<?php echo $defaultStyle == 'segmented' ? 'active' : '' ?>">
+					<a href="#segmented" data-toggle="tab" data-target="#segmented">segmented</a>
                 </li>
-                <li><a href="#step-by-step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
+                <li class="<?php echo $defaultStyle == 'step' ? 'active' : '' ?>">
+					<a href="#step-by-step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div tabindex="7" class="tab-pane fade in active" id="narrative">
+                <div tabindex="7" class="tab-pane fade <?php echo $defaultStyle == 'narrative' ? 'in active' : '' ?>" id="narrative">
                     <h2 tabindex="8">Instructions:</h2>
 
                     <ul tabindex="9" id='timeline'>
@@ -151,14 +154,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="tab-pane fade" id="segmented">
+                <div class="tab-pane fade <?php echo $defaultStyle == 'segmented' ? 'in active' : '' ?>" id="segmented">
                     <h2 tabindex="8">Instructions:</h2>
                     <p tabindex="9">Cook over low heat in a large saucepan, stirring constantly until <span class="the" data-toggle="tooltip" data-placement="top" title="" data-original-title="loading synonyms...">meat</span> loses its red colour and about half of the liquid has evaporated. cover and cook about 45 minutes longer. Boil and mash potatoes and mix in with the <span class="the" data-toggle="tooltip" data-placement="top" title="" data-original-title="loading synonyms...">meat</span> and allow
                         to cool. Preheat oven to 450 degrees F. Prepare pastry for 2-crust, 9 inch <span class="the" data-toggle="tooltip" data-placement="top" title="" data-original-title="loading synonyms...">pie</span>. Roll out half and line a 9-inch pie plate. Fill with cooled <span class="the" data-toggle="tooltip" data-placement="top" title="" data-original-title="loading synonyms...">meat</span> mixture. Roll out remainder of dough and cover pie. Flute and seal edges. Slash top
                         of crust. Bake for 10 min and reduce heat to 350 degrees F and bake for 30-40 minutes.
                     </p>
                 </div>
-                <div class="tab-pane fade" id="step-by-step">
+                <div class="tab-pane fade <?php echo $defaultStyle == 'step' ? 'in active' : '' ?>" id="step-by-step">
                     <h2 tabindex="8">Instructions:</h2>
                     <ol tabindex="9">
                         <li>Get one 3-quart saucepan</li>
