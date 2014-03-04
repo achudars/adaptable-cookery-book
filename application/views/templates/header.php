@@ -16,6 +16,7 @@
 </head>
 
 <body>
+	<span class="hidden" id="baseUrl"><?php echo base_url() ?></span>
     <header>
         <a class="brand" href="<?php echo base_url() . 'recipes/grid-view' ?>">
         </a>

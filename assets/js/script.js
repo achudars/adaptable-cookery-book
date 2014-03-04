@@ -31,6 +31,18 @@ $(document).ready(function() {
 	};
 
 	$('.recipe-style').click(function() {
-		console.log($(this).data('style'));
+		var chosenStyle = $(this).data('style');
+
+		$.ajax({
+			type: 'POST',
+			url: $('#baseUrl').text() + 'ajax/changeRecipeStyle',
+			data: {recipeStyle: chosenStyle},
+			success: function() {
+				console.log("Woo");
+			},
+			error: function() {
+				console.log("No");
+			}
+		});
 	});
 });
