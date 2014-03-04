@@ -11,7 +11,8 @@
 		 */
 		public function viewList()
 		{
-			$data['title'] = 'View All Recipes: List View';
+			$data['title']        = 'View All Recipes: List View';
+			$data['defaultStyle'] = $this->getRecipeStyle();
 
 			$data['recipes'] = array(
 				array("Home Brew","31","100","main dish","1",                   "http://bit.ly/1fkKR4y"),
@@ -43,7 +44,8 @@
 		 */
 		public function viewGrid()
 		{
-			$data['title'] = 'View All Recipes: Grid View';
+			$data['title']        = 'View All Recipes: Grid View';
+			$data['defaultStyle'] = $this->getRecipeStyle();
 
 			$data['recipes'] = array(
 				array("Home Brew","31","100","main dish","1",                   "http://bit.ly/1fkKR4y"),
@@ -67,5 +69,26 @@
 			$this->load->view('templates/header.php', $data);
 			$this->load->view('pages/recipes_grid.php', $data);
 			$this->load->view('templates/footer.php', $data);
+		}
+
+		/**
+		 * Private function used to determine the user's preference on recipe
+		 * style (for use in the header).
+		 *
+		 * @return - $preferredRecipeStyle : The user's recipe style
+		 */
+		private function getRecipeStyle()
+		{
+			$this->load->model('Recipe_style_model');
+
+			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
+
+			if(!$preferredRecipeStyle)
+			{
+				$this->Recipe_style_model->setRecipeStyle();
+				$preferredRecipeStyle = 'narrative';
+			}
+
+			return $preferredRecipeStyle;
 		}
 	}

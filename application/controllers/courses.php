@@ -12,6 +12,18 @@
 		{
 			$data['title'] = 'Courses Available';
 
+			$this->load->model('Recipe_style_model');
+
+			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
+
+			if(!$preferredRecipeStyle)
+			{
+				$this->Recipe_style_model->setRecipeStyle();
+				$preferredRecipeStyle = 'narrative';
+			}
+
+			$data['defaultStyle'] = $preferredRecipeStyle;
+
 			$data['courses'] = array(
 				array(
 					'courseName'  => 'Starters',
