@@ -28,7 +28,7 @@ class Recipe_model extends CI_Model
         {
             throw new Exception('That recipe could not be found.', 404);
         } else {
-            return $q->result();
+            return $q->result()[0];
         }
     }
     
@@ -84,6 +84,7 @@ class Recipe_model extends CI_Model
         {
             throw new Exception('That recipe could not be found.', 404);
         } else {
+            $recipe = new stdClass();
             $recipe->instructions = $q->result()[0];
             $recipe->ingredients = $this->getNarrativeIngredients($recipeid);
             return $recipe;
@@ -104,6 +105,7 @@ class Recipe_model extends CI_Model
                 ->where(['recipeid' => $recipeid])
                 ->order_by('stepid', 'asc');
         
+        $recipe = new stdClass();
         $recipe->instructions = $this->db->get();
         $recipe->ingredients = $this->getSegmentedIngredients($recipeid);
         return $recipe;
@@ -123,6 +125,7 @@ class Recipe_model extends CI_Model
                 ->where(['recipeid' => $recipeid])
                 ->order_by('stepid', 'asc');
         
+        $recipe = new stdClass();
         $recipe->instructions = $this->db->get();
         $recipe->ingredients = $this->getSteppedIngredients($recipeid);
         return $recipe;
@@ -139,12 +142,15 @@ class Recipe_model extends CI_Model
      */
     private function getNarrativeIngredientsExcept($recipeid, $except)
     {
+        if (empty($except)) {
+            $except = [0];
+        }
         $this->db->select('name, quantity, section, units')
                 ->from('recipe_ingredient')
                 ->where_not_in('recipeingredientid', $except)
                 ->where(['recipeid' => $recipeid]);
         
-        return $this->db->get();
+        return $this->db->get()->result();
     }
     
     /**
@@ -171,7 +177,7 @@ class Recipe_model extends CI_Model
                 ->from('recipe_segmented_ingredient')
                 ->where(['recipeid' => $recipeid]);
         
-        $ingredients = $this->db->get();
+        $ingredients = $this->db->get()->result();
         
         //Load narrative ingredients unless they are replaced
         $replaced = [];
@@ -200,7 +206,7 @@ class Recipe_model extends CI_Model
                 ->from('recipe_step_ingredient')
                 ->where(['recipeid' => $recipeid]);
         
-        $ingredients = $this->db->get();
+        $ingredients = $this->db->get()->result();
         
         //Load narrative ingredients unless they are replaced
         $replaced = [];

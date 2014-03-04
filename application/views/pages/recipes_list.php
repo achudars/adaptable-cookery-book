@@ -3,7 +3,9 @@
       <div class="list-recipes col-xs-12">
           <div class="holder">
             <div class="recipe-title">
-                <p><a href="/recipe"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?></a></p>
+                <p><a href="/recipe/<?php echo $recipe->recipeid;?>">
+                        <span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?>
+                    </a></p>
             </div>
             <div class="content">
               <img alt="" class="preview-img pull-left" style="background-image: url(<?php echo $recipe->imageurl;?>);">

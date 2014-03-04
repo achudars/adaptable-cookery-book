@@ -5,6 +5,12 @@
 	 */
 	class Recipe extends CI_Controller
 	{
+        
+        public function __construct()
+        {
+            parent::__construct();
+            $this->load->model('Recipe_model', 'recipe_model', true);
+        }
 		/**
 		 * Function called when viewing a recipe.
 		 *
@@ -19,9 +25,15 @@
 			{
 				//Go and get the recipe details from the database
 				//$data['recipeData'] = $db->getRecipe($recipeId);
-			}
-
-			$data['title'] = 'Recipe Title From Database Goes Here';
+                $info = $this->recipe_model->getRecipeInfo($recipeId);
+                $data['title'] = $info->name;
+                $data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
+                $data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
+                $data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
+			} else {
+                header('HTTP/1.1 400 Bad Request');
+                header('Location: ../');
+            }
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);

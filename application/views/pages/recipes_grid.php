@@ -4,7 +4,9 @@
           <div class="holder">
             <img alt="" class="preview-img" style="background-image: url(<?php echo $recipe->imageurl;?>);">
             <div class="recipe-title">
-                <p><a href="/recipe"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?></a></p>
+                <p><a href="/recipe/<?php echo $recipe->recipeid;?>">
+                        <span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?>
+                    </a></p>
             </div>
             <div class="split">
                 <span><span class="glyphicon glyphicon-time"></span> ??? min</span>
