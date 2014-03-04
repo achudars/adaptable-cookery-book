@@ -17,8 +17,8 @@
 
 <body>
     <header>
-        <div class="brand">
-        </div>
+        <a class="brand" href="<?php echo base_url() . 'recipes/grid-view' ?>">
+        </a>
         <nav class="navbar" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,9 +34,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li tabindex="1"  class="active"><a title="grid"href="<?php echo base_url() .  'recipes/grid-view' ?>">Grid</a></li>
-                        <li tabindex="2"  ><a title="list" href="<?php echo base_url() . 'recipes/' ?>">List</a></li>
-						<li tabindex="3"  ><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
+                        <li tabindex="1"  class="<?php echo $this->uri->segment(2) == 'grid-view' ? 'active' : '' ?>"><a title="grid"href="<?php echo base_url() .  'recipes/grid-view' ?>">Grid</a></li>
+                        <li tabindex="2"  class="<?php echo $this->uri->segment(2) == 'list-view' ? 'active' : '' ?>"><a title="list" href="<?php echo base_url() . 'recipes/list-view' ?>">List</a></li>
+						<li tabindex="3"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
                     <span class="btn-group pull-right">
                       <div class="btn-group">
@@ -45,9 +45,9 @@
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" tabindex="5">
-                            <li tabindex="5" class="active"><a href="#novice" data-toggle="tab" data-target="#novice">narrative</a></li>
-                            <li tabindex="5"><a href="#normal" data-toggle="tab" data-target="#normal">segmented</a></li>
-                            <li tabindex="5"><a href="#expert" data-toggle="tab" data-target="#expert">step-by-step</a></li>
+                            <li tabindex="5" class="active"><a href="#narrative" data-toggle="tab" data-target="#narrative">narrative</a></li>
+                            <li tabindex="5"><a href="#segmented" data-toggle="tab" data-target="#segmented">segmented</a></li>
+                            <li tabindex="5"><a href="#step-by-step" data-toggle="tab" data-target="#step-by-step">step-by-step</a></li>
                         </ul>
                       </div>
                     </span>
