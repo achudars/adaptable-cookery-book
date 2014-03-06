@@ -1,6 +1,6 @@
 <?php
 
-class CourseModel extends CI_Model
+class Course_model extends CI_Model
 {
     public function __construct()
     {
@@ -10,14 +10,14 @@ class CourseModel extends CI_Model
     /**
      * Loads a list of all the types of courses, and their basic information
      * 
-     * @return Array[Object] [{courseid, name, description}, ...]
+     * @return Array[Object] [{courseid, name, description, recipes}, ...]
      */
     public function getAllCourses() {
         $this->db->select('courseid, name, description')
                 ->from('course')
                 ->order_by('name', 'asc');
         
-        return $this->db->get();
+        return $this->db->get()->result();
     }
     
     /**
