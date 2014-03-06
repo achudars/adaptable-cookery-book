@@ -37,6 +37,7 @@
                 $data['defaultStyle'] = $preferredRecipeStyle;
                 $info = $this->recipe_model->getRecipeInfo($recipeId);
                 $data['title'] = $info->name;
+                $data['image'] = $info->imageurl;
                 $data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
                 $data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
                 $data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);

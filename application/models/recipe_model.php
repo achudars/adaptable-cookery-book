@@ -85,7 +85,7 @@ class Recipe_model extends CI_Model
             throw new Exception('That recipe could not be found.', 404);
         } else {
             $recipe = new stdClass();
-            $recipe->instructions = $q->result()[0];
+            $recipe->instructions = $q->result()[0]->narrative;
             $recipe->ingredients = $this->getNarrativeIngredients($recipeid);
             return $recipe;
         }
@@ -106,7 +106,7 @@ class Recipe_model extends CI_Model
                 ->order_by('stepid', 'asc');
         
         $recipe = new stdClass();
-        $recipe->instructions = $this->db->get();
+        $recipe->instructions = $this->db->get()->result();
         $recipe->ingredients = $this->getSegmentedIngredients($recipeid);
         return $recipe;
     }
@@ -126,7 +126,7 @@ class Recipe_model extends CI_Model
                 ->order_by('stepid', 'asc');
         
         $recipe = new stdClass();
-        $recipe->instructions = $this->db->get();
+        $recipe->instructions = $this->db->get()->result();
         $recipe->ingredients = $this->getSteppedIngredients($recipeid);
         return $recipe;
     }
@@ -150,7 +150,45 @@ class Recipe_model extends CI_Model
                 ->where_not_in('recipeingredientid', $except)
                 ->where(['recipeid' => $recipeid]);
         
-        return $this->db->get()->result();
+        $result = $this->db->get()->result();
+        
+        //Walk over quantities and convert them to be pretty
+        return array_map(function($x)
+        {
+            //Remove unnecessary decimal places
+            if ($x->quantity != null)
+            {
+                $x->quantity = (string)$x->quantity+0;
+            }
+            
+            //Replace with fractions where necessary
+            $prefix = floor($x->quantity);
+            if ($prefix == 0)
+            {
+                $prefix = '';
+            }
+            
+            switch (fmod($x->quantity,1))
+            {
+                case 0.25:
+                    $x->quantity = $prefix.'&frac14;';
+                    break;
+                case 0.33:
+                    $x->quantity = $prefix.'&#8531;';
+                    break;
+                case 0.5:
+                    $x->quantity = $prefix.'&frac12;';
+                    break;
+                case 0.67:
+                    $x->quantity = $prefix.'&#8532;';
+                    break;
+                case 0.75:
+                    $x->quantity = $prefix.'&frac34;';
+                    break;
+            }
+            
+            return $x;
+        }, $result);
     }
     
     /**
