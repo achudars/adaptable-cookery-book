@@ -481,3 +481,6 @@ span.the {
 span.the:hover {
     cursor: pointer;
 }
+img {
+    display: block;
+}
