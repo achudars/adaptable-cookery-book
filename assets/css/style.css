@@ -347,6 +347,9 @@ div p a:hover {
     .ingredients ul {
         position: fixed;
         margin-top: 40px;
+        bottom: 10px;
+        top: 120px;
+        overflow-y: auto;
     }
     .ingredients h2 {
         position: fixed;
@@ -480,4 +483,7 @@ span.the {
 }
 span.the:hover {
     cursor: pointer;
+}
+img {
+    display: block;
 }

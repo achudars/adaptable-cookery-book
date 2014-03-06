@@ -4,18 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        <?php echo $title ?>
-    </title>
-    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
-    <!-- Latest compiled and minified CSS -->
+    <title><?php echo $title ?></title>
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url() ?>assets/images/favicon.ico" type="image/x-icon">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link href="<?php echo base_url() . 'assets/css/style.css' ?>" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<span class="hidden" id="baseUrl"><?php echo base_url() ?></span>
     <header>
         <a class="brand" href="<?php echo base_url() . 'recipes/grid-view' ?>">
         </a>
@@ -45,9 +43,15 @@
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" tabindex="5">
-                            <li tabindex="5" class="active"><a href="#narrative" data-toggle="tab" data-target="#narrative">narrative</a></li>
-                            <li tabindex="5"><a href="#segmented" data-toggle="tab" data-target="#segmented">segmented</a></li>
-                            <li tabindex="5"><a href="#step-by-step" data-toggle="tab" data-target="#step-by-step">step-by-step</a></li>
+                            <li tabindex="5" class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
+								<a class="recipe-style" href="#narrative" data-style="narrative" data-toggle="tab" data-target="#narrative">narrative</a>
+							</li>
+                            <li tabindex="5" class="<?php echo $defaultStyle == 'segmented' ? 'active' : '' ?>">
+								<a class="recipe-style" href="#segmented" data-style="segmented" data-toggle="tab" data-target="#segmented">segmented</a>
+							</li>
+                            <li tabindex="5" class="<?php echo $defaultStyle == 'step' ? 'active' : '' ?>">
+								<a class="recipe-style" href="#step-by-step" data-style="step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
+							</li>
                         </ul>
                       </div>
                     </span>
@@ -57,3 +61,10 @@
             <!-- /.container-fluid -->
         </nav>
     </header>
+	<div class="container">
+		<div class="alert alert-danger style-change-error hidden">
+			<strong>Sorry, there was a problem changing the style of your recipes.</strong><br />
+			Although the recipe has changed here, the system can't remember your change at the moment.</br />
+			As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.
+		</div>
+	</div>

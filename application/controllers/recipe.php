@@ -23,8 +23,18 @@
 		{
 			if(isset($recipeId))
 			{
-				//Go and get the recipe details from the database
-				//$data['recipeData'] = $db->getRecipe($recipeId);
+                $this->load->model('Recipe_style_model');
+
+                $preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
+
+                if(!$preferredRecipeStyle)
+                {
+                    $this->Recipe_style_model->setRecipeStyle();
+                    $preferredRecipeStyle = 'narrative';
+                }
+
+                //Go and get the recipe details from the database
+                $data['defaultStyle'] = $preferredRecipeStyle;
                 $info = $this->recipe_model->getRecipeInfo($recipeId);
                 $data['title'] = $info->name;
                 $data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
