@@ -9,8 +9,8 @@
                     </a></p>
             </div>
             <div class="split">
-                <span><span class="glyphicon glyphicon-time"></span> ??? min</span>
-                <span>??? cal <span class="glyphicon glyphicon-dashboard"></span></span>
+                <span><span class="glyphicon glyphicon-time"></span> <?php echo $recipe->preptime;?> min</span>
+                <span><?php echo $recipe->calories;?> cal <span class="glyphicon glyphicon-dashboard"></span></span>
             </div>
             <div class="split">
                 <span><span class="glyphicon glyphicon-cutlery"></span> <?php echo $recipe->course;?></span>
