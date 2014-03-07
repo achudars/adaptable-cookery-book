@@ -17,7 +17,7 @@ class Recipe_model extends CI_Model
      */
     public function getRecipeInfo($recipeid)
     {
-        $this->db->select('recipeid, name, courseid, diettype, serves, imageurl')
+        $this->db->select('recipeid, name, courseid, diettype, serves, imageurl, calories, preptime')
                   ->from('recipe')
                   ->where(['recipeid' => $recipeid])
                   ->limit(1);
@@ -40,7 +40,7 @@ class Recipe_model extends CI_Model
      */
     public function getRecipesForCourse($courseid)
     {
-        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, course.name AS course')
+        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, calories, preptime, course.name AS course')
                   ->from('recipe')
                   ->join('course', 'recipe.courseid = course.courseid')
                   ->where(['courseid' => $courseid])
@@ -56,7 +56,7 @@ class Recipe_model extends CI_Model
      */
     public function getAllRecipes()
     {
-        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, course.name AS course')
+        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, calories, preptime course.name AS course')
                   ->from('recipe')
                   ->join('course', 'recipe.courseid = course.courseid')
                   ->order_by('name', 'asc');
