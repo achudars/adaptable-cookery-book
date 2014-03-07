@@ -56,7 +56,7 @@ class Recipe_model extends CI_Model
      */
     public function getAllRecipes()
     {
-        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, calories, preptime course.name AS course')
+        $this->db->select('recipeid, recipe.name, diettype, serves, imageurl, calories, preptime, course.name AS course')
                   ->from('recipe')
                   ->join('course', 'recipe.courseid = course.courseid')
                   ->order_by('name', 'asc');
