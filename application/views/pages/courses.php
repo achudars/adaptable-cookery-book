@@ -4,7 +4,7 @@
           <div class="holder">
             <img alt="" src="" class="preview-img" style="background-image: url(<?php echo $course['imageUrl'];?>);">
             <div class="course-title">
-                <p><a href="<?php echo base_url() . '/course/' . $course['courseName'] ?>"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $course['courseName'];?></a></p>
+                <p><a href="<?php echo base_url() . 'course/' . strtolower($course['courseName']) ?>"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $course['courseName'];?></a></p>
             </div>
             <div>
                 <span class="glyphicon glyphicon-list"></span> <?php echo $course['recipeCount'];?> recipes
