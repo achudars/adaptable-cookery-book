@@ -12,7 +12,7 @@ class Recipe_model extends CI_Model
      * Loads basic details about a recipe, useful for menu pages.
      * 
      * @param int $recipeid
-     * @return Object A set of {recipeid, name, courseid, diettype, serves, imageurl}
+     * @return Object A set of {recipeid, name, courseid, diettype, serves, imageurl, calories, preptime}
      * @throws Exception On failure to find the recipe.
      */
     public function getRecipeInfo($recipeid)
@@ -36,7 +36,7 @@ class Recipe_model extends CI_Model
      * Loads basic details for all recipes for a given course.
      * 
      * @param int $courseid
-     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, course},...]
+     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, calories, preptime, course},...]
      */
     public function getRecipesForCourse($courseid)
     {
@@ -52,7 +52,7 @@ class Recipe_model extends CI_Model
     /**
      * Loads basic details for all recipes.
      * 
-     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, course},...]
+     * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, calories, preptime, course},...]
      */
     public function getAllRecipes()
     {
