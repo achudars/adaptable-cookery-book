@@ -31,7 +31,7 @@ CREATE TABLE `recipe` (
 
 CREATE TABLE `recipe_ingredient` (
   `recipeingredientid` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(150) NOT NULL,
   `quantity` DECIMAL(5,2) NULL,
   `section` VARCHAR(45) NULL,
   `units` VARCHAR(15) NULL,
