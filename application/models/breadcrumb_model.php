@@ -11,6 +11,14 @@
 			parent::__construct();
 		}
 
+		/**
+		 * Function to return an array of links for the site
+		 * breadcrumb depending on the page that is passed
+		 * to the function.
+		 *
+		 * @param $siteSectin: String - The current location of the user.
+		 * @return $links: Array - An array containing the required breadcrumbs.
+		 */
 		public function generateBreadcrumb($siteSection)
 		{
 			if(empty($siteSection))
@@ -20,13 +28,13 @@
 			}
 
 			$links = array(
-				'Home' => base_url() . 'recipe/grid-view',
+				'Home' => base_url() . 'recipes/grid-view',
 			);
 
 			switch(strtolower($siteSection))
 			{
 				case 'recipe':
-					$links['Recipes'] = base_url() . 'recipe/grid-view';
+					$links['Recipes'] = base_url() . 'recipes/grid-view';
 					break;
 
 				case 'course':
