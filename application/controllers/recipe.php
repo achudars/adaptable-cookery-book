@@ -5,12 +5,13 @@
 	 */
 	class Recipe extends CI_Controller
 	{
-        
+
         public function __construct()
         {
             parent::__construct();
             $this->load->model('Recipe_model', 'recipe_model', true);
         }
+
 		/**
 		 * Function called when viewing a recipe.
 		 *
@@ -41,6 +42,10 @@
                 $data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
                 $data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
                 $data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
+
+				$this->load->model('Breadcrumb_model');
+				$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipe');
+				$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
 			} else {
                 header('HTTP/1.1 400 Bad Request');
                 header('Location: ../');
