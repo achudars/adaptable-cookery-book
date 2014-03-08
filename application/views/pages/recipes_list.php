@@ -14,7 +14,7 @@
               </div>
               <div class="pull-left split">
                   <div><span class="glyphicon glyphicon-time"></span> <span class="pull-right"><?php echo $recipe->preptime;?> min</span></div>
-                  <div><span class="glyphicon glyphicon-dashboard"></span> <span class="pull-right"><?php echo $recipe->calories;?> cal</span></div>
+                  <div><span class="glyphicon glyphicon-tasks"></span> <span class="pull-right"><?php echo $recipe->calories;?> cal</span></div>
                   <div><span class="glyphicon glyphicon-cutlery"></span> <span class="pull-right"><?php echo $recipe->course;?></span></div>
                   <div><span class="glyphicon glyphicon-user"></span> <span class="pull-right"><?php echo $recipe->serves;?></span></div>
               </div>

@@ -16,7 +16,7 @@
             </div>
             <div class="split">
                 <span><span class="glyphicon glyphicon-time"></span> <?php echo $recipe[1];?> min</span>
-                <span><?php echo $recipe[2];?> cal <span class="glyphicon glyphicon-dashboard"></span></span>
+                <span><?php echo $recipe[2];?> cal <span class="glyphicon glyphicon-tasks"></span></span>
             </div>
             <div class="split">
                 <span><span class="glyphicon glyphicon-cutlery"></span> <?php echo $recipe[3];?></span>

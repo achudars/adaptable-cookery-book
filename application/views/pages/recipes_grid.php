@@ -10,7 +10,7 @@
             </div>
             <div class="split">
                 <span><span class="glyphicon glyphicon-time"></span> <?php echo $recipe->preptime;?> min</span>
-                <span><?php echo $recipe->calories;?> cal <span class="glyphicon glyphicon-dashboard"></span></span>
+                <span><?php echo $recipe->calories;?> cal <span class="glyphicon glyphicon-tasks"></span></span>
             </div>
             <div class="split">
                 <span><span class="glyphicon glyphicon-cutlery"></span> <?php echo $recipe->course;?></span>
