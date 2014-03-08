@@ -327,6 +327,7 @@ div p a:hover {
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
     background: #383838;
     color: #EEE;
+    font-weight:bold;
 }
 .ingredients ul li .amount {
     width: 70px;
@@ -473,13 +474,6 @@ label {
     color: orange;
 }
 
-span.the {
-    color: Coral;
-    font-weight: bold;
-}
-span.the:hover {
-    cursor: pointer;
-}
 img {
     display: block;
     color: transparent;
@@ -487,4 +481,9 @@ img {
 ol li, section p, label {
     font-size: 16px;
     line-height: 26px;
+}
+
+.ingredient-name span:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
