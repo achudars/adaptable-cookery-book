@@ -61,6 +61,18 @@
             <!-- /.container-fluid -->
         </nav>
     </header>
+	<?php if(isset($breadcrumb)) { ?>
+		<div class="container breadcrumb">
+			<ul>
+				<?php
+				      foreach($breadcrumb as $name => $link)
+				      {
+				         echo '<li><a href="' . $link . '">' . $name . '</a></li>';
+				      }
+				?>
+			</ul>
+		</div>
+	<?php } ?>
 	<div class="container">
 		<div class="alert alert-danger style-change-error hidden">
 			<strong>Sorry, there was a problem changing the style of your recipes.</strong><br />
