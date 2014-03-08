@@ -55,7 +55,7 @@ body nav, input, button {
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
-  color: #000;
+  color: #111;
   background: none;
   text-decoration: underline;
 }
@@ -175,7 +175,7 @@ h1 {
     position: absolute;
 }
 .grid-recipes .holder > div p {
-    color: #FFF;
+    color: #EEE;
     background: #383838;
     padding-bottom: 5px;
     white-space: nowrap;
@@ -186,7 +186,7 @@ h1 {
 }
 .list-recipes .holder > div p {
     padding-top: 2.5px;
-    color: #FFF;
+    color: #EEE;
     margin-left: -5px;
     margin-right: -6px;
 }
@@ -214,7 +214,7 @@ h1 {
 }
 
 div p a {
-    color: #FFF;
+    color: #EEE;
 }
 div p a:hover {
     cursor: pointer;
@@ -262,7 +262,7 @@ div p a:hover {
     -moz-border-top-right-radius: 3px;
     border-top-right-radius: 3px;
     background: #383838;
-    color: #FFF;
+    color: #EEE;
     margin-left: 0;
     padding: 5px;
 }
@@ -329,7 +329,7 @@ div p a:hover {
 }
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
     background: #333;
-    color: #FFF;
+    color: #EEE;
 }
 .ingredients ul li .amount {
     width: 50px;
@@ -410,7 +410,7 @@ button.dropdown-toggle:hover {
     left: -44px;
     width: 20px;
     height: 20px;
-    background: #FFF;
+    background: #EEE;
     border: 5px solid #383838;
     border-radius: 50%;
     display: block;
