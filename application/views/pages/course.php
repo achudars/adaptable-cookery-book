@@ -2,7 +2,7 @@
     <div class="row">
         <div class="recipe col-sx-12 col-sm-12 col-md-12 col-lg-12">
             <h1><?php echo $courseName ?></h1>
-            <img alt="" class="course-img" src="" style="background-image: url(<?php echo $courseImage ?>)">
+            <img alt="Image of <?php echo $courseName ?>" class="course-img" src="" style="background-image: url(<?php echo $courseImage ?>)">
 		</div>
 	</div>
 </div>
