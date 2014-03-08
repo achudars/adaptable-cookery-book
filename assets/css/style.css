@@ -490,3 +490,14 @@ ol li, section p, label {
     text-decoration: underline;
     cursor: pointer;
 }
+
+#breadcrumbs {
+    background: #383838;
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+#breadcrumbs .container {
+    color: #EEE;
+    padding-left: 26px;
+}

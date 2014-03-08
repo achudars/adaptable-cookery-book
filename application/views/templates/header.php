@@ -74,6 +74,11 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
+        <div id="breadcrumbs" class="container">
+            <div class="container">
+                bread > crumb > in > a > strange > place
+            </div>
+        </div>
     </header>
 	<div class="container">
 		<div class="alert alert-danger style-change-error hidden">
