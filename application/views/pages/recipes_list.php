@@ -8,7 +8,7 @@
                     </a></p>
             </div>
             <div class="content">
-              <img alt="" class="preview-img pull-left" style="background-image: url(<?php echo $recipe->imageurl;?>);">
+              <img alt="Image of <?php echo $recipe->name;?>" class="preview-img pull-left" style="background-image: url(<?php echo $recipe->imageurl;?>);">
               <div class="recipe-text">
 
               </div>
