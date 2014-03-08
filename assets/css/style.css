@@ -191,26 +191,26 @@ h1 {
     margin-right: -6px;
 }
 .grid-recipes .holder > div p:after{
-   border-color:  #383838 transparent transparent #383838;
-   border-style:solid;
-   border-width: 3px;
-   height:0px;
-   width:0px;
-   position: absolute;
-   right: -6px;
-   margin-top: 25px;
-   content: "";
+ border-color:  #383838 transparent transparent #383838;
+ border-style:solid;
+ border-width: 3px;
+ height:0px;
+ width:0px;
+ position: absolute;
+ right: -6px;
+ margin-top: 25px;
+ content: "";
 }
 .grid-recipes .holder > div p:before{
     border-color: #383838 #383838 transparent transparent;
-   border-style:solid;
-   border-width: 3px;
-   height:0px;
-   width:0px;
-   position: absolute;
-   left: -6px;
-   margin-top: 25px;
-   content: "";
+    border-style:solid;
+    border-width: 3px;
+    height:0px;
+    width:0px;
+    position: absolute;
+    left: -6px;
+    margin-top: 25px;
+    content: "";
 }
 
 div p a {
@@ -323,25 +323,21 @@ div p a:hover {
 }
 .ingredients ul li {
     padding: 4px 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
-    background: #333;
+    background: #383838;
     color: #EEE;
 }
 .ingredients ul li .amount {
-    width: 50px;
+    width: 70px;
     display: inline-block;
-    text-align: center;
+    text-align: right;
     color: Coral;
-    height: 24px;
+    padding-right: 5px;
 }
 .ingredients ul li .ingredient-name {
     display: inline-block;
     color: Lavender;
-    height: 24px;
 }
 @media (min-width: 990px) {
     .ingredients ul {
@@ -382,10 +378,10 @@ button.dropdown-toggle:hover {
 
 #timeline li {
     outline: none;
-   position: relative;
-   height: 90px;
-   border: 1px solid rgba(0,0,0,0.03);
-   -webkit-border-radius: 3px;
+    position: relative;
+    height: 90px;
+    border: 1px solid rgba(0,0,0,0.03);
+    -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
@@ -487,4 +483,8 @@ span.the:hover {
 img {
     display: block;
     color: transparent;
+}
+ol li, section p, label {
+    font-size: 16px;
+    line-height: 26px;
 }
