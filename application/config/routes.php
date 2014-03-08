@@ -44,7 +44,7 @@ $route['404_override']       = '';
 $route['recipe']        = 'recipe/view';
 $route['recipe/(:num)'] = 'recipe/view/$1';
 
-$route['recipes']           = 'recipes/viewList';
+$route['recipes']           = 'recipes/viewGrid';
 $route['recipes/list-view'] = 'recipes/viewList';
 $route['recipes/grid-view'] = 'recipes/viewGrid';
 
