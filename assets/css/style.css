@@ -323,12 +323,9 @@ div p a:hover {
 }
 .ingredients ul li {
     padding: 4px 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
-    background: #333;
+    background: #383838;
     color: #EEE;
 }
 .ingredients ul li .amount {
@@ -336,13 +333,11 @@ div p a:hover {
     display: inline-block;
     text-align: right;
     color: Coral;
-    height: 24px;
     padding-right: 5px;
 }
 .ingredients ul li .ingredient-name {
     display: inline-block;
     color: Lavender;
-    height: 24px;
 }
 @media (min-width: 990px) {
     .ingredients ul {
@@ -488,4 +483,8 @@ span.the:hover {
 img {
     display: block;
     color: transparent;
+}
+ol li, section p, label {
+    font-size: 16px;
+    line-height: 26px;
 }
