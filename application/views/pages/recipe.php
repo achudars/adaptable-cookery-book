@@ -2,7 +2,7 @@
     <div class="row">
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <h1 tabindex="5"><?php echo $title?></h1>
-            <img alt="Image of <?php echo $title?>" class="recipe-img" src="<?php echo $image?>">
+            <img alt="Image of <?php echo $title?>" class="recipe-img" src="" style="background-image: url(<?php echo $image?>);">
         </div>
         <div class="col-sx-12 col-sm-12 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4 ingredients">
             <h2 tabindex="8">Ingredients:</h2>
