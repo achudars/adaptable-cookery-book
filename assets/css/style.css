@@ -352,9 +352,12 @@ div p a:hover {
         position: fixed;
     }
 }
+
 button.dropdown-toggle {
-    margin-top: 8px;
-    border: none;
+    margin-top: 9px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
 }
 button.dropdown-toggle:hover {
     background: none;
@@ -486,4 +489,15 @@ ol li, section p, label {
 .ingredient-name span:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+#breadcrumbs {
+    background: #383838;
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+#breadcrumbs .container {
+    color: #EEE;
+    padding-left: 26px;
 }
