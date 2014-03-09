@@ -498,6 +498,9 @@ ol li, section p, label {
     top: -20px;
 }
 #breadcrumbs .container {
-    color: #EEE;
     padding-left: 26px;
+}
+#breadcrumbs a {
+    color: #EEE;
+    font-weight: 100;
 }
