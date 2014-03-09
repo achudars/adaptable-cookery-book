@@ -5,6 +5,11 @@
 	 */
 	class Courses extends CI_Controller
 	{
+		public function __construct()
+		{
+			parent::__construct();
+		}
+
 		/**
 		 * Function called when viewing the courses.
 		 */
@@ -14,6 +19,7 @@
 
 			$this->load->model('Recipe_style_model');
 			$this->load->model('Breadcrumb_model');
+			$this->load->model('Course_model', 'Course_model', true);
 
 			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
 
@@ -24,35 +30,8 @@
 			}
 
 			$data['defaultStyle'] = $preferredRecipeStyle;
-
-			$data['courses'] = array(
-				array(
-					'courseName'  => 'Starters',
-					'courseId'    => 1,
-					'recipeCount' => 10,
-					'imageUrl'    => 'http://www.bishopburton.ac.uk/_inc/uploads/generalimages/Starters.jpg',
-				),
-				array(
-					'courseName'  => 'Main Courses',
-					'courseId'    => 2,
-					'recipeCount' => 7,
-					'imageUrl'    => 'http://www.brake.co.uk/_assets/720xn/Main_Course_Poster_720x430px_1.jpg',
-				),
-				array(
-					'courseName'  => 'Desserts',
-					'courseId'    => 3,
-					'recipeCount' => 11,
-					'imageUrl'    => 'http://upload.wikimedia.org/wikipedia/commons/8/84/Chocolate_Cake_Flourless_%281%29.jpg',
-				),
-				array(
-					'courseName'  => 'Snacks',
-					'courseId'    => 4,
-					'recipeCount' => 4,
-					'imageUrl'    => 'http://pururuwang.files.wordpress.com/2012/11/snacks1.jpg',
-				)
-			);
-
-			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('courses');
+			$data['courses']      = $this->Course_model->getAllCourses();
+			$data['breadcrumb']   = $this->Breadcrumb_model->generateBreadcrumb('courses');
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
