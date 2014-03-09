@@ -132,7 +132,7 @@ h1 {
     background-position: 50% 50%;
 
     width: 100%;
-    height: 70%;
+    height: 60%;
 }
 
 .list-recipes > .holder .preview-img {
@@ -156,7 +156,6 @@ h1 {
 }
 .grid-recipes .holder > .split > span {
     width: 48%;
-    height: 100%;
     display: inline-block;
     color: #383838;
     margin-top: 2.5px;
@@ -238,7 +237,7 @@ div p a:hover {
     height: 90%;
 }
 .list-recipes .recipe-text {
-    height: 60%;
+    height: 50%;
 }
 .list-recipes .split {
     width: 150px;
@@ -250,6 +249,7 @@ div p a:hover {
 .recipe {
     padding: 0;
     background: #FFF;
+    margin-bottom: 20px;
 }
 .recipe .tab-pane {
     padding: 0 10px;
@@ -343,7 +343,7 @@ div p a:hover {
 @media (min-width: 990px) {
     .ingredients ul {
         position: fixed;
-        margin-top: 40px;
+        margin-top: 70px;
         bottom: 10px;
         top: 120px;
         overflow-y: auto;
