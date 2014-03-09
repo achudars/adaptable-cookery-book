@@ -16,6 +16,10 @@
                 <span><span class="glyphicon glyphicon-cutlery"></span> <?php echo $recipe->course;?></span>
                 <span><?php echo $recipe->serves;?> servings <span class="glyphicon glyphicon-user"></span></span>
             </div>
+            <div class="split">
+                <span><span class="glyphicon glyphicon-leaf"></span> vegetarian </span>
+                <span><span></span></span>
+            </div>
           </div>
       </div>
     <?php endforeach;?>
