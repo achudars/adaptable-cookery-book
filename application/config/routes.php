@@ -49,7 +49,7 @@ $route['recipes/list-view'] = 'recipes/viewList';
 $route['recipes/grid-view'] = 'recipes/viewGrid';
 
 $route['course']        = 'courses/viewAll';
-$route['course/(:num)'] = 'course/view/$1';
+$route['course/(:any)'] = 'course/view/$1';
 
 $route['courses'] = 'courses/viewAll';
 
