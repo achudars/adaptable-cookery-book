@@ -38,6 +38,7 @@
 					break;
 
 				case 'course':
+				case 'courses':
 					$links['Courses'] = base_url() . 'courses/';
 					break;
 			}

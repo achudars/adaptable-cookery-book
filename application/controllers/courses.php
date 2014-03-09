@@ -13,6 +13,7 @@
 			$data['title'] = 'Courses Available';
 
 			$this->load->model('Recipe_style_model');
+			$this->load->model('Breadcrumb_model');
 
 			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
 
@@ -50,6 +51,8 @@
 					'imageUrl'    => 'http://pururuwang.files.wordpress.com/2012/11/snacks1.jpg',
 				)
 			);
+
+			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('courses');
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
