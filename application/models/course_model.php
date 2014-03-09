@@ -42,4 +42,23 @@ class Course_model extends CI_Model
             return $q->result()[0];
         }
     }
+
+	public function getRecipes($courseName)
+	{
+		$this->db->select('recipe.recipeid, recipe.name, recipe.imageurl, recipe.serves, recipe.calories, recipe.preptime, course.name AS courseName');
+		$this->db->from('recipe');
+		$this->db->join('course', 'course.courseid = recipe.courseid');
+		$this->db->where('course.name', $courseName);
+
+		$queryResult = $this->db->get();
+
+		if(!$queryResult)
+		{
+			throw new Exception('There are no recipes for course \'' . $courseName . '\'', 404);
+		}
+		else
+		{
+			return $queryResult->result();
+		}
+	}
 }
