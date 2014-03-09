@@ -28,6 +28,8 @@ class Course_model extends CI_Model
      * @throws Exception if a course does not exist
      */
     public function getCourseInfo($courseName) {
+		$courseName = urldecode($courseName);
+
         $this->db->select('name, description')
                 ->from('course')
                 ->where(['name' => $courseName])
@@ -43,8 +45,16 @@ class Course_model extends CI_Model
         }
     }
 
+	/**
+	 * Function used to retrieve all recipes of a given course type.
+	 * @param String $courseName - The given course name.
+	 * @return Array of objects
+	 * @throws Exception if course does not exist.
+	 */
 	public function getRecipes($courseName)
 	{
+		$courseName = urldecode($courseName);
+
 		$this->db->select('recipe.recipeid, recipe.name, recipe.imageurl, recipe.serves, recipe.calories, recipe.preptime, course.name AS courseName');
 		$this->db->from('recipe');
 		$this->db->join('course', 'course.courseid = recipe.courseid');
