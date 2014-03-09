@@ -327,6 +327,7 @@ div p a:hover {
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
     background: #383838;
     color: #EEE;
+    font-weight:bold;
 }
 .ingredients ul li .amount {
     width: 70px;
@@ -351,9 +352,12 @@ div p a:hover {
         position: fixed;
     }
 }
+
 button.dropdown-toggle {
-    margin-top: 8px;
-    border: none;
+    margin-top: 9px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
 }
 button.dropdown-toggle:hover {
     background: none;
@@ -473,13 +477,6 @@ label {
     color: orange;
 }
 
-span.the {
-    color: Coral;
-    font-weight: bold;
-}
-span.the:hover {
-    cursor: pointer;
-}
 img {
     display: block;
     color: transparent;
@@ -487,4 +484,20 @@ img {
 ol li, section p, label {
     font-size: 16px;
     line-height: 26px;
+}
+
+.ingredient-name span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#breadcrumbs {
+    background: #383838;
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+#breadcrumbs .container {
+    color: #EEE;
+    padding-left: 26px;
 }
