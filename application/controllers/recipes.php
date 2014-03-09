@@ -5,11 +5,12 @@
 	 */
 	class Recipes extends CI_Controller
 	{
-        
+
         public function __construct()
         {
             parent::__construct();
             $this->load->model('Recipe_model', 'recipe_model', true);
+            $this->load->model('Breadcrumb_model');
         }
 		/**
 		 * Funciton used to display the recipes in the
@@ -17,10 +18,13 @@
 		 */
 		public function viewList()
 		{
-			$data['title'] = 'View All Recipes: List View';
-            
+			$data['title']        = 'View All Recipes: List View';
             $data['defaultStyle'] = $this->getRecipeStyle();
-            $data['recipes'] = $this->recipe_model->getAllRecipes();
+
+            $data['recipes']    = $this->recipe_model->getAllRecipes();
+			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipes');
+
+			$data['breadcrumb']['Recipes: List View'] = base_url() . 'recipes/list-view';
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
@@ -37,7 +41,10 @@
 			$data['title']        = 'View All Recipes: Grid View';
 			$data['defaultStyle'] = $this->getRecipeStyle();
 
-			$data['recipes'] = $this->recipe_model->getAllRecipes();
+			$data['recipes']    = $this->recipe_model->getAllRecipes();
+			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipes');
+
+			$data['breadcrumb']['Recipes: Grid View'] = base_url() . 'recipes/grid-view';
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
