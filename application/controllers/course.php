@@ -41,6 +41,7 @@
 			);
 
 			$this->load->model('Recipe_style_model');
+			$this->load->model('Breadcrumb_model');
 
 			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
 
@@ -51,6 +52,9 @@
 			}
 
 			$data['defaultStyle'] = $preferredRecipeStyle;
+
+			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('course');
+			$data['breadcrumb']['Course: ' . $data['courseName']] = base_url() . 'course/' . $data['courseName'];
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
