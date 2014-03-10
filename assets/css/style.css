@@ -308,6 +308,10 @@ div p a:hover {
     border-bottom-right-radius: 3px !important;
 }
 
+.container .course-description {
+    padding: 0 40px;
+}
+
 .ingredients {
     padding: 0;
 }
