@@ -34,7 +34,9 @@ body nav, input, button {
     -webkit-transition: 1s;
     -moz-transition: 1s
 }
-
+.brand.active {
+    background-image: url("./../../assets/images/icon_2.png");
+}
 .brand:hover {
     background-image: url("./../../assets/images/icon_2.png");
     cursor: pointer;
@@ -356,9 +358,7 @@ div p a:hover {
 
 button.dropdown-toggle {
     margin-top: 9px;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
+    border: none;
 }
 button.dropdown-toggle:hover {
     background: none;

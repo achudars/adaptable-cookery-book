@@ -12,25 +12,6 @@
             $this->load->model('Recipe_model', 'recipe_model', true);
             $this->load->model('Breadcrumb_model');
         }
-		/**
-		 * Funciton used to display the recipes in the
-		 * system in their list form.
-		 */
-		public function viewList()
-		{
-			$data['title']        = 'View All Recipes: List View';
-            $data['defaultStyle'] = $this->getRecipeStyle();
-
-            $data['recipes']    = $this->recipe_model->getAllRecipes();
-			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipes');
-
-			$data['breadcrumb']['Recipes: List View'] = base_url() . 'recipes/list-view';
-
-			$this->load->helper('html');
-			$this->load->view('templates/header.php', $data);
-			$this->load->view('pages/recipes_list.php', $data);
-			$this->load->view('templates/footer.php', $data);
-		}
 
 		/**
 		 * Function used to display the recipes in the
@@ -44,7 +25,7 @@
 			$data['recipes']    = $this->recipe_model->getAllRecipes();
 			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipes');
 
-			$data['breadcrumb']['Recipes: Grid View'] = base_url() . 'recipes/grid-view';
+			$data['breadcrumb']['Recipes'] = base_url() . 'recipes';
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
