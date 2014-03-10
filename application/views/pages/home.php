@@ -1,4 +1,6 @@
-<div class="hero-unit">
-	<h1>Home</h1>
-	<p>This is the home page</p>
+<div class="container">
+	<div class="hero-unit">
+		<h1>Home</h1>
+		<p>This is the home page</p>
+	</div>
 </div>
