@@ -1,7 +1,14 @@
 <div class="container home-intro">
-	<div class="hero-unit">
-		<h1>Home</h1>
-		<p>This is the home page</p>
+	<h1>
+		Welcome to Team 14's Recipe/Cookery/Chef Application!<br />
+		<small>Here you'll find a range of recipes that even the most novice people in the kitchen can cook. Main? Side? Dessert? We've got them all.</small>
+	</h1>
+</div>
+<div class="container">
+	<div class="alert alert-info">
+		<strong>First Things First...</strong><br />
+		Before you go ahead and start cooking, we'd like to know how good you are in the kitchen. This application is tailored to you and your preferences for recipe instructions.<br />
+		Simply pick your preferred style from the options below and you'll be ready to go.
 	</div>
 </div>
 <div class="container">
