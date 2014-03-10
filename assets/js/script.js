@@ -49,7 +49,9 @@ $(document).ready(function() {
 					$('.home-intro.success').removeClass('hidden');
 				}
 
-				$('.style-change-success').removeClass('hidden').delay(1000).fadeOut();
+				$('.style-change-success').removeClass('hidden').delay(2000).fadeOut('slow', function() {
+					$('.style-change-success').addClass('hidden').css('display', 'block');
+				});
 			},
 			error: function() {
 				$('.style-change-error').removeClass('hidden');
