@@ -21,6 +21,8 @@
 				return;
 			}
 
+			$courseName = urldecode($courseName);
+
 			$this->load->model('Course_model', 'Course_model', true);
 			$this->load->model('Recipe_style_model');
 			$this->load->model('Breadcrumb_model');
