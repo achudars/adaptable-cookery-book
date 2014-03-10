@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = 'home/view';
-$route['404_override']       = '';
+$route['404_override']       = 'custom_404/view';
 
 $route['recipe']        = 'recipe/view';
 $route['recipe/(:num)'] = 'recipe/view/$1';
