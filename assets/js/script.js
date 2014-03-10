@@ -1,12 +1,5 @@
 $(document).ready(function() {
 
-	/*$(".the").tooltip();*/
-
-	/*$(".the").hover(function() {
-	    var word = $(this).text();
-	    find_synonyms(word);
-	});*/
-
     $(".ingredient-name").lettering('words');
 
     $(".ingredient-name span").hover(
