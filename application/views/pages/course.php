@@ -12,7 +12,7 @@
           <div class="holder">
             <img alt="" class="preview-img" src="" style="background-image: url(<?php echo $recipe->imageurl; ?>);">
             <div class="recipe-title">
-                <p><a href="<?php echo base_url() ?>/recipe/<?php echo $recipe->recipeid ?>"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?></a></p>
+                <p><a href="<?php echo base_url() ?>recipe/<?php echo $recipe->recipeid ?>"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?></a></p>
             </div>
             <div class="split">
                 <span><span class="glyphicon glyphicon-time"></span> <?php echo $recipe->preptime;?> min</span>

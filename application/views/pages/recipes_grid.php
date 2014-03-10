@@ -4,7 +4,7 @@
           <div class="holder">
             <img alt="Image of <?php echo $recipe->name;?>" class="preview-img" style="background-image: url(<?php echo $recipe->imageurl;?>);">
             <div class="recipe-title">
-                <p><a href="<?php echo base_url() ?>/recipe/<?php echo $recipe->recipeid;?>">
+                <p><a href="<?php echo base_url() ?>recipe/<?php echo $recipe->recipeid;?>">
                         <span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?>
                     </a></p>
             </div>

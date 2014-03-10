@@ -3,7 +3,7 @@
       <div class="list-recipes col-xs-12">
           <div class="holder">
             <div class="recipe-title">
-                <p><a href="<?php echo base_url() ?>/recipe/<?php echo $recipe->recipeid;?>">
+                <p><a href="<?php echo base_url() ?>recipe/<?php echo $recipe->recipeid;?>">
                         <span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?>
                     </a></p>
             </div>
