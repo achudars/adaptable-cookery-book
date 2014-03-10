@@ -514,7 +514,7 @@ ol li, section p, label {
 	margin-top:10px;
 }
 
-.container.home-intro {
+.container.home-intro, .container.not-found {
 	background: none repeat scroll 0 0 #FFFFFF;
 	margin-bottom: 20px;
 	padding: 20px;
@@ -530,7 +530,7 @@ ol li, section p, label {
 	margin-top:20px;
 }
 
-.home-intro h1 {
+.home-intro h1, .not-found h1 {
 	margin-left:0;
 	font-size:3em;
 }
@@ -543,4 +543,13 @@ ol li, section p, label {
 	left:0;
 	right:0;
 	z-index: 99999;
+}
+
+.not-found p {
+	margin-top:20px;
+	margin-left:2px;
+}
+
+.not-found-home {
+	margin-top:20px;
 }

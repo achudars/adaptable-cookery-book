@@ -1,5 +1,9 @@
 <?php
 
+	/**
+	 * Class used to handle requests for
+	 * this custom 404 landing page.
+	 */
 	class custom_404 extends CI_Controller {
 
 		public function __construct()
@@ -20,6 +24,8 @@
 			}
 
 			$data['defaultStyle'] = $preferredRecipeStyle;
+			$data['title']        = '404 Error';
+			$data['page']         = '/' . $this->uri->uri_string();
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
