@@ -11,7 +11,7 @@ CREATE TABLE `course` (
   `name` VARCHAR(45) NOT NULL,
   `description` TEXT NULL,
   PRIMARY KEY (`courseid`))
-  CHARACTER SET utf8 COLLATE utf8_general_ci);
+  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE `recipe` (
   `recipeid` INT NOT NULL AUTO_INCREMENT,
@@ -29,7 +29,7 @@ CREATE TABLE `recipe` (
     REFERENCES `course` (`courseid`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
-  CHARACTER SET utf8 COLLATE utf8_general_ci);
+  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE `recipe_ingredient` (
   `recipeingredientid` INT NOT NULL AUTO_INCREMENT,
@@ -44,7 +44,7 @@ CREATE TABLE `recipe_ingredient` (
     REFERENCES `recipe` (`recipeid`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
-  CHARACTER SET utf8 COLLATE utf8_general_ci);
+  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE `recipe_segmented` (
   `recipeid` INT NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE `recipe_segmented` (
     REFERENCES `recipe` (`recipeid`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
-  CHARACTER SET utf8 COLLATE utf8_general_ci);
+  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE `recipe_step` (
   `recipeid` INT NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE `recipe_step` (
     REFERENCES `recipe` (`recipeid`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
-  CHARACTER SET utf8 COLLATE utf8_general_ci);
+  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE `recipe_segmented_ingredient` (
   `recipeingredientid` INT NOT NULL AUTO_INCREMENT,
@@ -89,7 +89,7 @@ CREATE TABLE `recipe_segmented_ingredient` (
     REFERENCES `recipe_ingredient` (`recipeingredientid`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
-  CHARACTER SET utf8 COLLATE utf8_general_ci);
+  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE `recipe_step_ingredient` (
   `recipeingredientid` INT NOT NULL AUTO_INCREMENT,
@@ -110,7 +110,7 @@ CREATE TABLE `recipe_step_ingredient` (
     REFERENCES `recipe_ingredient` (`recipeingredientid`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
-  CHARACTER SET utf8 COLLATE utf8_general_ci);
+  CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 INSERT INTO `course` (`name`, `description`) VALUES
 	('Main Dish', 'In here you can find all the main courses you could ever dream of eating.'),
