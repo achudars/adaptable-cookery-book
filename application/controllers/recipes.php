@@ -24,8 +24,6 @@
             $data['recipes']    = $this->recipe_model->getAllRecipes();
 			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipes');
 
-			$data['breadcrumb']['Recipes: List View'] = base_url() . 'recipes/list-view';
-
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
 			$this->load->view('pages/recipes_list.php', $data);

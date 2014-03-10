@@ -32,43 +32,26 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                        <li tabindex="1"  class="<?php echo $this->uri->segment(2) == 'grid-view' ? 'active' : '' ?>"><a title="grid"href="<?php echo base_url() .  'recipes/grid-view' ?>">Recipes</a></li>
 						<li tabindex="3"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
-                    <span class="btn-group">
-                      <div class="btn-group">
+                    <span class="btn-group pull-right">
                         <button tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           Instruction Types
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" tabindex="5">
                             <li tabindex="5" class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
-								<a class="recipe-style" href="#narrative" data-style="narrative" data-toggle="tab" data-target="#narrative">narrative</a>
-							</li>
+                                <a class="recipe-style" href="#narrative" data-style="narrative" data-toggle="tab" data-target="#narrative">narrative</a>
+                            </li>
                             <li tabindex="5" class="<?php echo $defaultStyle == 'segmented' ? 'active' : '' ?>">
-								<a class="recipe-style" href="#segmented" data-style="segmented" data-toggle="tab" data-target="#segmented">segmented</a>
-							</li>
+                                <a class="recipe-style" href="#segmented" data-style="segmented" data-toggle="tab" data-target="#segmented">segmented</a>
+                            </li>
                             <li tabindex="5" class="<?php echo $defaultStyle == 'step' ? 'active' : '' ?>">
-								<a class="recipe-style" href="#step-by-step" data-style="step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
-							</li>
+                                <a class="recipe-style" href="#step-by-step" data-style="step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
+                            </li>
                         </ul>
-                      </div>
-                      <div class="btn-group">
-                        <button tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                           Recipe Views
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" tabindex="5">
-                            <li tabindex="1"  class="<?php echo $this->uri->segment(2) == 'grid-view' ? 'active' : '' ?>"><a title="grid"href="<?php echo base_url() .  'recipes/grid-view' ?>"><span class="glyphicon glyphicon-th"></span> Grid View</a></li>
-                            <li tabindex="2"  class="<?php echo $this->uri->segment(2) == 'list-view' ? 'active' : '' ?>"><a title="list" href="<?php echo base_url() . 'recipes/list-view' ?>"><span class="glyphicon glyphicon-th-list"></span> List View</a></li>
-                        </ul>
-                      </div>
                     </span>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Search</button>
-                      </form>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
