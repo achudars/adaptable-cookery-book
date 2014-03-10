@@ -22,4 +22,27 @@ $(document).ready(function() {
         }
     );
 
+	$('.recipe-style').click(function() {
+		$('.style-change-error').addClass('hidden');
+
+		var chosenStyle = $(this).data('style');
+
+		$.ajax({
+			type: 'POST',
+			url: $('#baseUrl').text() + 'ajax/changeRecipeStyle',
+			data: {recipeStyle: chosenStyle},
+			success: function() {
+				$('.recipe-style').each(function() {
+					$(this).parent().removeClass('active');
+					if($(this).data('style') == chosenStyle)
+					{
+						$(this).parent().addClass('active');
+					}
+				});
+			},
+			error: function() {
+				$('.style-change-error').removeClass('hidden');
+			}
+		});
+	});
 });
