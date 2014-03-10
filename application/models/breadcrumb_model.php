@@ -28,13 +28,13 @@
 			}
 
 			$links = array(
-				'Home' => base_url() . 'recipes/grid-view',
+				'Home' => base_url() . 'recipes/',
 			);
 
 			switch(strtolower($siteSection))
 			{
 				case 'recipe':
-					$links['Recipes'] = base_url() . 'recipes/grid-view';
+					$links['Recipes'] = base_url() . 'recipes/';
 					break;
 
 				case 'course':
