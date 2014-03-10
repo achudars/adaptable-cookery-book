@@ -1,3 +1,6 @@
+SET NAMES 'utf8';
+
+
 DROP TABLE recipe_step_ingredient;
 DROP TABLE recipe_segmented_ingredient;
 DROP TABLE recipe_ingredient;
@@ -10,7 +13,8 @@ CREATE TABLE `course` (
   `courseid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `description` TEXT NULL,
-  PRIMARY KEY (`courseid`));
+  PRIMARY KEY (`courseid`),
+  CHARACTER SET utf8 COLLATE utf8_general_ci);
 
 CREATE TABLE `recipe` (
   `recipeid` INT NOT NULL AUTO_INCREMENT,
@@ -27,7 +31,8 @@ CREATE TABLE `recipe` (
     FOREIGN KEY (`courseid`)
     REFERENCES `course` (`courseid`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT);
+    ON UPDATE RESTRICT,
+  CHARACTER SET utf8 COLLATE utf8_general_ci);
 
 CREATE TABLE `recipe_ingredient` (
   `recipeingredientid` INT NOT NULL AUTO_INCREMENT,
@@ -41,7 +46,8 @@ CREATE TABLE `recipe_ingredient` (
     FOREIGN KEY (`recipeid`)
     REFERENCES `recipe` (`recipeid`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT);
+    ON UPDATE RESTRICT,
+  CHARACTER SET utf8 COLLATE utf8_general_ci);
 
 CREATE TABLE `recipe_segmented` (
   `recipeid` INT NOT NULL,
@@ -52,7 +58,8 @@ CREATE TABLE `recipe_segmented` (
     FOREIGN KEY (`recipeid`)
     REFERENCES `recipe` (`recipeid`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT);
+    ON UPDATE RESTRICT,
+  CHARACTER SET utf8 COLLATE utf8_general_ci);
 
 CREATE TABLE `recipe_step` (
   `recipeid` INT NOT NULL,
@@ -63,7 +70,8 @@ CREATE TABLE `recipe_step` (
     FOREIGN KEY (`recipeid`)
     REFERENCES `recipe` (`recipeid`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT);
+    ON UPDATE RESTRICT,
+  CHARACTER SET utf8 COLLATE utf8_general_ci);
 
 CREATE TABLE `recipe_segmented_ingredient` (
   `recipeingredientid` INT NOT NULL AUTO_INCREMENT,
@@ -83,7 +91,8 @@ CREATE TABLE `recipe_segmented_ingredient` (
     FOREIGN KEY (`replaces`)
     REFERENCES `recipe_ingredient` (`recipeingredientid`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT);
+    ON UPDATE RESTRICT,
+  CHARACTER SET utf8 COLLATE utf8_general_ci);
 
 CREATE TABLE `recipe_step_ingredient` (
   `recipeingredientid` INT NOT NULL AUTO_INCREMENT,
@@ -103,7 +112,8 @@ CREATE TABLE `recipe_step_ingredient` (
     FOREIGN KEY (`replaces`)
     REFERENCES `recipe_ingredient` (`recipeingredientid`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT);
+    ON UPDATE RESTRICT,
+  CHARACTER SET utf8 COLLATE utf8_general_ci);
 
 INSERT INTO `course` (`name`, `description`) VALUES
 	('Main Dish', 'In here you can find all the main courses you could ever dream of eating.'),
