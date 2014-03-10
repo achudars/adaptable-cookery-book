@@ -534,3 +534,13 @@ ol li, section p, label {
 	margin-left:0;
 	font-size:3em;
 }
+
+.style-change-success {
+	position:absolute;
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	left:0;
+	right:0;
+	z-index: 99999;
+}

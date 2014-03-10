@@ -48,6 +48,8 @@ $(document).ready(function() {
 					$('.home-intro.success').find('.style').text(chosenStyle);
 					$('.home-intro.success').removeClass('hidden');
 				}
+
+				$('.style-change-success').removeClass('hidden').delay(1000).fadeOut();
 			},
 			error: function() {
 				$('.style-change-error').removeClass('hidden');

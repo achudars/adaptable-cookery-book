@@ -94,3 +94,8 @@
 			As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.
 		</div>
 	</div>
+	<div class="container">
+		<div class="alert alert-success style-change-success hidden">
+			<strong>Great! Your presentation style was changed successfully!</strong>
+		</div>
+	</div>
