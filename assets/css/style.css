@@ -493,6 +493,8 @@ ol li, section p, label {
 }
 
 #breadcrumbs {
+    height: 30px;
+    line-height: 30px;
     background: #383838;
     width: 100%;
     position: relative;
@@ -503,7 +505,9 @@ ol li, section p, label {
 }
 #breadcrumbs a {
     color: #EEE;
-    font-weight: 100;
+}
+#breadcrumbs a:hover {
+    color: Coral;
 }
 
 .style-intro {
