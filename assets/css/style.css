@@ -34,7 +34,9 @@ body nav, input, button {
     -webkit-transition: 1s;
     -moz-transition: 1s
 }
-
+.brand.active {
+    background-image: url("./../../assets/images/icon_2.png");
+}
 .brand:hover {
     background-image: url("./../../assets/images/icon_2.png");
     cursor: pointer;
