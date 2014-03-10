@@ -25,7 +25,8 @@ $(document).ready(function() {
 	$('.recipe-style').click(function() {
 		$('.style-change-error').addClass('hidden');
 
-		var chosenStyle = $(this).data('style');
+		var clickedButton = $(this);
+		var chosenStyle   = clickedButton.data('style');
 
 		$.ajax({
 			type: 'POST',
@@ -39,6 +40,14 @@ $(document).ready(function() {
 						$(this).parent().addClass('active');
 					}
 				});
+
+				if(clickedButton.hasClass('home-style-choose'))
+				{
+					clickedButton.parentsUntil('body', '.container').fadeOut();
+					$('.welcome-message').fadeOut();
+					$('.home-intro.success').find('.style').text(chosenStyle);
+					$('.home-intro.success').removeClass('hidden');
+				}
 			},
 			error: function() {
 				$('.style-change-error').removeClass('hidden');
