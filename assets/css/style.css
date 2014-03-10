@@ -553,3 +553,7 @@ ol li, section p, label {
 .not-found-home {
 	margin-top:20px;
 }
+
+.nav.nav-tabs.nav-justified {
+    background: #EEE;
+}
