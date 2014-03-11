@@ -57,11 +57,17 @@
                             <input class="radio" id="work<?php echo $step->stepid?>" name="works" type="radio"
                                 <?php echo $step->stepid == 1 ? ' checked' : ''?>>
                             <div class="relative">
-                                <label for='work<?php echo $step->stepid?>'><?php echo $step->instruction?></label>
+                                <label for='work<?php echo $step->stepid?>'>
+                                <?php echo $step->instruction?>
+                                </label>
                                 <span class='step'><?php echo $step->stepid?></span>
                                 <span class='circle'></span>
                             </div>
-                            <div class='sub'></div>
+                            <div class='sub'>
+                            	<span class="glyphicon glyphicon-arrow-up"></span>
+                            	<span class="glyphicon glyphicon-arrow-down"></span>
+                            </div>
+
                         </li>
                         <?php endforeach?>
                     </ul>

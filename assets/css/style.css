@@ -255,7 +255,7 @@ div p a:hover {
     margin-bottom: 20px;
 }
 .recipe .tab-pane {
-    padding: 0 10px;
+    padding: 0 40px 0 10px;
 }
 .recipe h1 {
     -webkit-border-top-left-radius: 3px;
@@ -379,7 +379,7 @@ button.dropdown-toggle:hover {
 
 #timeline {
     list-style: none;
-    margin: 50px 0 30px 30px;
+    margin: 15px 0 30px 30px;
     padding-left: 30px;
     border-left: 8px solid #383838;
 }
@@ -387,7 +387,7 @@ button.dropdown-toggle:hover {
 #timeline li {
     outline: none;
     position: relative;
-    height: 90px;
+    height: 200px;
     border: 1px solid rgba(0,0,0,0.03);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -402,9 +402,8 @@ button.dropdown-toggle:hover {
 }
 
 .step {
-    margin-top: -16px;
-    top: 50px;
-    left: -70px;
+    top: 90px;
+    left: -65px;
     position: absolute;
 }
 
@@ -443,8 +442,20 @@ button.dropdown-toggle:hover {
 .sub:before {
     border-right-color: #383838;
     border-width: 10px;
-    top: 45px;
+    top: 98px;
     margin-top: -10px;
+}
+.sub .glyphicon-arrow-down {
+    color: #DDD;
+    position: absolute;
+    right: -21px;
+    top: 100px;
+}
+.sub .glyphicon-arrow-up {
+    color: #DDD;
+    position: absolute;
+    right: -20px;
+    top: 80px;
 }
 input:not(:checked) + .relative +  .sub:before {
     border: none;
@@ -452,12 +463,15 @@ input:not(:checked) + .relative +  .sub:before {
 
 label {
     font-weight: 400;
-    top: 15px;
-    left: 20px;
+    top: 0;
+    left: 0;
     right: 40px;
     position: absolute;
     z-index: 100;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
 
 .radio {
@@ -467,7 +481,7 @@ label {
     background: Coral;
 }
 .radio:checked ~ .sub {
-    min-height: 90px;
+    min-height: 200px;
     border-color: #383838;
 }
 .radio:checked ~ .sub p {
@@ -563,4 +577,13 @@ ol li, section p, label {
 
 .nav.nav-tabs.nav-justified {
     background: #EEE;
+}
+
+.alert-success {
+    background-color: #9BF177;
+    top: 99px;
+    width: 100%;
+    text-align: center;
+    height: 26px;
+    line-height: 0px;
 }
