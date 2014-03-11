@@ -10,9 +10,14 @@ $(document).ready(function() {
                 $(this).addClass("matched");
                 var matched = $(".tab-content ol li:contains('"+word+"'), .tab-content label:contains('"+word+"')");
                 matched.css({"border":"2px solid Coral"});
-                $('html, body').animate({
-                    scrollTop: matched.offset().top
-                }, 2000);
+                try {
+                    $('html, body').animate({
+                        scrollTop: matched.offset().top
+                    }, 2000);
+                } catch(e) {
+                    console.log("You are probably scrolling over an element that we cannot find. " + e);
+                }
+
             }
 
         },
