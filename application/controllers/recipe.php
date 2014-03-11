@@ -17,7 +17,7 @@
 		 *
 		 * @param $recipeId : Integer/Null - When integer, recipe data is feteched fron
 		 *                    from the database and displayed to the user.
-		 *                    If null, WE'LL SEND THEM TO THE RECIPE LANDING PAGE
+		 *                    If null, we'll send them to the Recipe landing page
 		 *
 		 */
 		public function view($recipeId = null)
@@ -43,6 +43,9 @@
                 $data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
                 $data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
 				$data['diettype'] = $info->diettype;
+                $data['preptime'] = $info->preptime;
+                $data['calories'] = $info->calories;
+                $data['serves'] = $info->serves;
 
 				$this->load->model('Breadcrumb_model');
 				$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipe');

@@ -236,8 +236,20 @@ h1 {
     content: "";
 }
 
-.home-squares {
-
+.single-recipe .holder {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 30px 0 0 35px;
+    color: #FFF;
+}
+.single-recipe .holder div {
+    color: #FFF;
 }
 
 div p a {
