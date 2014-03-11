@@ -15,7 +15,7 @@
 <body>
 	<span class="hidden" id="baseUrl"><?php echo base_url() ?></span>
     <header>
-        <a class="brand <?php echo $this->uri->segment(1) == '' ? 'active' : '' ?>" href="<?php echo base_url() ?>">
+        <a tabindex="3" class="brand <?php echo $this->uri->segment(1) == '' ? 'active' : '' ?>" href="<?php echo base_url() ?>">
         </a>
         <nav class="navbar" role="navigation">
             <div class="container">
@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li tabindex="1"  class="<?php echo $this->uri->segment(1) == 'recipes' ? 'active' : '' ?>"><a title="grid"href="<?php echo base_url() .  'recipes/' ?>">Recipes</a></li>
-						<li tabindex="3"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
+						<li tabindex="2"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
                     <span class="btn-group pull-right">
                         <button tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
