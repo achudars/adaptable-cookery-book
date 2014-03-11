@@ -150,12 +150,12 @@ h1 {
     box-shadow:         0px 0px 3px 2px rgba(0,0,0,0.5);
 }
 .grid-recipes > .holder .preview-img, .home-squares > .holder .preview-img {
-    -webkit-border-top-left-radius: 3px;
-    -moz-border-top-left-radius: 3px;
-    border-top-left-radius: 3px;
-    -webkit-border-top-right-radius: 3px;
-    -moz-border-top-right-radius: 3px;
-    border-top-right-radius: 3px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
     background-image: url("http://bit.ly/1gJuK0l");
     background-size: cover;
     background-repeat: no-repeat;
@@ -166,16 +166,6 @@ h1 {
 }
 .home-squares > .holder .preview-img {
     height: 45%;
-}
-.list-recipes > .holder .preview-img {
-    -webkit-border-bottom-left-radius: 3px;
-    -moz-border-bottom-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 25%;
-    height: 100%;
 }
 
 .grid-recipes .holder > .recipe-title {
@@ -208,6 +198,7 @@ h1 {
 .grid-recipes .holder > div p, .home-squares .holder > div p{
     color: #EEE;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     padding-bottom: 5px;
     padding-top:5px;
     white-space: nowrap;
@@ -245,8 +236,20 @@ h1 {
     content: "";
 }
 
-.home-squares {
-
+.single-recipe .holder {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 30px 0 0 35px;
+    color: #FFF;
+}
+.single-recipe .holder div {
+    color: #FFF;
 }
 
 div p a {
@@ -299,23 +302,31 @@ div p a:hover {
     -moz-border-top-right-radius: 3px;
     border-top-right-radius: 3px;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     color: #EEE;
     margin-left: 0;
     padding: 5px;
+    position: inherit;
+    -moz-box-shadow:    0px 0px -1px #383838;
+    -webkit-box-shadow: 0px 0px -1px #383838;
+    box-shadow:         0px 0px -1px #383838;
 }
 .recipe p {
     margin-bottom: 40px;
 }
 .recipe .recipe-img {
-    -moz-box-shadow:    inset 0px 10px 20px #383838;
-    -webkit-box-shadow: inset 0px 10px 20px #383838;
-    box-shadow:         inset 0px 10px 20px #383838;
     background-image: url("http://bit.ly/1ffWb3r");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 300px;
     width: 100%;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .container.single-recipe {
     padding: 0 40px;
@@ -331,15 +342,12 @@ div p a:hover {
     background-position: 50% 50%;
     height: 300px;
     width: 100%;
-    -moz-box-shadow:    inset 0px 10px 20px #383838;
-    -webkit-box-shadow: inset 0px 10px 20px #383838;
-    box-shadow:         inset 0px 10px 20px #383838;
-    -webkit-border-bottom-left-radius: 3px !important;
-    -moz-border-bottom-left-radius: 3px !important;
-    border-bottom-left-radius: 3px !important;
-    -webkit-border-bottom-right-radius: 3px !important;
-    -moz-border-bottom-right-radius: 3px !important;
-    border-bottom-right-radius: 3px !important;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .container .course-description {
@@ -356,6 +364,7 @@ div p a:hover {
     border-radius: 3px;
     padding: 5px;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     list-style: none;
     color: #EEE;
 }
@@ -551,9 +560,13 @@ ol li, section p, label {
     height: 30px;
     line-height: 30px;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     width: 100%;
     position: relative;
     top: -20px;
+    -moz-box-shadow:    0px 0px 10px #383838;
+    -webkit-box-shadow: 0px 0px 10px #383838;
+    box-shadow:         0px 0px 10px #383838;
 }
 #breadcrumbs .container {
     padding-left: 26px;

@@ -1,6 +1,6 @@
 <div class="container">
     <?php foreach ($recipes as $recipe):?>
-      <div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-4">
           <div class="holder">
             <img alt="Image of <?php echo $recipe->name;?>" class="preview-img" style="background-image: url(<?php echo $recipe->imageurl;?>);">
             <div class="recipe-title">

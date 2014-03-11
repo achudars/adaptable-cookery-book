@@ -3,6 +3,14 @@
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <h1 tabindex="5"><?php echo $title?></h1>
             <img alt="Image of <?php echo $title?>" class="recipe-img" src="" style="background-image: url(<?php echo $image?>);">
+            <div class="holder">
+	        	<div><span class="glyphicon glyphicon-time"></span> <?php echo $preptime;?> min</div>
+                <div><span class="glyphicon glyphicon-tasks"></span> <?php echo $calories;?> calories</div>
+                <div><span class="glyphicon glyphicon-user"></span> <?php echo $serves;?> servings</div>
+			    <?php if(!empty($diettype)) { ?>
+			    	<div><span class="glyphicon glyphicon-leaf"></span> <?php echo !empty($diettype) ? $diettype : ''; ?> </div>
+				<?php } ?>
+            </div>
         </div>
         <div class="col-sx-12 col-sm-12 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4 ingredients">
             <h2 tabindex="8">Ingredients:</h2>
@@ -15,11 +23,6 @@
                 <?php endforeach?>
             </ul>
         </div>
-		<?php if($diettype) { ?>
-	        <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
-				<h1>This recipe is suitable for <?php echo $diettype ?> diners</h1>
-			</div>
-		<?php } ?>
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <ul class="nav nav-tabs nav-justified">
                 <li class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
