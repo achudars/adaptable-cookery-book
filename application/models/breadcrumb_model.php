@@ -28,7 +28,7 @@
 			}
 
 			$links = array(
-				'Home' => base_url() . 'recipes/',
+				'Home' => base_url(),
 			);
 
 			switch(strtolower($siteSection))
