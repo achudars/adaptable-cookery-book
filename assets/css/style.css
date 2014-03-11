@@ -208,6 +208,7 @@ h1 {
 .grid-recipes .holder > div p, .home-squares .holder > div p{
     color: #EEE;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     padding-bottom: 5px;
     padding-top:5px;
     white-space: nowrap;
@@ -299,6 +300,7 @@ div p a:hover {
     -moz-border-top-right-radius: 3px;
     border-top-right-radius: 3px;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     color: #EEE;
     margin-left: 0;
     padding: 5px;
@@ -356,6 +358,7 @@ div p a:hover {
     border-radius: 3px;
     padding: 5px;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     list-style: none;
     color: #EEE;
 }
@@ -551,6 +554,7 @@ ol li, section p, label {
     height: 30px;
     line-height: 30px;
     background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
     width: 100%;
     position: relative;
     top: -20px;
