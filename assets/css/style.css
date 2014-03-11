@@ -331,7 +331,7 @@ div p a:hover {
 .ingredients ul li {
     padding: 4px 10px;
 }
-.ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
+.ingredients ul li:hover, .ingredients ul li:hover {
     background: #383838;
     color: #EEE;
 }
@@ -490,7 +490,7 @@ ol li, section p, label {
     line-height: 26px;
 }
 
-.ingredient-name span:hover {
+.ingredient-name span.matched:hover {
     text-decoration: underline;
     cursor: pointer;
 }
