@@ -30,8 +30,18 @@
 			}
 
 			$data['defaultStyle'] = $preferredRecipeStyle;
-			$data['courses']      = $this->Course_model->getAllCourses();
 			$data['breadcrumb']   = $this->Breadcrumb_model->generateBreadcrumb('courses');
+
+			$courses         = $this->Course_model->getAllCourses();
+			$data['courses'] = array();
+
+			foreach($courses as $course)
+			{
+				$courseRecipes    = $this->Course_model->getRecipes($course->name);
+				$course->imageurl = $courseRecipes[array_rand($courseRecipes)]->imageurl;
+
+				$data['courses'][] = $course;
+			}
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);

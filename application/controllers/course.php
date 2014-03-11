@@ -30,8 +30,8 @@
 			$course = $this->Course_model->getCourseInfo($courseName);
 
 			$data['title']       = $course->name . ' Recipes';
-			$data['courseImage'] = 'http://placehold.it/3500x1500';
 			$data['recipes']     = $this->Course_model->getRecipes($courseName);
+			$data['courseImage'] = $data['recipes'][array_rand($data['recipes'])]->imageurl;
 
 			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
 
