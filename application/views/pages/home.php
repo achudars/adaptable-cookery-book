@@ -1,6 +1,6 @@
 <div class="container home-intro">
 	<h1>
-		Welcome to Team 14's Recipe/Cookery/Chef Application!<br />
+		Welcome to Team 14's Recipe/Cookery/Chef Application!
 		<small>Here you'll find a range of recipes that even the most novice people in the kitchen can cook. Main? Side? Dessert? We've got them all.</small>
 	</h1>
 </div>
@@ -12,8 +12,8 @@
 </div>
 <div class="container welcome-message">
 	<div class="alert alert-info">
-		<strong>First Things First...</strong><br />
-		Before you go ahead and start cooking, we'd like to know how good you are in the kitchen. This application is tailored to you and your preferences for recipe instructions.<br />
+		<strong>First Things First...</strong>
+		Before you go ahead and start cooking, we'd like to know how good you are in the kitchen. This application is tailored to you and your preferences for recipe instructions.
 		Simply pick your preferred style from the options below and you'll be ready to go.
 	</div>
 </div>
@@ -26,7 +26,7 @@
 			</div>
 			<div class="style-intro">
 				<span>The narrative style is for those who don't want to be bounded by culineray rules. Rough steps, rough instructions.</span>
-				<br />
+
 				<a class="btn btn-primary recipe-style home-style-choose" data-style="narrative">Choose Narrative Style</a>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 			</div>
 			<div class="style-intro">
 				<span>The segmented style is well suited to those with intermediate experience in the kitchen, providing the information for the recipe in several, not too complicated steps.</span>
-				<br />
+
 				<a class="btn btn-primary recipe-style home-style-choose" data-style="segmented">Choose Segmented Style</a>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 			</div>
 			<div class="style-intro">
 				<span>Not really one for cooking? Not really sure how to sauté a potato? Simple, easy and well defined steps - this is the choice for you.</span>
-				<br />
+
 				<a class="btn btn-primary recipe-style home-style-choose" data-style="step">Choose Step-By-Step Style</a>
 			</div>
 		</div>
