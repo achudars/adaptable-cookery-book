@@ -16,11 +16,13 @@
                 <span><span class="glyphicon glyphicon-cutlery"></span> <?php echo $recipe->course;?></span>
                 <span><?php echo $recipe->serves;?> servings <span class="glyphicon glyphicon-user"></span></span>
             </div>
-            <div class="split">
-                <span><span class="glyphicon glyphicon-leaf"></span> vegetarian </span>
-                <span><span></span></span>
-            </div>
-          </div>
+			<?php if(!empty($recipe->diettype)) { ?>
+				<div class="split">
+				    <span><span class="glyphicon glyphicon-leaf"></span> <?php echo !empty($recipe->diettype) ? $recipe->diettype : ''; ?> </span>
+				    <span><span></span></span>
+				</div>
+			<?php } ?>
+		   </div>
       </div>
     <?php endforeach;?>
 </div>
