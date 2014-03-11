@@ -3,7 +3,7 @@
 html,
 body {
   height: 100%;
-  background: #F5F4EE;
+  background: #EEE;
   background-image: url("./../../assets/images/tile.png");
 }
 
@@ -99,9 +99,33 @@ h1 {
     padding: 10px;
     min-height: 300px;
 }
+#home-container {
+    position: absolute;
+    top: 130px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("./../../assets/images/cake.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-align: center;
+}
+#home-container h1 {
+    padding: 20px;
+    margin: 0px;
+    background-image: url("./../../assets/images/tile.png");
+}
 .home-squares {
     padding: 10px;
     min-height: 360px;
+}
+.home-squares img :after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 127, 80, 0.5);
+    width: 100%;
+    height: 100%;
 }
 .grid-recipes > .holder, .list-recipes > .holder, .home-squares > .holder {
     background: #FFF;
@@ -140,7 +164,9 @@ h1 {
     width: 100%;
     height: 60%;
 }
-
+.home-squares > .holder .preview-img {
+    height: 45%;
+}
 .list-recipes > .holder .preview-img {
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-bottom-left-radius: 3px;
@@ -179,7 +205,7 @@ h1 {
     width: 100%;
     position: absolute;
 }
-.grid-recipes .holder > div p {
+.grid-recipes .holder > div p, .home-squares .holder > div p{
     color: #EEE;
     background: #383838;
     padding-bottom: 5px;
@@ -196,7 +222,7 @@ h1 {
     margin-left: -5px;
     margin-right: -6px;
 }
-.grid-recipes .holder > div p:after{
+.grid-recipes .holder > div p:after, .home-squares .holder > div p:after{
    border-color:  #383838 transparent transparent #383838;
    border-style:solid;
    border-width: 3px;
@@ -207,7 +233,7 @@ h1 {
    margin-top: 25px;
    content: "";
 }
-.grid-recipes .holder > div p:before{
+.grid-recipes .holder > div p:before, .home-squares .holder > div p:before{
     border-color: #383838 #383838 transparent transparent;
     border-style:solid;
     border-width: 3px;
@@ -541,16 +567,34 @@ ol li, section p, label {
 
 .style-intro {
 	padding:10px;
+    background: #FFF;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .style-intro .recipe-style {
 	margin-top:10px;
 }
 
-.container.home-intro, .container.not-found {
+.container.home-intro {
+    background: none;
+}
+
+.container.not-found {
 	background: none repeat scroll 0 0 #FFFFFF;
 	margin-bottom: 20px;
 	padding: 20px;
+
+}
+
+.container.home-intro.success p {
+	margin-top:20px;
+}
+
+.home-intro > div {
+    margin: 20px 10px;
+    padding: 10px;
+    background: #FFF;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -558,16 +602,6 @@ ol li, section p, label {
     -webkit-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
     box-shadow:         0px 0px 3px 2px rgba(0,0,0,0.2);
 }
-
-.container.home-intro.success p {
-	margin-top:20px;
-}
-
-.home-intro h1, .not-found h1 {
-	margin-left:0;
-	font-size:3em;
-}
-
 .style-change-success {
 	position:absolute;
 	width:960px;
@@ -590,7 +624,22 @@ ol li, section p, label {
 .nav.nav-tabs.nav-justified {
     background: #EEE;
 }
-
+.alert.alert-info {
+    background: #FFF;
+    border-radius: 0;
+    border: none;
+    color: #383838;
+    font-size: 120%;
+}
+.home-squares .btn-primary {
+    background: Coral;
+    border: 1px solid #383838;
+    color: #383838;
+}
+.home-squares .btn-primary:hover {
+    background: #383838;
+    color: #EEE;
+}
 .alert-success {
     background-color: #9BF177;
     top: 99px;
