@@ -18,7 +18,7 @@
 	</div>
 </div>
 <div class="container">
-	<div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-3">
+	<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
 		<div class="holder">
 			<img alt="Image of Segmented Instructions" src="" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/narrative.png' ?>);">
 			<div class="course-title">
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-3">
+	<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
 		<div class="holder">
 			<img alt="Image of Segmented Instructions" src="" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/segmented.png' ?>);">
 			<div class="course-title">
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-3">
+	<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
 		<div class="holder">
 			<img alt="Image of Segmented Instructions" src="" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/steps.png' ?>);">
 			<div class="course-title">
