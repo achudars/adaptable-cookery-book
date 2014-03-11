@@ -334,7 +334,6 @@ div p a:hover {
 .ingredients ul li:hover, .ingredients ul li:hover .ingredient-name {
     background: #383838;
     color: #EEE;
-    font-weight:bold;
 }
 .ingredients ul li .amount {
     width: 70px;

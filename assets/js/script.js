@@ -5,13 +5,27 @@ $(document).ready(function() {
     $(".ingredient-name span").hover(
         function() {
             var word = $(this).text();
-            var matched = $(".tab-content ol li:contains('"+word+"'), .tab-content label:contains('"+word+"')");
-            matched.css({"border":"2px solid Coral"});
+            if(!(  word == "for" || word == "such" || word == "as" || word == "and" || word == "in"
+                || word == "or" || word == "e.g." || word == "if" || word == "into" || word == "to")){
+                $(this).addClass("matched");
+                var matched = $(".tab-content ol li:contains('"+word+"'), .tab-content label:contains('"+word+"')");
+                matched.css({"border":"2px solid Coral"});
+                $('html, body').animate({
+                    scrollTop: matched.offset().top
+                }, 2000);
+            }
+
         },
         function() {
-            var word = $(this).text();
-            var matched = $(".tab-content ol li:contains('"+word+"'), .tab-content label:contains('"+word+"')");
-            matched.css({"border":"none"});
+           var word = $(this).text();
+            if(!(  word == "for" || word == "such" || word == "as" || word == "and" || word == "in"
+                || word == "or" || word == "e.g." || word == "if" || word == "into" || word == "to")){
+                $(this).removeClass("matched");
+                var matched = $(".tab-content ol li:contains('"+word+"'), .tab-content label:contains('"+word+"')");
+                matched.css({"border":"none"});
+
+            }
+
         }
     );
 
