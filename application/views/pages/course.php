@@ -22,6 +22,12 @@
                 <span><span class="glyphicon glyphicon-cutlery"></span> <?php echo $recipe->courseName;?></span>
                 <span><?php echo $recipe->serves;?> <span class="glyphicon glyphicon-user"></span></span>
             </div>
+			<?php if(!empty($recipe->diettype)) { ?>
+				<div class="split">
+				    <span><span class="glyphicon glyphicon-leaf"></span> <?php echo !empty($recipe->diettype) ? $recipe->diettype : ''; ?> </span>
+				    <span><span></span></span>
+				</div>
+			<?php } ?>
           </div>
       </div>
     <?php endforeach;?>

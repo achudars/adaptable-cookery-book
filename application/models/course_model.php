@@ -55,7 +55,7 @@ class Course_model extends CI_Model
 	{
 		$courseName = urldecode($courseName);
 
-		$this->db->select('recipe.recipeid, recipe.name, recipe.imageurl, recipe.serves, recipe.calories, recipe.preptime, course.name AS courseName');
+		$this->db->select('recipe.recipeid, recipe.name, recipe.imageurl, recipe.serves, recipe.calories, recipe.preptime, recipe.diettype, course.name AS courseName');
 		$this->db->from('recipe');
 		$this->db->join('course', 'course.courseid = recipe.courseid');
 		$this->db->where('course.name', $courseName);
