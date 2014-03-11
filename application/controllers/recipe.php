@@ -42,6 +42,7 @@
                 $data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
                 $data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
                 $data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
+				$data['diettype'] = $info->diettype;
 
 				$this->load->model('Breadcrumb_model');
 				$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipe');

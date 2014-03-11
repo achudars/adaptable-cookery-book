@@ -15,6 +15,11 @@
                 <?php endforeach?>
             </ul>
         </div>
+		<?php if($diettype) { ?>
+	        <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
+				<h1>This recipe is suitable for <?php echo $diettype ?> diners</h1>
+			</div>
+		<?php } ?>
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <ul class="nav nav-tabs nav-justified">
                 <li class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
