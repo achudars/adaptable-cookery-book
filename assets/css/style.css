@@ -341,13 +341,16 @@ div p a:hover {
     text-align: right;
     color: Coral;
     padding-right: 5px;
+    position: absolute;
 }
 .ingredients ul li .ingredient-name {
     display: inline-block;
     color: Lavender;
+    padding-left: 75px;
 }
 @media (min-width: 990px) {
     .ingredients ul {
+        width: 400px;
         position: fixed;
         margin-top: 70px;
         bottom: 10px;
