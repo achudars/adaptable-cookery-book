@@ -10,9 +10,7 @@
                   </a>
                 </p>
             </div>
-
-                <p tabindex="7"><?php echo $course->description ?></p>
-
+            <p tabindex="7"><?php echo $course->description ?></p>
         </div>
     </div>
     <?php endforeach;?>
