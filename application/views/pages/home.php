@@ -5,10 +5,9 @@
 	</h1>
 </div>
 <div class="container home-intro success hidden">
-	<h1>
-		Great! You're all ready to go now!
-	</h1>
-	<p>You selected <span class="style"></span> as your presentation style - good choice! Don't forget, you can use the style choosers on any recipe to change your preference, as well as the menu in the header on any page!</p>
+	<p>Great! You're all ready to go now!</p>
+	<p>You selected <span class="style"></span> as your presentation style - good choice!</p>
+	<p>Don't forget, you can use the style choosers on any recipe to change your preference, as well as the menu in the header on any page!</p>
 </div>
 <div class="container welcome-message">
 	<div tabindex="7" class="alert alert-info">
