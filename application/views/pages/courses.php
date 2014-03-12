@@ -5,7 +5,7 @@
             <img alt="Image of <?php echo $course->name;?>" src="//:0" class="preview-img" style="background-image: url(<?php echo $course->imageurl ?>);">
             <div class="course-title">
                 <p>
-                  <a tabindex="7" href="<?php echo base_url() . 'course/' . strtolower($course->name) ?>">
+                  <a tabindex="7" href="<?php echo base_url() . 'course/' . rawurlencode(strtolower($course->name)) ?>">
                     <span class="glyphicon glyphicon-chevron-right"></span> <?php echo $course->name;?>
                   </a>
                 </p>
