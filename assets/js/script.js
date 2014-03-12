@@ -35,5 +35,9 @@ $(document).ready(function() {
 				$('.style-change-error').removeClass('hidden');
 			}
 		});
+        
+        //Update ingredients
+        $('.ingredients ul').removeClass('active');
+        $('#ingredients-'+chosenStyle).addClass('active');
 	});
 });

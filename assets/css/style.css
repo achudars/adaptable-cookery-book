@@ -369,6 +369,10 @@ div p a:hover {
     background-image: url("./../../assets/images/darktile.png");
     list-style: none;
     color: #EEE;
+    display: none;
+}
+.ingredients ul.active {
+    display: block;
 }
 .ingredients h2 {
     margin: 0;

@@ -14,8 +14,24 @@
         </div>
         <div class="col-sx-12 col-sm-12 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4 ingredients">
             <h2 tabindex="8">Ingredients:</h2>
-            <ul>
+            <ul id="ingredients-narrative" class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
                 <?php foreach ($narrative->ingredients as $ingredient):?>
+                <li tabindex="8">
+                    <span class="amount"><?php echo $ingredient->quantity.$ingredient->units?></span>
+                    <span class="ingredient-name"><?php echo $ingredient->name?></span>
+                </li>
+                <?php endforeach?>
+            </ul>
+            <ul id="ingredients-segmented" class="<?php echo $defaultStyle == 'segmented' ? 'active' : '' ?>">
+                <?php foreach ($segmented->ingredients as $ingredient):?>
+                <li tabindex="8">
+                    <span class="amount"><?php echo $ingredient->quantity.$ingredient->units?></span>
+                    <span class="ingredient-name"><?php echo $ingredient->name?></span>
+                </li>
+                <?php endforeach?>
+            </ul>
+            <ul id="ingredients-step" class="<?php echo $defaultStyle == 'step' ? 'active' : '' ?>">
+                <?php foreach ($steps->ingredients as $ingredient):?>
                 <li tabindex="8">
                     <span class="amount"><?php echo $ingredient->quantity.$ingredient->units?></span>
                     <span class="ingredient-name"><?php echo $ingredient->name?></span>

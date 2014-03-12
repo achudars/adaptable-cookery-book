@@ -152,7 +152,18 @@ class Recipe_model extends CI_Model
         
         $result = $this->db->get()->result();
         
-        //Walk over quantities and convert them to be pretty
+        return $this->formatIngredients($result);
+    }
+    
+    /**
+     * Takes quantity values and converts them to look more human-readable
+     * 
+     * e.g. Removing decimal places, using fractions.
+     * 
+     * @param Array{name,quantity,section,units} $result
+     * @return Array{name,quantity,section,units}
+     */
+    private function formatIngredients($result) {
         return array_map(function($x)
         {
             //Remove unnecessary decimal places
@@ -228,7 +239,7 @@ class Recipe_model extends CI_Model
         $narrative = $this->getNarrativeIngredientsExcept($recipeid, $replaced);
         
         //Merge the two results
-        return array_merge($ingredients, $narrative);
+        return array_merge($this->formatIngredients($ingredients), $narrative);
     }
     
     /**
@@ -257,6 +268,6 @@ class Recipe_model extends CI_Model
         $narrative = $this->getNarrativeIngredientsExcept($recipeid, $replaced);
         
         //Merge the two results
-        return array_merge($ingredients, $narrative);
+        return array_merge($this->formatIngredients($ingredients), $narrative);
     }
 }
