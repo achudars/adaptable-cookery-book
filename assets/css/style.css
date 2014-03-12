@@ -600,14 +600,21 @@ ol li, section p, label {
 }
 
 .container.not-found {
-	background: none repeat scroll 0 0 #FFFFFF;
+	background: none repeat scroll 0 0 #EEE;
 	margin-bottom: 20px;
 	padding: 20px;
 
 }
 
 .container.home-intro.success p {
-	margin-top:20px;
+    background: #383838;
+    background-image: url("./../../assets/images/darktile.png");
+    color: #EEE;
+    padding: 10px;
+    font-weight: 400;
+}
+.container.home-intro.success p .style {
+    color: Coral;
 }
 
 .home-intro > div {
