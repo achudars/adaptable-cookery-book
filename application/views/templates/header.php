@@ -75,13 +75,13 @@ header('Content-Type:text/html; charset=utf-8');
     </header>
 	<div class="container">
 		<div class="alert alert-danger style-change-error hidden">
-			<strong>Sorry, there was a problem changing the style of your recipes.</strong><br />
-			Although the recipe has changed here, the system can't remember your change at the moment.</br />
-			As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.
+			<p>Sorry, there was a problem changing the style of your recipes.</p>
+			<p>Although the recipe has changed here, the system can't remember your change at the moment.</p>
+			<p>As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.</p>
 		</div>
 	</div>
 	<div class="container">
 		<div class="alert alert-success style-change-success hidden">
-			<strong>Great! Your presentation style was changed successfully!</strong>
+			<p>Great! Your presentation style was changed successfully!</p>
 		</div>
 	</div>
