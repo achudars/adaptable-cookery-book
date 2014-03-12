@@ -38,7 +38,7 @@ header('Content-Type:text/html; charset=utf-8');
                         <li tabindex="1"  class="<?php echo $this->uri->segment(1) == 'recipes' ? 'active' : '' ?>"><a title="grid" href="<?php echo base_url() .  'recipes/' ?>">Recipes</a></li>
 						<li tabindex="2"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
-                    <span class="btn-group pull-right">
+                    <div class="btn-group pull-right">
                         <button tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           Instruction Types
                           <span class="caret"></span>
@@ -54,7 +54,7 @@ header('Content-Type:text/html; charset=utf-8');
                                 <a class="recipe-style" href="#step-by-step" data-style="step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
                             </li>
                         </ul>
-                    </span>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
