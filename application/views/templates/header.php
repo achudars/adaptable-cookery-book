@@ -4,8 +4,7 @@ header('Content-Type:text/html; charset=utf-8');
 <html lang="en">
 
 <head>
-    <meta content-type="text/html; charset=utf-8">
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $title ?></title>
     <link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/favicon.ico" type="image/x-icon">
