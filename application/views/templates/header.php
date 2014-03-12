@@ -16,6 +16,7 @@
 	<span class="hidden" id="baseUrl"><?php echo base_url() ?></span>
     <header>
         <a tabindex="3" class="brand <?php echo $this->uri->segment(1) == '' ? 'active' : '' ?>" href="<?php echo base_url() ?>">
+        Link to home
         </a>
         <nav class="navbar" role="navigation">
             <div class="container">

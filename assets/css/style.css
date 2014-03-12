@@ -32,7 +32,9 @@ body nav, input, button {
     background-position: 50% 50%;
     transition: 1s;
     -webkit-transition: 1s;
-    -moz-transition: 1s
+    -moz-transition: 1s;
+    color: transparent;
+    font-size: 0;
 }
 .brand.active {
     background-image: url("./../../assets/images/icon_2.png");
