@@ -20,7 +20,7 @@
 	<div class="container">
 		<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
 			<div class="holder">
-				<img alt="Image of Narrative Instructions" src="" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/narrative.png' ?>);">
+				<img alt="Image of Narrative Instructions" src="//:0" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/narrative.png' ?>);">
 				<div tabindex="8" class="course-title">
 					<p >Narrative Instructions</p>
 				</div>
@@ -32,7 +32,7 @@
 		</div>
 		<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
 			<div class="holder">
-				<img alt="Image of Segmented Instructions" src="" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/segmented.png' ?>);">
+				<img alt="Image of Segmented Instructions" src="//:0" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/segmented.png' ?>);">
 				<div tabindex="11" class="course-title">
 					<p>Segmented Instructions</p>
 				</div>
@@ -44,7 +44,7 @@
 		</div>
 		<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
 			<div class="holder">
-				<img alt="Image of Step-By-Step Instructions" src="" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/steps.png' ?>);">
+				<img alt="Image of Step-By-Step Instructions" src="//:0" class="preview-img" style="background-image: url(<?php echo base_url() . 'assets/images/steps.png' ?>);">
 				<div tabindex="14" class="course-title">
 					<p>Step-By-Step Instructions</p>
 				</div>
