@@ -64,7 +64,7 @@
                 <?php
                       foreach($breadcrumb as $name => $link)
                       {
-                         echo '<a tabindex="6" href="' . $link . '"> > ' . $name . '</a>';
+                         echo '<a tabindex="6" href="' . $link . '"> ' . $name . ' / </a>';
                       }
                 ?>
             <?php } ?>
