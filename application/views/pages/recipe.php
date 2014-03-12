@@ -2,7 +2,7 @@
     <div class="row">
         <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <h1 tabindex="7"><?php echo $title?></h1>
-            <img alt="Image of <?php echo $title?>" class="recipe-img" src="" style="background-image: url(<?php echo $image?>);">
+            <img alt="Image of <?php echo $title?>" class="recipe-img" src="//:0" style="background-image: url(<?php echo $image?>);">
             <div class="holder">
 	        	<div><span class="glyphicon glyphicon-time"></span> <span tabindex="7"><?php echo $preptime;?> minutes</span></div>
                 <div><span class="glyphicon glyphicon-tasks"></span> <span tabindex="7"><?php echo $calories;?> calories</span></div>
