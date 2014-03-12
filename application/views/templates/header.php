@@ -4,8 +4,7 @@ header('Content-Type:text/html; charset=utf-8');
 <html lang="en">
 
 <head>
-    <meta content-type="text/html; charset=utf-8">
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $title ?></title>
     <link rel="shortcut icon" href="<?php echo base_url() ?>assets/images/favicon.ico" type="image/x-icon">
@@ -25,7 +24,7 @@ header('Content-Type:text/html; charset=utf-8');
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button alt="A button to toggle navigation for responsive view." type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -36,11 +35,11 @@ header('Content-Type:text/html; charset=utf-8');
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li tabindex="1"  class="<?php echo $this->uri->segment(1) == 'recipes' ? 'active' : '' ?>"><a title="grid"href="<?php echo base_url() .  'recipes/' ?>">Recipes</a></li>
+                        <li tabindex="1"  class="<?php echo $this->uri->segment(1) == 'recipes' ? 'active' : '' ?>"><a title="grid" href="<?php echo base_url() .  'recipes/' ?>">Recipes</a></li>
 						<li tabindex="2"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
-                    <span class="btn-group pull-right">
-                        <button alt="A button to list instrcution types as a drop down menu." tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <div class="btn-group pull-right">
+                        <button tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           Instruction Types
                           <span class="caret"></span>
                         </button>
@@ -55,7 +54,7 @@ header('Content-Type:text/html; charset=utf-8');
                                 <a class="recipe-style" href="#step-by-step" data-style="step" data-toggle="tab" data-target="#step-by-step">step-by-step</a>
                             </li>
                         </ul>
-                    </span>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -76,13 +75,13 @@ header('Content-Type:text/html; charset=utf-8');
     </header>
 	<div class="container">
 		<div class="alert alert-danger style-change-error hidden">
-			<strong>Sorry, there was a problem changing the style of your recipes.</strong><br />
-			Although the recipe has changed here, the system can't remember your change at the moment.</br />
-			As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.
+			<p>Sorry, there was a problem changing the style of your recipes.</p>
+			<p>Although the recipe has changed here, the system can't remember your change at the moment.</p>
+			<p>As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.</p>
 		</div>
 	</div>
 	<div class="container">
 		<div class="alert alert-success style-change-success hidden">
-			<strong>Great! Your presentation style was changed successfully!</strong>
+			<p>Great! Your presentation style was changed successfully!</p>
 		</div>
 	</div>

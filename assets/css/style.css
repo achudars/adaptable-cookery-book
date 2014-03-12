@@ -352,7 +352,7 @@ div p a:hover {
     border-bottom-right-radius: 5px;
 }
 
-.container .course-description {
+.container .course-title + p {
     padding: 0 40px;
 }
 
