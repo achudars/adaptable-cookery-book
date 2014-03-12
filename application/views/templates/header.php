@@ -25,7 +25,7 @@ header('Content-Type:text/html; charset=utf-8');
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button alt="A button to toggle navigation for responsive view." type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -40,7 +40,7 @@ header('Content-Type:text/html; charset=utf-8');
 						<li tabindex="2"  class="<?php echo $this->uri->segment(1) == 'courses' ? 'active' : '' ?>"><a title="courses" href="<?php echo base_url() . 'courses/' ?>">Courses</a></li>
                     </ul>
                     <span class="btn-group pull-right">
-                        <button tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <button alt="A button to list instrcution types as a drop down menu." tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           Instruction Types
                           <span class="caret"></span>
                         </button>
