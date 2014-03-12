@@ -8,7 +8,7 @@
                 <div><span class="glyphicon glyphicon-tasks"></span> <span tabindex="7"><?php echo $calories;?> calories</span></div>
                 <div><span class="glyphicon glyphicon-user"></span> <span tabindex="7"><?php echo $serves;?> servings</span></div>
 			    <?php if(!empty($diettype)) { ?>
-			    	<div><span tabindex="7" class="glyphicon glyphicon-leaf"></span> <?php echo !empty($diettype) ? $diettype : ''; ?> </div>
+			    	<div><span class="glyphicon glyphicon-leaf"></span> <span tabindex="7"><?php echo !empty($diettype) ? $diettype : ''; ?></span></div>
 				<?php } ?>
             </div>
         </div>
