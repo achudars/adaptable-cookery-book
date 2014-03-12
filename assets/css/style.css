@@ -628,7 +628,7 @@ ol li, section p, label {
 	margin-right:auto;
 	left:0;
 	right:0;
-	z-index: 99999;
+	z-index: 999;
 }
 
 .not-found p {
