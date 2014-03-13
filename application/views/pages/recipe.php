@@ -39,7 +39,7 @@
                 <?php endforeach?>
             </ul>
         </div>
-        <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
+        <div class="recipe recipe-content col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <ul class="nav nav-tabs nav-justified">
                 <li class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
 					<a tabindex="9" class="recipe-style" href="#narrative" data-style="narrative"
