@@ -9,7 +9,7 @@
                     </a></p>
             </div>
             <div class="split">
-                <span tabindex="7"><span class="glyphicon glyphicon-time"></span> <?php echo $recipe->preptime;?> min</span>
+                <span tabindex="7"><span class="glyphicon glyphicon-time"></span> <?php echo $recipe->preptime;?> minutes</span>
                 <span tabindex="7"><?php echo $recipe->calories;?> calories <span class="glyphicon glyphicon-tasks"></span></span>
             </div>
             <div class="split">

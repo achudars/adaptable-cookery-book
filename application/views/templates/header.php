@@ -40,7 +40,7 @@ header('Content-Type:text/html; charset=utf-8');
                     </ul>
                     <div class="btn-group pull-right">
                         <button tabindex="4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                          Instruction Types
+                          <span data-toggle="tooltip" data-placement="bottom" title="Click on this dropdown menu to select how instructions will be represented when you view recipes.">Instruction Types</span>
                           <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" tabindex="5">

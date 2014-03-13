@@ -679,3 +679,6 @@ ol li, section p, label {
     height: 26px;
     line-height: 0px;
 }
+.tooltip-inner {
+    white-space:pre-wrap;
+}
