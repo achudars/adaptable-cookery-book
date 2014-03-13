@@ -291,7 +291,12 @@ div p a:hover {
 .recipe {
     padding: 0;
     background: #FFF;
-    margin-bottom: 100px;
+}
+.recipe.recipe-content {
+    margin-bottom: 120px;
+}
+.recipe.recipe-content h2 {
+    margin-left: 10px;
 }
 .recipe .tab-pane {
     padding: 0 40px 0 10px;

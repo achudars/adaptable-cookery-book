@@ -39,7 +39,7 @@
                 <?php endforeach?>
             </ul>
         </div>
-        <div class="recipe col-sx-12 col-sm-12 col-md-7 col-lg-7">
+        <div class="recipe recipe-content col-sx-12 col-sm-12 col-md-7 col-lg-7">
             <ul class="nav nav-tabs nav-justified">
                 <li class="<?php echo $defaultStyle == 'narrative' ? 'active' : '' ?>">
 					<a tabindex="9" class="recipe-style" href="#narrative" data-style="narrative"
@@ -55,26 +55,23 @@
                 </li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade <?php
+            	<h2 tabindex="10">Instructions:</h2>
+                <section class="tab-pane fade <?php
                     echo $defaultStyle == 'narrative' ? 'in active' : '' ?>" id="narrative">
-                    <h2 tabindex="10">Instructions:</h2>
                     <section tabindex="11">
                         <?php echo $narrative->instructions;?>
                     </section>
-                </div>
-                <div class="tab-pane fade <?php
+                </section>
+                <section class="tab-pane fade <?php
                     echo $defaultStyle == 'step' ? 'in active' : '' ?>" id="step-by-step">
-                    <h2 tabindex="10">Instructions:</h2>
                     <ol>
                         <?php foreach ($steps->instructions as $step):?>
                         <li tabindex="11"><?php echo $step->instruction?></li>
                         <?php endforeach?>
                     </ol>
-                </div>
-                <div class="tab-pane fade <?php
+                </section>
+                <section class="tab-pane fade <?php
                     echo $defaultStyle == 'segmented' ? 'in active' : '' ?>" id="segmented">
-                    <h2 tabindex="10">Instructions:</h2>
-
                     <ul id='timeline'>
                         <?php foreach ($segmented->instructions as $step):?>
                         <li tabindex="11">
@@ -95,7 +92,7 @@
                         </li>
                         <?php endforeach?>
                     </ul>
-                </div>
+                </section>
 
 
             </div>
