@@ -55,16 +55,15 @@
                 </li>
             </ul>
             <div class="tab-content">
+            	<h2 tabindex="10">Instructions:</h2>
                 <section class="tab-pane fade <?php
                     echo $defaultStyle == 'narrative' ? 'in active' : '' ?>" id="narrative">
-                    <h2 tabindex="10">Instructions:</h2>
                     <section tabindex="11">
                         <?php echo $narrative->instructions;?>
                     </section>
                 </section>
                 <section class="tab-pane fade <?php
                     echo $defaultStyle == 'step' ? 'in active' : '' ?>" id="step-by-step">
-                    <h2 tabindex="10">Instructions:</h2>
                     <ol>
                         <?php foreach ($steps->instructions as $step):?>
                         <li tabindex="11"><?php echo $step->instruction?></li>
@@ -73,8 +72,6 @@
                 </section>
                 <section class="tab-pane fade <?php
                     echo $defaultStyle == 'segmented' ? 'in active' : '' ?>" id="segmented">
-                    <h2 tabindex="10">Instructions:</h2>
-
                     <ul id='timeline'>
                         <?php foreach ($segmented->instructions as $step):?>
                         <li tabindex="11">
