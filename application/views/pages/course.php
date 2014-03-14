@@ -9,10 +9,10 @@
 <div class="container">
     <?php foreach ($recipes as $recipe):?>
       <div class="grid-recipes col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="holder">
+          <a class="holder" tabindex="8" href="<?php echo base_url() ?>recipe/<?php echo $recipe->recipeid ?>">
             <img alt="" class="preview-img" src="//:0" style="background-image: url(<?php echo $recipe->imageurl; ?>);">
             <div class="recipe-title">
-                <p><a tabindex="8" href="<?php echo base_url() ?>recipe/<?php echo $recipe->recipeid ?>"><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?></a></p>
+                <p><span class="glyphicon glyphicon-chevron-right"></span> <?php echo $recipe->name;?></p>
             </div>
             <div class="split">
                 <span tabindex="8"><span class="glyphicon glyphicon-time"></span> <?php echo $recipe->preptime;?> minutes</span>
@@ -28,7 +28,7 @@
 				    <span><span></span></span>
 				</div>
 			<?php } ?>
-          </div>
+          </a>
       </div>
     <?php endforeach;?>
 </div>
