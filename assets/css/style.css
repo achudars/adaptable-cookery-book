@@ -547,13 +547,19 @@ img {
     display: block;
     color: transparent;
 }
-ol li, section p, label {
+ol li, section p, label, li span {
     font-size: 16px;
     line-height: 32px;
     font-weight: 400;
 }
 
-.ingredient-name span.matched:hover {
+span.matched {
+    background: Coral;
+    color: #383838;
+    border-radius: 3px;
+    padding: 2px 8px;
+}
+span.matched:hover {
     text-decoration: underline;
     cursor: pointer;
 }
