@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/" />
+<title>BreadbrumbsCorrectlyFormedTest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">BreadbrumbsCorrectlyFormedTest</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>recipes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Home /</td>
+	<td>Home /</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Recipes /</td>
+	<td>Recipes /</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Vanilla Slice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Home /</td>
+	<td>Home /</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Recipes /</td>
+	<td>Recipes /</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Recipe: Vanilla Slice /</td>
+	<td>Recipe: Vanilla Slice /</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Home /</td>
+	<td>Home /</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Courses /</td>
+	<td>Courses /</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Dessert</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Home /</td>
+	<td>Home /</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Courses /</td>
+	<td>Courses /</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Course: Dessert /</td>
+	<td>Course: Dessert /</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Courses Available</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
