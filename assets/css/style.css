@@ -343,9 +343,12 @@ div p a:hover {
 }
 .ingredients ul {
     font-size: 110%;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     padding: 5px;
     background: #383838;
     background-image: url("./../../assets/images/darktile.png");
@@ -358,6 +361,16 @@ div p a:hover {
 }
 .ingredients h2 {
     margin: 0;
+    background: #FF7F50;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
 }
 .ingredients ul li {
     padding: 4px 10px;
@@ -383,13 +396,14 @@ div p a:hover {
     .ingredients ul {
         width: 400px;
         position: fixed;
-        margin-top: 70px;
+        margin-top: 80px;
         bottom: 10px;
         top: 120px;
         overflow-y: auto;
     }
     .ingredients h2 {
         position: fixed;
+        width: 400px;
     }
 }
 
