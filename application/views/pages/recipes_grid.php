@@ -6,7 +6,6 @@
             <div class="recipe-title">
                 <p>
                     <span class="glyphicon glyphicon-chevron-right"></span> <span tabindex="7"><?php echo $recipe->name;?></span>
-
                 </p>
             </div>
             <div class="split">
