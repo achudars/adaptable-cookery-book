@@ -119,8 +119,7 @@ h1 {
     background-image: url("./../../assets/images/tile.png");
 }
 .home-squares {
-    padding: 10px;
-    min-height: 360px;
+    min-height: 300px;
 }
 .home-squares img :after {
     content: "";
@@ -667,6 +666,15 @@ span.matched:hover {
 .home-squares .btn-primary:hover {
     background: #383838;
     color: #EEE;
+}
+
+@media (max-width: 990px) {
+    #home-container {
+        bottom: -300px;
+    }
+    .home-squares .holder {
+        height: 200px;
+    }
 }
 .alert-success {
     background-color: #9BF177;

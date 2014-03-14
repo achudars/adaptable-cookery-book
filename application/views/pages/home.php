@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<div class="home-squares col-xs-12 col-sm-12 col-md-4 col-lg-4">
 			<div class="holder">
 				<div tabindex="8" class="course-title">
 					<h1>Narrative Instructions</h1>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<div class="home-squares col-xs-12 col-sm-12 col-md-4 col-lg-4">
 			<div class="holder">
 				<div tabindex="12" class="course-title">
 					<h1>Segmented Instructions</h1>
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="home-squares col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<div class="home-squares col-xs-12 col-sm-12 col-md-4 col-lg-4">
 			<div class="holder">
 				<div tabindex="16" class="course-title">
 					<h1>Step-By-Step Instructions</h1>
