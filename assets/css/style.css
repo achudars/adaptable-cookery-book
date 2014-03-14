@@ -547,7 +547,7 @@ img {
     display: block;
     color: transparent;
 }
-ol li, section p, label, li span {
+ol li, section p, label, li span, .holder a {
     font-size: 16px;
     line-height: 32px;
     font-weight: 400;
@@ -678,4 +678,52 @@ span.matched:hover {
 }
 .tooltip-inner {
     white-space:pre-wrap;
+}
+
+
+
+
+.ribbon-wrapper {
+  width: 100px;
+  height: 103px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -5px;
+}
+
+.ribbon {
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -4px;
+  top: 15px;
+  width: 135px;
+  background-color: Coral;
+  color: #383838;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  border-top:   3px solid #6e8900;
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon:before {
+  left: 0;
+}
+.ribbon:after {
+  right: 0;
 }
