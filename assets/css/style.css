@@ -684,6 +684,17 @@ span.matched:hover {
     height: 26px;
     line-height: 0px;
 }
+.alert-danger {
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    position: absolute;
+    background: tomato;
+    border-radius: 0;
+    left: 0;
+    z-index: 1;
+}
 .tooltip-inner {
     white-space:pre-wrap;
 }
