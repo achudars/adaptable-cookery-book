@@ -66,7 +66,7 @@ header('Content-Type:text/html; charset=utf-8');
                 <?php
                       foreach($breadcrumb as $name => $link)
                       {
-                         echo '<a tabindex="6" href="' . rawurlencode($link) . '"> ' . $name . ' / </a>';
+                         echo '<a tabindex="6" href="' . $link . '"> ' . $name . ' / </a>';
                       }
                 ?>
             <?php } ?>

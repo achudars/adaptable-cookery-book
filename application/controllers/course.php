@@ -44,7 +44,7 @@
 			$data['defaultStyle'] = $preferredRecipeStyle;
 			$data['breadcrumb']   = $this->Breadcrumb_model->generateBreadcrumb('course');
 
-			$data['breadcrumb']['Course: ' . ucfirst($courseName)] = base_url() . 'course/' . $courseName;
+			$data['breadcrumb']['Course: ' . ucfirst($courseName)] = base_url() . 'course/' . rawurlencode($courseName);
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
