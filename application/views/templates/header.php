@@ -66,22 +66,23 @@ header('Content-Type:text/html; charset=utf-8');
                 <?php
                       foreach($breadcrumb as $name => $link)
                       {
-                         echo '<a tabindex="6" href="' . rawurlencode($link) . '"> ' . $name . ' / </a>';
+                         echo '<a tabindex="6" href="' . $link . '"> ' . $name . ' / </a>';
                       }
                 ?>
             <?php } ?>
             </div>
         </div>
     </header>
-	<div class="container">
-		<div class="alert alert-danger style-change-error hidden">
-			<p>Sorry, there was a problem changing the style of your recipes.</p>
-			<p>Although the recipe has changed here, the system can't remember your change at the moment.</p>
-			<p>As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.</p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="alert alert-danger style-change-error hidden">
+            <p>Sorry, there was a problem changing the style of your recipes.</p>
+            <p>Although the recipe has changed here, the system can't remember your change at the moment.</p>
+            <p>As such, when you go and look at another recipe your style preference will revert to default, rather than the choice you've just made.</p>
+        </div>
+    </div>
 	<div class="container">
 		<div class="alert alert-success style-change-success hidden">
 			<p>Great! Your presentation style was changed successfully!</p>
 		</div>
 	</div>
+
