@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 				if(clickedButton.hasClass('home-style-choose'))
 				{
-					setTimeout("location.href='" + $('#baseUrl').text() + "/recipes/'", 1500);
+					setTimeout("location.href='" + $('#baseUrl').text() + "recipes/'", 1500);
 				}
 
 				$('.style-change-success').removeClass('hidden').delay(2000).fadeOut('slow', function() {
