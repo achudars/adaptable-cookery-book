@@ -49,8 +49,9 @@
 			{
 				error_log(__FILE__ . ':' . __LINE__ . ' - No recipe information found in database for recipe ID: ' . $recipeId);
 
-				$data['title'] = 'Recipe Not Found';
-				$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
+				$data['breadcrumb']['Recipe: ' . $recipeId] = base_url() . 'recipe/' . $recipeId;
+				$data['title']    = 'Recipe Not Found';
+				$data['recipeId'] = $recipeId;
 
 				$this->load->helper('html');
 				$this->load->view('templates/header.php', $data);
@@ -59,8 +60,6 @@
 
 				return;
 			}
-
-			$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
 
 			$data['title']     = $recipeInfo->name;
 			$data['image']     = $recipeInfo->imageurl;
@@ -71,6 +70,8 @@
 			$data['preptime']  = $recipeInfo->preptime;
 			$data['calories']  = $recipeInfo->calories;
 			$data['serves']    = $recipeInfo->serves;
+
+			$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);

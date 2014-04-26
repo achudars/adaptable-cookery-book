@@ -24,7 +24,7 @@ class Recipe_model extends CI_Model
 
         $q = $this->db->get();
 
-        if (empty($q->result))
+        if (empty($q->result()))
         {
 			error_log(__FILE__ . ':' . __LINE__ . ' - Database query for recipe ID ' . $recipeid . ' returned no results.');
 			return false;
