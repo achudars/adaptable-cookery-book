@@ -22,38 +22,38 @@
 		 */
 		public function view($recipeId = null)
 		{
-			if(isset($recipeId))
+			if(!isset($recipeId))
 			{
-                $this->load->model('Recipe_style_model');
+				error_log(__FILE__ . ':' . __LINE__ . ' - Received request to view recipe, but no recipe ID');
+				header('Location: ' . base_url() . 'recipes/');
+			}
 
-                $preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
+			$this->load->model('Recipe_style_model');
 
-                if(!$preferredRecipeStyle)
-                {
-                    $this->Recipe_style_model->setRecipeStyle();
-                    $preferredRecipeStyle = 'narrative';
-                }
+			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
 
-                //Go and get the recipe details from the database
-                $data['defaultStyle'] = $preferredRecipeStyle;
-                $info = $this->recipe_model->getRecipeInfo($recipeId);
-                $data['title'] = $info->name;
-                $data['image'] = $info->imageurl;
-                $data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
-                $data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
-                $data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
-				$data['diettype'] = $info->diettype;
-                $data['preptime'] = $info->preptime;
-                $data['calories'] = $info->calories;
-                $data['serves'] = $info->serves;
+			if(!$preferredRecipeStyle)
+			{
+			    $this->Recipe_style_model->setRecipeStyle();
+			    $preferredRecipeStyle = 'narrative';
+			}
 
-				$this->load->model('Breadcrumb_model');
-				$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipe');
-				$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
-			} else {
-                header('HTTP/1.1 400 Bad Request');
-                header('Location: ../');
-            }
+			//Go and get the recipe details from the database
+			$data['defaultStyle'] = $preferredRecipeStyle;
+			$info = $this->recipe_model->getRecipeInfo($recipeId);
+			$data['title'] = $info->name;
+			$data['image'] = $info->imageurl;
+			$data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
+			$data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
+			$data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
+			$data['diettype'] = $info->diettype;
+			$data['preptime'] = $info->preptime;
+			$data['calories'] = $info->calories;
+			$data['serves'] = $info->serves;
+
+			$this->load->model('Breadcrumb_model');
+			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipe');
+			$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
