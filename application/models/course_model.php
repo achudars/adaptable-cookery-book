@@ -37,10 +37,13 @@ class Course_model extends CI_Model
 
         $q = $this->db->get();
 
-        if (empty($q))
+        if (empty($q->result()))
         {
-            throw new Exception('That course could not be found.', 404);
-        } else {
+			error_log(__FILE__ . ':' . __LINE__ . ' - No course data for course ' . $courseName);
+			return false;
+        }
+		else
+		{
             return $q->result()[0];
         }
     }
