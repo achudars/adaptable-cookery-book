@@ -38,22 +38,39 @@
 			    $preferredRecipeStyle = 'narrative';
 			}
 
-			//Go and get the recipe details from the database
 			$data['defaultStyle'] = $preferredRecipeStyle;
-			$info = $this->recipe_model->getRecipeInfo($recipeId);
-			$data['title'] = $info->name;
-			$data['image'] = $info->imageurl;
-			$data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
-			$data['steps'] = $this->recipe_model->getRecipeStepped($recipeId);
-			$data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
-			$data['diettype'] = $info->diettype;
-			$data['preptime'] = $info->preptime;
-			$data['calories'] = $info->calories;
-			$data['serves'] = $info->serves;
+
+			$recipeInfo = $this->recipe_model->getRecipeInfo($recipeId);
 
 			$this->load->model('Breadcrumb_model');
 			$data['breadcrumb'] = $this->Breadcrumb_model->generateBreadcrumb('recipe');
+
+			if(!$recipeInfo)
+			{
+				error_log(__FILE__ . ':' . __LINE__ . ' - No recipe information found in database for recipe ID: ' . $recipeId);
+
+				$data['title'] = 'Recipe Not Found';
+				$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
+
+				$this->load->helper('html');
+				$this->load->view('templates/header.php', $data);
+				$this->load->view('pages/recipe_not_found.php', $data);
+				$this->load->view('templates/footer.php', $data);
+
+				return;
+			}
+
 			$data['breadcrumb']['Recipe: ' . $data['title']] = base_url() . 'recipe/' . $recipeId;
+
+			$data['title']     = $recipeInfo->name;
+			$data['image']     = $recipeInfo->imageurl;
+			$data['narrative'] = $this->recipe_model->getRecipeNarrative($recipeId);
+			$data['steps']     = $this->recipe_model->getRecipeStepped($recipeId);
+			$data['segmented'] = $this->recipe_model->getRecipeSegmented($recipeId);
+			$data['diettype']  = $recipeInfo->diettype;
+			$data['preptime']  = $recipeInfo->preptime;
+			$data['calories']  = $recipeInfo->calories;
+			$data['serves']    = $recipeInfo->serves;
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
