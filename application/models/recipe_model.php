@@ -2,15 +2,15 @@
 
 class Recipe_model extends CI_Model
 {
-    
+
     public function __construct()
     {
         parent::__construct();
     }
-    
+
     /**
      * Loads basic details about a recipe, useful for menu pages.
-     * 
+     *
      * @param int $recipeid
      * @return Object A set of {recipeid, name, courseid, diettype, serves, imageurl, calories, preptime}
      * @throws Exception On failure to find the recipe.
@@ -21,20 +21,23 @@ class Recipe_model extends CI_Model
                   ->from('recipe')
                   ->where(['recipeid' => $recipeid])
                   ->limit(1);
-        
+
         $q = $this->db->get();
-        
-        if (empty($q))
+
+        if (empty($q->result))
         {
-            throw new Exception('That recipe could not be found.', 404);
-        } else {
+			error_log(__FILE__ . ':' . __LINE__ . ' - Database query for recipe ID ' . $recipeid . ' returned no results.');
+			return false;
+        }
+		else
+		{
             return $q->result()[0];
         }
     }
-    
+
     /**
      * Loads basic details for all recipes for a given course.
-     * 
+     *
      * @param int $courseid
      * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, calories, preptime, course},...]
      */
@@ -45,13 +48,13 @@ class Recipe_model extends CI_Model
                   ->join('course', 'recipe.courseid = course.courseid')
                   ->where(['courseid' => $courseid])
                   ->order_by('name', 'asc');
-        
+
         return $this->db->get()->result();
     }
-    
+
     /**
      * Loads basic details for all recipes.
-     * 
+     *
      * @return Array[Object] [{recipeid, name, diettype, serves, imageurl, calories, preptime, course},...]
      */
     public function getAllRecipes()
@@ -60,14 +63,14 @@ class Recipe_model extends CI_Model
                   ->from('recipe')
                   ->join('course', 'recipe.courseid = course.courseid')
                   ->order_by('name', 'asc');
-        
+
         return $this->db->get()->result();
     }
-    
+
     /**
      * Gets all the information necessary to display the narrative form
      * of the recipe.
-     * 
+     *
      * @param int $recipeid
      * @return Object {instructions, ingredients[]}
      * @throws Exception On failure to find the recipe
@@ -79,7 +82,7 @@ class Recipe_model extends CI_Model
                 ->where(['recipeid' => $recipeid])
                 ->limit(1);
         $q = $this->db->get();
-        
+
         if (empty($q))
         {
             throw new Exception('That recipe could not be found.', 404);
@@ -90,11 +93,11 @@ class Recipe_model extends CI_Model
             return $recipe;
         }
     }
-    
+
     /**
      * Gets all the information necessary to display the segmented form
      * of the recipe.
-     * 
+     *
      * @param int $recipeid
      * @return Object {instructions[{stepid, instruction}], ingredients[]}
      */
@@ -104,17 +107,17 @@ class Recipe_model extends CI_Model
                 ->from('recipe_segmented')
                 ->where(['recipeid' => $recipeid])
                 ->order_by('stepid', 'asc');
-        
+
         $recipe = new stdClass();
         $recipe->instructions = $this->db->get()->result();
         $recipe->ingredients = $this->getSegmentedIngredients($recipeid);
         return $recipe;
     }
-    
+
     /**
      * Gets all the information necessary to display the stepped form
      * of the recipe.
-     * 
+     *
      * @param int $recipeid
      * @return Object {instructions[{stepid, instruction}], ingredients[]}
      */
@@ -124,19 +127,19 @@ class Recipe_model extends CI_Model
                 ->from('recipe_step')
                 ->where(['recipeid' => $recipeid])
                 ->order_by('stepid', 'asc');
-        
+
         $recipe = new stdClass();
         $recipe->instructions = $this->db->get()->result();
         $recipe->ingredients = $this->getSteppedIngredients($recipeid);
         return $recipe;
     }
-    
+
     /**
      * Gets all the ingredients for the narrative recipe, except those excluded.
-     * 
+     *
      * Segmented and stepped recipes will use the same ingredient set as
      * narrative, unless they are explicitly overridden.
-     * 
+     *
      * @param int $recipeid
      * @return Array[Object] [{name, quantity, section, units}]
      */
@@ -149,17 +152,17 @@ class Recipe_model extends CI_Model
                 ->from('recipe_ingredient')
                 ->where_not_in('recipeingredientid', $except)
                 ->where(['recipeid' => $recipeid]);
-        
+
         $result = $this->db->get()->result();
-        
+
         return $this->formatIngredients($result);
     }
-    
+
     /**
      * Takes quantity values and converts them to look more human-readable
-     * 
+     *
      * e.g. Removing decimal places, using fractions.
-     * 
+     *
      * @param Array{name,quantity,section,units} $result
      * @return Array{name,quantity,section,units}
      */
@@ -171,14 +174,14 @@ class Recipe_model extends CI_Model
             {
                 $x->quantity = (string)$x->quantity+0;
             }
-            
+
             //Replace with fractions where necessary
             $prefix = floor($x->quantity);
             if ($prefix == 0)
             {
                 $prefix = '';
             }
-            
+
             switch (fmod($x->quantity,1))
             {
                 case 0.25:
@@ -197,14 +200,14 @@ class Recipe_model extends CI_Model
                     $x->quantity = $prefix.'&frac34;';
                     break;
             }
-            
+
             return $x;
         }, $result);
     }
-    
+
     /**
      * Loads the ingredients needed for the Narrative view of the recipe.
-     * 
+     *
      * @param int $recipeid
      * @return Array[Object] [{name, quantity, section, units}]
      */
@@ -212,10 +215,10 @@ class Recipe_model extends CI_Model
     {
         return $this->getNarrativeIngredientsExcept($recipeid, []);
     }
-    
+
     /**
      * Loads the ingredients needed for the Segmented view of the recipe.
-     * 
+     *
      * @param int $recipeid
      * @return Array[Object] [{name, quantity, section, units}]
      * @todo Look at providing a consistent ordering
@@ -225,9 +228,9 @@ class Recipe_model extends CI_Model
         $this->db->select('name, quantity, section, units, replaces')
                 ->from('recipe_segmented_ingredient')
                 ->where(['recipeid' => $recipeid]);
-        
+
         $ingredients = $this->db->get()->result();
-        
+
         //Load narrative ingredients unless they are replaced
         $replaced = [];
         foreach ($ingredients as $ingredient) {
@@ -235,16 +238,16 @@ class Recipe_model extends CI_Model
                 $replaced[] = $ingredient->replaces;
             }
         }
-        
+
         $narrative = $this->getNarrativeIngredientsExcept($recipeid, $replaced);
-        
+
         //Merge the two results
         return array_merge($this->formatIngredients($ingredients), $narrative);
     }
-    
+
     /**
      * Loads the ingredients needed for the Stepped view of the recipe.
-     * 
+     *
      * @param int $recipeid
      * @return Array[Object] [{name, quantity, section, units}]
      * @todo Look at providing a consistent ordering
@@ -254,9 +257,9 @@ class Recipe_model extends CI_Model
         $this->db->select('name, quantity, section, units, replaces')
                 ->from('recipe_step_ingredient')
                 ->where(['recipeid' => $recipeid]);
-        
+
         $ingredients = $this->db->get()->result();
-        
+
         //Load narrative ingredients unless they are replaced
         $replaced = [];
         foreach ($ingredients as $ingredient) {
@@ -264,9 +267,9 @@ class Recipe_model extends CI_Model
                 $replaced[] = $ingredient->replaces;
             }
         }
-        
+
         $narrative = $this->getNarrativeIngredientsExcept($recipeid, $replaced);
-        
+
         //Merge the two results
         return array_merge($this->formatIngredients($ingredients), $narrative);
     }
