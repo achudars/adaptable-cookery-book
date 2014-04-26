@@ -27,12 +27,7 @@
 			$this->load->model('Recipe_style_model');
 			$this->load->model('Breadcrumb_model');
 
-			$course = $this->Course_model->getCourseInfo($courseName);
-
-			$data['title']       = $course->name . ' Recipes';
-			$data['recipes']     = $this->Course_model->getRecipes($courseName);
-			$data['courseImage'] = $data['recipes'][array_rand($data['recipes'])]->imageurl;
-
+			$course               = $this->Course_model->getCourseInfo($courseName);
 			$preferredRecipeStyle = $this->Recipe_style_model->getRecipeStyle();
 
 			if(!$preferredRecipeStyle)
@@ -45,6 +40,25 @@
 			$data['breadcrumb']   = $this->Breadcrumb_model->generateBreadcrumb('course');
 
 			$data['breadcrumb']['Course: ' . ucfirst($courseName)] = base_url() . 'course/' . rawurlencode($courseName);
+
+			if(!$course)
+			{
+				error_log(__FILE__ . ':' . __LINE__ . ' - Received no course information for course ' . $courseName);
+
+				$data['title']      = 'Course Not Found';
+				$data['courseName'] = $courseName;
+
+				$this->load->helper('html');
+				$this->load->view('templates/header.php', $data);
+				$this->load->view('pages/course_not_found.php', $data);
+				$this->load->view('templates/footer.php', $data);
+
+				return;
+			}
+
+			$data['title']       = $course->name . ' Recipes';
+			$data['recipes']     = $this->Course_model->getRecipes($courseName);
+			$data['courseImage'] = $data['recipes'][array_rand($data['recipes'])]->imageurl;
 
 			$this->load->helper('html');
 			$this->load->view('templates/header.php', $data);
